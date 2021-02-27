@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 248: expected statement.
+    vpunch
+          ^
+
+File "game/script.rpy", line 250: expected statement.
+    hpunch
+          ^
+
+Ren'Py Version: Ren'Py 7.4.2.1292
+Sun Feb 21 11:25:04 2021
