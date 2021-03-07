@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 44: expected 'simple_expression' not found.
-    show eileen happy at 
-                         ^
+File "game/script.rpy", line 91: u'n' is not a keyword argument or valid child for the imagemap statement.
+    n "test2"
+     ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Mar  6 19:41:18 2021
+Sat Mar  6 22:53:16 2021
