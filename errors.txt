@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 91: u'n' is not a keyword argument or valid child for the imagemap statement.
-    n "test2"
-     ^
+The label start_chapter1 is defined twice, at
+  File "game/chapter-1.rpy", line 2 and
+  File "game/chapter_1.rpyc", line 1.
+
+The label start_chapter2 is defined twice, at
+  File "game/chapter-2.rpy", line 2 and
+  File "game/chapter_2.rpyc", line 1.
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Mar  6 22:53:16 2021
+Sat Mar 13 17:39:30 2021

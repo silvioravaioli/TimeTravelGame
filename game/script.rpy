@@ -11,7 +11,7 @@ define p = Character("Protagonist",color="#ffff00")     # protagonist
 define g = Character("Time God",color="#809fff")        # god
 define f = Character("Friend",color="#33cc33")          # friend
 define m = Character("Mother",color="#ff0066")          # mother
-define n = Character(" ",color="#d9d9d9")               # narrator
+define n = Character("",color="#d9d9d9")               # narrator
 
 
 ####################################################
