@@ -8,24 +8,28 @@
 # name of the character.
 
 define p = Character("Protagonist",color="#ffff00")     # protagonist
+define s = Character("Past Self",color="#ffff00")     # past self
 define g = Character("Time God",color="#809fff")        # god
 define f = Character("Friend",color="#33cc33")          # friend
 define m = Character("Mother",color="#ff0066")          # mother
+define b = Character("Barista",color="#458b74")          # barista
 define n = Character("",color="#d9d9d9")               # narrator
+
 
 
 ####################################################
 # START
 
 label start:
-
+    $ testing_mode = False
+    if not testing_mode:
+        jump start_game
     menu:
         n "Do you need the RenPy short tutorial?"
         "Yes - show the tutorial":
             jump start_tutorial
         "No - skip to the game":
             jump start_game
-
 ####################################################
 # START GAME
 
