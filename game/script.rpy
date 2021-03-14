@@ -8,7 +8,9 @@
 # name of the character.
 
 define p = Character("Protagonist",color="#ffff00")     # protagonist
+define pp = Character("Past Protagonist",color="#888888")     # past protagonist
 define g = Character("Time God",color="#809fff")        # god
+define b = Character("Barista",color="#ff0066")         # barista
 define c = Character("Coworker",color="#33cc33")        # coworker
 
 

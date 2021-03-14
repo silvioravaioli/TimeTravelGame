@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-The label start_chapter1 is defined twice, at
-  File "game/chapter-1.rpy", line 2 and
-  File "game/chapter_1.rpyc", line 1.
-
-The label start_chapter2 is defined twice, at
-  File "game/chapter-2.rpy", line 2 and
-  File "game/chapter_2.rpyc", line 1.
+File "game/chapter-2.rpy", line 19: expected ':' not found.
+    label chapter1_block2
+                         ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Mar 13 17:39:30 2021
+Sat Mar 13 19:10:53 2021
