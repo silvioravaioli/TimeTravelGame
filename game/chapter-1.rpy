@@ -81,14 +81,14 @@ label start_chapter1:
 
     label cafe_3:
         p "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
-        b "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
+        bar "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
         p "I'm not actually a coffee person. But hey, sure, why not?"
-        b "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
+        bar "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
         # TODO SHOW [Barista is now standing in front of coffee machine]
-        s "So...that's how you make coffee. Wish I knew that earlier."
-        b "Oh where'd this letter come from?"
+        pp "So...that's how you make coffee. Wish I knew that earlier."
+        bar "Oh where'd this letter come from?"
         # TODO Barista makes a face
-        b "Leave"
+        bar "Leave"
         jump end
 
     label office:

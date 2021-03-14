@@ -8,14 +8,18 @@
 # name of the character.
 
 define p = Character("Protagonist",color="#ffff00")     # protagonist
-define s = Character("Past Self",color="#ffff00")     # past self
+define pp = Character("Past Protagonist",color="#888888")     # past protagonist
+
 define g = Character("Time God",color="#809fff")        # god
+define c = Character("Coworker",color="#33cc33")        # coworker
+define bar = Character("Barista",color="#ff0066")       # barista
+define boss = Character("Boss",color="#ff0066")         # boss
+
+
+## extra - in case we want to add more
 define f = Character("Friend",color="#33cc33")          # friend
 define m = Character("Mother",color="#ff0066")          # mother
-define b = Character("Barista",color="#458b74")          # barista
 define n = Character("",color="#d9d9d9")               # narrator
-
-
 
 ####################################################
 # START
