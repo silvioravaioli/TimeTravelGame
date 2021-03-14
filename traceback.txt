@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 101, in script
-    e "You chose swimming."
-Exception: Sayer 'e' is not defined.
+  File "game/chapter-1.rpy", line 99, in script
+    P "HIDE!"
+Exception: Sayer 'P' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 101, in script
-    e "You chose swimming."
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 680, in execute
+  File "game/chapter-1.rpy", line 99, in script
+    P "HIDE!"
+  File "renpy/ast.py", line 680, in execute
     who = eval_who(self.who, self.who_fast)
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 574, in eval_who
+  File "renpy/ast.py", line 574, in eval_who
     raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'e' is not defined.
+Exception: Sayer 'P' is not defined.
 
-Darwin-20.3.0-x86_64-i386-64bit
+Windows-10-10.0.19041
 Ren'Py 7.4.2.1292
 Time Travel Game V01 1.0
-Sat Mar  6 22:51:24 2021
+Sat Mar 13 19:46:42 2021
