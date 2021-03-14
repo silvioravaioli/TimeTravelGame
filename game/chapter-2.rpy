@@ -1,17 +1,17 @@
 ####################################################
 label start_chapter2:
-    # play music "funiculifunicula.mp3" fadeout 1       # ADD MUSIC
+
     scene bg restaurant room
+
     show eileen vhappy
     n "START CHAPTER 2."
-
     n "New part of the story"
-
     hide eileen
+
     scene black
 
     # ending
-    #return
+    # return
 
 
 
@@ -27,7 +27,7 @@ label chapter1_block2:
     hide pastprotagonist
 
     show barista
-    b  "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
+    bar  "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
     hide barista
 
     show pastprotagonist
@@ -35,13 +35,17 @@ label chapter1_block2:
     hide pastprotagonist
 
     show barista
-    b  "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
+    bar  "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
     n  "The barista is now standing in front of coffee machine"
     hide barista
 
     show pastprotagonist
     pp "So... that’s how you make coffee"
     hide pastprotagonist
+
+    show protagonist
+    pp "Oh, looks like I’m leaving. Better leave so that I don’t run into myself."
+    hide protagonist
 
     #### MENU
     menu:
@@ -56,7 +60,7 @@ label chapter1_block2:
     scene black
 
     # ending
-    #return
+    # return
 
 
 
@@ -90,13 +94,109 @@ label chapter1_block3:
     g "Interesting question. Guess you’ll have to find out."
     hide timegod
 
-    n "--- TO BE ADDED: Ways to find out about the impact ----"
-    n "--- TO BE ADDED: How does the protagonist realize that the bean water disaster was averted? ----"
+    scene black
 
+    # ending
+    # return
+
+
+
+
+####################################################
+label chapter1_block4success:
+
+    n "IF MISSION SUCCESS - OFFICE, NEXT DAY"
+
+    scene bg office
+
+    show boss
+    boss "I need you to file these documents, and sign these things for me."
+    boss "Also I need those progress reports done by the end of the day."
+    boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
+    hide boss
+    
+    show protagonist
+    boss "Ok, anything else?"
+    hide protagonist
+
+    show boss
+    boss "Oh, yeah. Make me a cup of coffee"
+    hide boss
+
+    show protagonist
+    p "You want me to make you a cup of coffee?"
+    hide protagonist
+
+    show boss
+    boss "Yeah, cup of coffee."
+    hide boss
+
+    show protagonist incredulous
+    p "Me???"
+    hide protagonist
+
+    show boss irritated
+    boss "Yes. That’s what I SAID."
+    boss "And be fast, I need to run to the next meeting."
+    hide boss
+
+    show protagonist happy
+    p "It worked! (whispered/italics)"
+    hide protagonist
 
     scene black
 
     # ending
-    return
+    # return
+
+
+
+
+####################################################
+label chapter1_block4failure:
+
+    n "IF MISSION FAILED - OFFICE, NEXT DAY"
+
+    scene bg office
+
+    show boss
+    boss "I need you to file these documents, and sign these things for me."
+    boss "Also I need those progress reports done by the end of the day."
+    boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
+    hide boss
+    
+    show protagonist
+    boss "Ok, anything else?"
+    hide protagonist
+
+    show boss
+    boss "Oh, yeah. Make me a cup of coffee"
+    hide boss
+
+    show protagonist
+    p "You want me to make you a cup of coffee?"
+    hide protagonist
+
+    show boss
+    boss "OF COURSE NOT!"
+    show boss pointingAtCoffeeStation
+    boss "Actually after yesterday, you are banned from making coffee."
+    hide boss
+
+    show protagonist incredulous
+    p "Me???"
+    hide protagonist
+
+    scene bg coffeeMachineBanned
+    n "pan to coffee machine, there’s a huge printout sign with the protagonist’s face on it and a huge prohibited sign over it"
+
+    show boss irritated
+    boss "Bean water. My god..."
+    hide boss
+
+    scene black
+
+    # ending
+    # return
 
 

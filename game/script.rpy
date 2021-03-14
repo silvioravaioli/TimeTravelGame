@@ -9,9 +9,12 @@
 
 define p = Character("Protagonist",color="#ffff00")     # protagonist
 define pp = Character("Past Protagonist",color="#888888")     # past protagonist
+
 define g = Character("Time God",color="#809fff")        # god
-define b = Character("Barista",color="#ff0066")         # barista
 define c = Character("Coworker",color="#33cc33")        # coworker
+
+define bar = Character("Barista",color="#ff0066")       # barista
+define boss = Character("Boss",color="#ff0066")         # boss
 
 
 ## extra - in case we want to add more
