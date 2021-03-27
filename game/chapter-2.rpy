@@ -114,7 +114,7 @@ label chapter1_block4success:
     boss "Also I need those progress reports done by the end of the day."
     boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
     hide boss
-    
+
     show protagonist
     boss "Ok, anything else?"
     hide protagonist
@@ -164,7 +164,7 @@ label chapter1_block4failure:
     boss "Also I need those progress reports done by the end of the day."
     boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
     hide boss
-    
+
     show protagonist
     boss "Ok, anything else?"
     hide protagonist
@@ -198,5 +198,3 @@ label chapter1_block4failure:
 
     # ending
     # return
-
-
