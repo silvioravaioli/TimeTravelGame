@@ -1,22 +1,43 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/chapter-1.rpy", line 99, in script
-    P "HIDE!"
-Exception: Sayer 'P' is not defined.
+Compiling ATL code at game/script.rpy:8
+  File "game/testing-zone.rpy", line 25, in script
+    show eileen happy zorder 2 at t11
+NameError: name 'tcommon' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapter-1.rpy", line 99, in script
-    P "HIDE!"
-  File "renpy/ast.py", line 680, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "renpy/ast.py", line 574, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'P' is not defined.
+  File "game/testing-zone.rpy", line 25, in script
+    show eileen happy zorder 2 at t11
+  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 1191, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 1161, in show_imspec
+    atl=atl)
+  File "/Applications/renpy-7.4.2-sdk/renpy/exports.py", line 753, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "/Applications/renpy-7.4.2-sdk/renpy/display/core.py", line 1095, in add
+    thing._show()
+  File "/Applications/renpy-7.4.2-sdk/renpy/display/transform.py", line 1117, in _show
+    super(ATLTransform, self)._show()
+  File "/Applications/renpy-7.4.2-sdk/renpy/display/transform.py", line 1086, in _show
+    self.update_state()
+  File "/Applications/renpy-7.4.2-sdk/renpy/display/transform.py", line 1105, in update_state
+    fr = self.execute(self, self.st, self.at)
+  File "/Applications/renpy-7.4.2-sdk/renpy/atl.py", line 588, in execute
+    block = self.compile()
+  File "/Applications/renpy-7.4.2-sdk/renpy/atl.py", line 556, in compile
+    block = self.atl.compile(self.context)
+  File "/Applications/renpy-7.4.2-sdk/renpy/atl.py", line 751, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "/Applications/renpy-7.4.2-sdk/renpy/atl.py", line 964, in compile
+    child = ctx.eval(expr)
+  File "/Applications/renpy-7.4.2-sdk/renpy/atl.py", line 313, in eval
+    return eval(expr, renpy.store.__dict__, self.context) # @UndefinedVariable
+  File "<string>", line 1, in <module>
+NameError: name 'tcommon' is not defined
 
-Windows-10-10.0.19041
+Darwin-20.3.0-x86_64-i386-64bit
 Ren'Py 7.4.2.1292
 Time Travel Game V01 1.0
-Sat Mar 13 19:46:42 2021
+Sat Mar 20 19:16:19 2021

@@ -1,6 +1,10 @@
 ﻿# The script of the game goes in this file.
 
 
+define e = Character("Eileen")
+
+call transforms
+
 ####################################################
 # CHARACTERS
 
