@@ -5,8 +5,8 @@ label start_chapter1:
     # TODO Location - (Home, intention was to use this as a hub in between levels):
     # TODO Open the door, first thing you see is the time god
 
-    scene home
-    p "Ah, I'm finally home..."
+    scene bg home
+    p "I'm finally home..."
     g "Whoa you really messed that up! I see you’ve had a bad day."
     g "I have a proposition for you."
     g "Would you like a do over...a chance to undo your mistakes?"
@@ -45,7 +45,7 @@ label start_chapter1:
     scene black
     n "Time God snaps his fingers and you’re transported to one week into the past."
 
-    scene home
+    scene bg home
     # TODO "1 week ago" fades in and out at corner of screen
 
     p "So...where should I go?"
@@ -61,7 +61,7 @@ label start_chapter1:
             jump home_
 
     label cafe:
-        scene cafe
+        scene bg cafe
         p "I need to teach my past self how to make coffee, maybe I should send him to deliver the letter instead."
         n "Where do you want to go?"
         menu:
@@ -92,7 +92,7 @@ label start_chapter1:
         jump end
 
     label office:
-        scene office
+        scene bg office
         p "My desk is empty. Looks like he- or I am still on my bathroom break."
         p "Here’s what I'll do...write a delivery message on this letter and put it on my desk"
         n "(Holding letter and pencil)"
@@ -110,7 +110,7 @@ label start_chapter1:
                 g "Nice try. Your job isn't finished yet."
                 n "Time God snaps fingers and sends you back to the past"
     label home_:
-        scene home
+        scene bg home
     label end:
         n "END OF CHAPTER 1"
         scene black

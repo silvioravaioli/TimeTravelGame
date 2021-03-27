@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 6: expected statement.
-    transforms
-              ^
+The label start_testingZone_BACKUP is defined twice, at
+  File "game/BACKUP CODE SILVIO/testing-zone-backupsilvio.rpyc", line 2 and
+  File "game/testing-zone.rpy", line 2.
+
+The label start_testingZone is defined twice, at
+  File "game/BACKUP CODE SILVIO/testing-zone-backupsilvio.rpyc", line 21 and
+  File "game/testing-zone.rpy", line 21.
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Mar 20 19:25:01 2021
+Sat Mar 27 17:44:01 2021
