@@ -305,9 +305,9 @@ label chapter1_office:
     n "(moves behind potted plant)"
 
     show pastprotagonist neutral zorder 2 at t11
-    s "What is this???"
+    pp "What is this???"
     # TODO past self confused
-    s "Hm...maybe it's from the boss. Guess I'll drop it off."
+    pp "Hm...maybe it's from the boss. Guess I'll drop it off."
     hide pastprotagonist
 
     menu:
@@ -337,7 +337,7 @@ label chapter1_office:
 
 
 ####################################################
-label chapter1_home1:
+label chapter1_home:
     scene bg home
 
     show protagonist neutral zorder 2 at t11
