@@ -12,16 +12,16 @@ call transforms
 
 define p = Character("",color="#ffff00")     # protagonist
 define pp = Character("",color="#888888")     # past protagonist
-
-define g = Character("Time God",color="#809fff")        # god
-define c = Character("Coworker",color="#33cc33")        # coworker
-define s = Character("Coworker",color="#33cc33")        # coworker
-define bar = Character("Barista",color="#ff0066")       # barista
+define g = Character("timegod_name" ,color="#809fff", dynamic=True)        # god
+define timegod_name = "???"
+define coworker = Character("Coworker",color="#33cc33")        # coworker
+define barista = Character("Barista",color="#ff0066")       # barista
 define boss = Character("Boss",color="#ff0066")         # boss
 
 
 ## extra - in case we want to add more
 define e = Character("Eileen")
+define s = Character("Unclear",color="#33cc33")        # coworker
 define f = Character("Friend",color="#33cc33")          # friend
 define m = Character("Mother",color="#ff0066")          # mother
 define n = Character("",color="#d9d9d9")               # narrator

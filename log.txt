@@ -1,38 +1,39 @@
-Sat Mar 27 17:53:04 2021
+Sat Mar 27 23:35:50 2021
 Darwin-20.3.0-x86_64-i386-64bit
 Ren'Py 7.4.2.1292
  
 
 Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
-Loader init took 0.01s
+Loader init took 0.02s
 Loading error handling took 0.02s
-Loading script took 0.10s
+Loading script took 0.20s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.05s
-Loading analysis data took 0.03s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
+Backing up script files to '/Users/silvioravaioli/Library/RenPy/backups/TimeTravelGame':
 Dump and make backups. took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.07s
 Prepare screens took 0.09s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.16s
+Interface start took 0.17s
 
 Initializing gl renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -190,39 +191,14 @@ Texture testing:
 Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.9354159832s
-
-Full traceback:
-  File "game/chapter-1.rpy", line 105, in script
-    s "What is this?? Hm...maybe it's from the boss. Guess I'll drop it off."
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 680, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 574, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 's' is not defined.
-
-While running game code:
-  File "game/chapter-1.rpy", line 105, in script
-    s "What is this?? Hm...maybe it's from the boss. Guess I'll drop it off."
-Exception: Sayer 's' is not defined.
-
-Full traceback:
-  File "game/chapter-1.rpy", line 105, in script
-    s "What is this?? Hm...maybe it's from the boss. Guess I'll drop it off."
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 680, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 574, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 's' is not defined.
-
-While running game code:
-  File "game/chapter-1.rpy", line 105, in script
-    s "What is this?? Hm...maybe it's from the boss. Guess I'll drop it off."
-Exception: Sayer 's' is not defined.
+Total time until interface ready: 1.12991714478s
+Screen sizes: virtual=(1280, 720) physical=(1440, 847) drawable=(2880, 1694)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
 Cleaning stores took 0.00s
 Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
+Build styles took 0.01s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s

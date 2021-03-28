@@ -34,15 +34,17 @@ label start_testingZone:
     e "Sentence 1."
 
     show monika happy zorder 2 at t11
-    e "Sentence 2."
-    show monika happy at t11
-    e "Sentence 1."
-    show monika happy at t11
-    e "Sentence 2."
-    show monika happy at t11
-    e "Sentence 1."
-    show monika happy at t11
-    e "Sentence 2."
+    e "Position t11."
+    show monika happy at t21
+    e "Position t21."
+    show monika happy at t31
+    e "Position t31."
+    show monika happy at t22
+    e "Position t22."
+    show monika happy at t33
+    e "Position t33."
+    show monika happy at t44
+    e "Position t44."
 
     scene black
     jump start
