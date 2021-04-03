@@ -15,26 +15,30 @@ label start_chapter1:
 
     show boss neutral zorder 2 at t33
     boss "Why did it take you so long?"
+
+    show protagonist zorder 1 at thide
+    hide protagonist
+
     boss "---THE BOSS MAKES FUNNY FACES---"
     show boss at s33
 
-    show coworker neutral zorder 2 at t11
+    show coworker neutral zorder 2 at t31
     coworker "Woah you really messed that up"
-    show coworker zorder 1 at thide
-    hide coworker
+    show coworker at s31
 
     # [See angry boss spitting out coffee]
-    show boss neutral zorder 2 at t11
+    show boss neutral zorder 2 at t33
     boss "DISGUSTING!!!"
-    show boss zorder 1 at thide
-    hide boss
+    show boss at s33
 
-    show coworker neutral zorder 2 at t11
+
+    show coworker neutral zorder 2 at t31
     coworker "I know it’s called bean water, but you don’t just directly put the beans in the water."
     coworker "HAHAHAHAHAHAHAHAHAHAHA"
     show coworker zorder 1 at thide
     hide coworker
-
+    show boss zorder 1 at thide
+    hide boss
 
 ####################################################
 label chapter1_introdialogue0:
