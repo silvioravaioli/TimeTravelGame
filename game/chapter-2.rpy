@@ -1,200 +1,60 @@
 ####################################################
 label start_chapter2:
-
-    scene bg restaurant room
-
-    show eileen vhappy
-    n "START CHAPTER 2."
-    n "New part of the story"
-    hide eileen
-
-    scene black
-
-    # ending
-    # return
-
-
-
-####################################################
-label chapter1_block2:
-
-    scene bg cafeteria
-
-    show pastprotagonist
-    pp "Uh... guess I’ll just put this here on the table..."
-    pp "Might as well get some lunch while I’m at it."
-    pp "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
-    hide pastprotagonist
-
-    show barista
-    bar  "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
-    hide barista
-
-    show pastprotagonist
-    pp " Past self: “I’m not actually a coffee person. But hey, sure, why not?"
-    hide pastprotagonist
-
-    show barista
-    bar  "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
-    n  "The barista is now standing in front of coffee machine"
-    hide barista
-
-    show pastprotagonist
-    pp "So... that’s how you make coffee"
-    hide pastprotagonist
-
-    show protagonist
-    pp "Oh, looks like I’m leaving. Better leave so that I don’t run into myself."
-    hide protagonist
-
-    #### MENU
-    menu:
-        n "What do you want to do now?"
-        "Explore the coffee shop":
-            n "You explore the coffee shop"
-        "Leave":
-            n "Leave"
-        "--other--":
-            n "--other--"
-
-    scene black
-
-    # ending
-    # return
-
-
+    scene bg office
+    show protagonist neutral at t11
+    p "Ok it’s almost 5. I’m heading out."
+    n "{i}You walk past and see a poster on the wall{\i}"
+    p "Hmm… I wonder what that is?"
+    n "{i}Poster says “STAR WARS DAY{\i}"
+    show protagonist excited at t11
+    p "Oh YES! OH YES OH YES! Next Monday is STAR WARS DAY! I am going to absolutely SMOKE the competition."
+    show protagonist anxious at t11
+    p "What should I be? Princess Leia? Stormtrooper? I do a mean Darth Vader impression too. Wookie? Hmm…."
+    scene black with Dissolve(2.0)
+    jump chapter2_office_StarWarsDay1
 
 
 ####################################################
-label chapter1_block3:
+label chapter2_office_StarWarsDay1:
+    scene bg office
+    n "{i}One week later...{\i}"
+    show boss neutral at t33
+    boss "What the HELL are you wearing?"
+    show protagonist wookie at t31
+    p "I’m a Wookie! Star Wars day? Said so on the poster on the wall?"
+    show boss angry at t33
+    boss "That’s NEXT Monday! Not TODAY! Today’s our investor meeting! You’re presenting and you show up dressed as Bigfoot?"
+    show protagonist anxious at t31
+    p "Oh..."
+    scene black with Dissolve(2.0)
 
+    n "TODO - image of poster and scene with people in suits, protagonist and boss reactions"
+    # [Image of Wookie P with a chart he’s presenting. We see the backs of a bunch of people wearing suits in the foreground.
+    # B is standing off to the side, facepalming. P is visibly freaking out]
+    jump chapter2_home_meetTimeGod
+
+
+####################################################
+label chapter2_home_meetTimeGod:
     scene bg home
-
-    show timegod
-    g "So... how do you think it went?"
-    hide timegod
-
-    #### MENU
+    show timegod neutral at t11
+    g "Whoa you really messed that up. I see you’ve had a bad day...again."
+    g "I have a proposition for you."
+    g "Would you like a do over...a chance to undo your mistakes?"
     menu:
-        g "So... how do you think it went?"
-        "Not great":
-            show timegod
-            g "Hm. You’ll get better next time."
-        "Went OK":
-            show timegod
-            g "Good. Now you know what to expect next time."
-    hide timegod
+        "You again!":
+            g "Interesting statement."
+        "What do you want me to do this time?":
+            g "Interesting question."
+        "Huh? I thought you were a dream?":
+            g "Interesting question."
 
-
-    show protagonist
-    p "So... What happened when I was gone?"
-    hide protagonist
-
-    show timegod
-    g "Interesting question. Guess you’ll have to find out."
-    hide timegod
-
-    scene black
-
-    # ending
-    # return
-
-
-
-
-####################################################
-label chapter1_block4success:
-
-    n "IF MISSION SUCCESS - OFFICE, NEXT DAY"
-
-    scene bg office
-
-    show boss
-    boss "I need you to file these documents, and sign these things for me."
-    boss "Also I need those progress reports done by the end of the day."
-    boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
-    hide boss
-
-    show protagonist
-    boss "Ok, anything else?"
-    hide protagonist
-
-    show boss
-    boss "Oh, yeah. Make me a cup of coffee"
-    hide boss
-
-    show protagonist
-    p "You want me to make you a cup of coffee?"
-    hide protagonist
-
-    show boss
-    boss "Yeah, cup of coffee."
-    hide boss
-
-    show protagonist incredulous
-    p "Me???"
-    hide protagonist
-
-    show boss irritated
-    boss "Yes. That’s what I SAID."
-    boss "And be fast, I need to run to the next meeting."
-    hide boss
-
-    show protagonist happy
-    p "It worked! (whispered/italics)"
-    hide protagonist
-
-    scene black
-
-    # ending
-    # return
-
-
-
-
-####################################################
-label chapter1_block4failure:
-
-    n "IF MISSION FAILED - OFFICE, NEXT DAY"
-
-    scene bg office
-
-    show boss
-    boss "I need you to file these documents, and sign these things for me."
-    boss "Also I need those progress reports done by the end of the day."
-    boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
-    hide boss
-
-    show protagonist
-    boss "Ok, anything else?"
-    hide protagonist
-
-    show boss
-    boss "Oh, yeah. Make me a cup of coffee"
-    hide boss
-
-    show protagonist
-    p "You want me to make you a cup of coffee?"
-    hide protagonist
-
-    show boss
-    boss "OF COURSE NOT!"
-    show boss pointingAtCoffeeStation
-    boss "Actually after yesterday, you are banned from making coffee."
-    hide boss
-
-    show protagonist incredulous
-    p "Me???"
-    hide protagonist
-
-    scene bg coffeeMachineBanned
-    n "pan to coffee machine, there’s a huge printout sign with the protagonist’s face on it and a huge prohibited sign over it"
-
-    show boss irritated
-    boss "Bean water. My god..."
-    hide boss
-
-    scene black
-
-    # ending
-    # return
+    g "I’m going to need you to pick something up for me."
+    g "While you’re at it, feel free to destroy this abomination of a Bigfoot costume."
+    menu:
+        "So what do you need me to get?":
+            g "Interesting question."
+        "Are we in the past now? How did you do that?":
+            g "Interesting question."
+        "Shouldn’t you wait until I agree before sending me back in time?":
+            g "Interesting question."

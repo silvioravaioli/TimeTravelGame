@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapter-1.rpy", line 129, in script
-    jump chapter1_home
-ScriptError: could not find label 'chapter1_home'.
+  File "game/chapter-2.rpy", line 22, in script
+    b "What the HELL are you wearing?"
+Exception: Sayer 'b' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapter-1.rpy", line 129, in script
-    jump chapter1_home
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 1711, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-7.4.2-sdk/renpy/script.py", line 900, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'chapter1_home'.
+  File "game/chapter-2.rpy", line 22, in script
+    b "What the HELL are you wearing?"
+  File "renpy/ast.py", line 680, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "renpy/ast.py", line 574, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'b' is not defined.
 
-Darwin-20.3.0-x86_64-i386-64bit
+Windows-10-10.0.19041
 Ren'Py 7.4.2.1292
 Time Travel Game V01 1.0
-Sat Mar 27 23:40:35 2021
+Sat Apr  3 19:32:25 2021

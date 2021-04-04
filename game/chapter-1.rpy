@@ -89,7 +89,7 @@ label chapter1_introdialogue3:
     menu:
         g "Interesting question. I simply need you to deliver this letter to the coffee shop across the street from your office."
         "Let me read it first.":
-            n "Letter reads: \"Loved the date last night -T\""
+            n "{i}Letter reads: \"Loved the date last night -T\"{/i}"
             jump chapter1_introdialogue4
         "Okay, sure. I'll do it.":
             jump chapter1_introdialogue4
@@ -112,7 +112,7 @@ label chapter1_introdialogue4:
     g "Go!"
 
     scene black
-    n "The Time God snaps his fingers and you’re transported to one week into the past."
+    n "{i}The Time God snaps his fingers and you’re transported to one week into the past.{\i}"
 
     # TODO "1 week ago" fades in and out at corner of screen
     # TODO MAP to choose where to go
