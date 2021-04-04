@@ -1,5 +1,10 @@
 ####################################################
 label start_chapter2:
+
+    ### INITIALIZE MISSIONS
+    $ mission2personal_success = 0
+    $ mission2timegod_success  = 0
+
     scene bg office
     show protagonist neutral at t11
     p "Ok it’s almost 5. I’m heading out."

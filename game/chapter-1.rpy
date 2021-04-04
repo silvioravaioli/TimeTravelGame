@@ -2,18 +2,18 @@
 label start_chapter1:
     # play music "funiculifunicula.mp3" fadeout 1       # ADD MUSIC
 
-    # TODO Location - (Home, intention was to use this as a hub in between levels):
-    # TODO Open the door, first thing you see is the time god
-    $ mission1personal_success = 0   # DEFAULT: FAIL PERSONAL MISSION
+    ### INITIALIZE MISSIONS
+    $ mission1personal_success = 0
 
 
     scene bg office
 
-    show protagonist neutral zorder 2 at t31
+    show protagonist talking zorder 2 at t31
     p "This is your coffee, Boss."
     show protagonist at s31
 
     show boss neutral zorder 2 at t33
+    show protagonist anxious
     boss "Why did it take you so long?"
 
     show protagonist zorder 1 at thide
@@ -44,7 +44,7 @@ label start_chapter1:
 label chapter1_introdialogue0:
 
     scene bg home
-    show protagonist neutral zorder 2 at t11
+    show protagonist anxious zorder 2 at t11
     p "I'm finally home..."
     show protagonist zorder 1 at thide
     hide protagonist
@@ -211,10 +211,10 @@ label chapter1_cafe_present2:
 label chapter1_cafe_table:
 
     scene bg cafe
-    show protagonist neutral zorder 2 at t33
+    show protagonist neutral zorder 2 at t31
     p "I am in a hurry, I will just leave this on the counter."
 
-    show barista neutral zorder 2 at t31
+    show barista neutral zorder 2 at t33
     barista "What is...?"
     show barista shocked
     barista "What is...?"
@@ -255,26 +255,26 @@ label chapter1_cafe_present3:
     p "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
     show protagonist at s33
 
-    show barista neutral zorder 2 at t31
+    show barista neutral zorder 2 at t33
     barista "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
-    show barista at s31
+    show barista at s33
 
-    show protagonist at t33
+    show protagonist at t31
     p "I'm not actually a coffee person. But hey, sure, why not?"
-    show protagonist at s33
+    show protagonist at s31
 
-    show barista at t31
+    show barista at t33
     barista "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
-    show barista at s31
+    show barista at s33
 
     n "The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
     # TODO SHOW [Barista is now standing in front of coffee machine]
 
-    show protagonist at t33
+    show protagonist at t31
     p "So...that's how you make coffee. Wish I knew that earlier."
-    show protagonist at s33
+    show protagonist at s31
 
-    show barista at t31
+    show barista at t33
     barista "Oh, where'd this letter come from?"
     show barista shocked
     barista "Oh, where'd this letter come from?"
@@ -292,32 +292,31 @@ label chapter1_cafe_past3:
 
     show pastprotagonist neutral zorder 2 at t11
     pp "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
-    show pastprotagonist at s33
+    show pastprotagonist at s31
 
-    show barista neutral zorder 2 at t31
+    show barista neutral zorder 2 at t33
     barista "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
-    show barista at s31
+    show barista at s33
 
-    show pastprotagonist at t33
+    show pastprotagonist at t31
     pp "I'm not actually a coffee person. But hey, sure, why not?"
-    show pastprotagonist at s33
+    show pastprotagonist at s31
 
-    show barista at t31
+    show barista at t33
     barista "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
-    show barista at s31
+    show barista at s33
 
     n "The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
     # TODO SHOW [Barista is now standing in front of coffee machine]
 
-    show pastprotagonist at t33
+    show pastprotagonist at t31
     pp "So...that's how you make coffee. I never really paid attention to it."
-    show pastprotagonist at s33
+    show pastprotagonist at s31
 
-    show barista at t31
-    barista "Oh where'd this letter come from?"
-    # TODO Barista makes a face
-    barista "LEAVE."
-    barista "LEAVE. NOW!"
+    show barista at t33
+    barista "Oh, where'd this letter come from?"
+    show barista shocked
+    barista "Oh, where'd this letter come from?"
     show barista zorder 1 at thide
     hide barista
     show pastprotagonist zorder 1 at thide
@@ -331,18 +330,22 @@ label chapter1_cafe_past3:
 label chapter1_office:
 
     scene bg office
-    show protagonist neutral zorder 2 at t11
+    show protagonist anxious zorder 2 at t11
     p "My desk is empty. Looks like he- or I am still on my bathroom break."
+
+    show protagonist hmm
     p "Here’s what I'll do...write a delivery message on this letter and put it on my desk"
-    n "(Holding letter and pencil)"
-    n "Letter is now folded up nicely, with a post-it note on top that reads"
+
+    show protagonist excited
+    n "The letter is now folded up nicely, with a post-it note on top that reads"
     n "\"URGENT: Deliver to Hourglass Cafe\" followed by the address"
     n "(Toilet flushes)"
+
+    show protagonist surprised
     p "HIDE!"
     show protagonist zorder 1 at thide
     hide protagonist
-
-    n "(moves behind potted plant)"
+    p "Better hide behind this potted plant"
 
     show pastprotagonist neutral zorder 2 at t11
     pp "What is this???"
@@ -354,7 +357,7 @@ label chapter1_office:
         p "What should I do now?"
 
         "Follow the past self to the cafe":
-            show protagonist neutral zorder 2 at t11
+            show protagonist hmm zorder 2 at t11
             p "Ok I need to see this through."
             show protagonist zorder 1 at thide
             hide protagonist
@@ -380,9 +383,13 @@ label chapter1_office:
 label chapter1_home:
     scene bg home
 
-    show protagonist neutral zorder 2 at t11
+    show protagonist hmm zorder 2 at t11
     p "What just happened?"
+
+    show protagonist surprised
     p "I am in the same place... but it is also different..."
+
+    show protagonist hmm
     p "I was supposed to do something, but what?"
     p "My memory is foggy, maybe I should just take a nap."
     hide protagonist
@@ -423,19 +430,19 @@ label chapter1_end:
     boss "I need you to file these documents, and sign these things for me."
     boss "Also I need those progress reports done by the end of the day."
     boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
-    show boss at s31
+    show boss at s33
 
-    show protagonist neutral zorder 2 at t33
+    show protagonist talking zorder 2 at t31
     boss "Ok, anything else?"
-    show protagonist at s33
+    show protagonist at s31
 
-    show boss at t31
+    show boss at t33
     boss "Oh, yeah. Make me a cup of coffee"
-    show boss at s31
+    show boss at s33
 
-    show protagonist at t33
+    show protagonist anxious at t31
     p "You want me to make you a cup of coffee?"
-    show protagonist at s33
+    show protagonist at s31
 
     if mission1personal_success==1:
         jump chapter1_end_success
@@ -445,24 +452,24 @@ label chapter1_end:
 
 ####################################################
 label chapter1_end_success:
-    show boss at t31
+    show boss at t33
     boss "Yeah, cup of coffee."
-    show boss at s31
+    show boss at s33
 
-    show protagonist at t33
-    #show protagonist incredulous
+    show protagonist hmm at t31
     p "Me???"
-    show protagonist at s33
+    show protagonist at s31
 
-    show boss at t31
+    show boss at t33
     #show boss irritated
     boss "Yes. That’s what I SAID."
+    show protagonist joy
     boss "And be fast, I need to run to the next meeting."
     show boss zorder 1 at thide
     hide boss
 
-    show protagonist at t11
-    p "It worked! (whispered/italics)"
+    show protagonist woohoo at t11
+    p "It worked!"
     show protagonist zorder 1 at thide
     hide protagonist
 
@@ -473,21 +480,17 @@ label chapter1_end_success:
 
 ####################################################
 label chapter1_end_failure:
-    show boss at t31
+    show boss at t33
     boss "OF COURSE NOT!"
+    show protagonist surprised
     #show boss pointingAtCoffeeStation
     boss "Actually after yesterday, you are banned from making coffee."
-    show boss at s31
-
-    show protagonist at t33
-    #show protagonist incredulous
-    p "Me???"
-    show protagonist at s33
+    show boss at s33
 
     #scene bg coffeeMachineBanned
-    n "Pan to coffee machine, there’s a huge printout sign with the protagonist’s face on it and a huge prohibited sign over it"
+    n "Pan to the coffee machine, there’s a huge printout sign with the protagonist’s face on it and a huge prohibited sign over it"
 
-    show boss at t31
+    show boss at t33
     #show boss irritated
     boss "Bean water. My god..."
     show boss zorder 1 at thide
