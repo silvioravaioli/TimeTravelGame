@@ -4,6 +4,44 @@ label start_chapter1:
 
     # TODO Location - (Home, intention was to use this as a hub in between levels):
     # TODO Open the door, first thing you see is the time god
+    $ mission1personal_success = 0   # DEFAULT: FAIL PERSONAL MISSION
+
+
+    scene bg office
+
+    show protagonist neutral zorder 2 at t31
+    p "This is your coffee, Boss."
+    show protagonist at s31
+
+    show boss neutral zorder 2 at t33
+    boss "Why did it take you so long?"
+
+    show protagonist zorder 1 at thide
+    hide protagonist
+
+    boss "---THE BOSS MAKES FUNNY FACES---"
+    show boss at s33
+
+    show coworker neutral zorder 2 at t31
+    coworker "Woah you really messed that up"
+    show coworker at s31
+
+    # [See angry boss spitting out coffee]
+    show boss neutral zorder 2 at t33
+    boss "DISGUSTING!!!"
+    show boss at s33
+
+
+    show coworker neutral zorder 2 at t31
+    coworker "I know it’s called bean water, but you don’t just directly put the beans in the water."
+    coworker "HAHAHAHAHAHAHAHAHAHAHA"
+    show coworker zorder 1 at thide
+    hide coworker
+    show boss zorder 1 at thide
+    hide boss
+
+####################################################
+label chapter1_introdialogue0:
 
     scene bg home
     show protagonist neutral zorder 2 at t11
@@ -148,10 +186,8 @@ label chapter1_cafe_outdoor:
     menu:
         n "Where should I go now?"
         "Enter the cafe":
-            $ mission1personal_success = 0   # FAIL PERSONAL MISSION
             jump chapter1_cafe_present2
         "Go to the office":
-            $ mission1personal_success = 1   # SUCCEED PERSONAL MISSION
             jump chapter1_office
 
 
@@ -180,6 +216,8 @@ label chapter1_cafe_table:
 
     show barista neutral zorder 2 at t31
     barista "What is...?"
+    show barista shocked
+    barista "What is...?"
 
     show protagonist zorder 1 at thide
     hide protagonist
@@ -190,6 +228,9 @@ label chapter1_cafe_table:
 
 ####################################################
 label chapter1_cafe_past2:
+
+    # this is the only path that gives success in the personal mission
+    $ mission1personal_success = 1   # SUCCEED PERSONAL MISSION
 
     scene bg cafeoutdoor
     show pastprotagonist neutral zorder 2 at t11
@@ -234,10 +275,9 @@ label chapter1_cafe_present3:
     show protagonist at s33
 
     show barista at t31
-    barista "Oh where'd this letter come from?"
-    # TODO Barista makes a face
-    barista "LEAVE."
-    barista "LEAVE. NOW!"
+    barista "Oh, where'd this letter come from?"
+    show barista shocked
+    barista "Oh, where'd this letter come from?"
     show barista zorder 1 at thide
     hide barista
     show protagonist zorder 1 at thide

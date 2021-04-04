@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Sat Apr  3 19:55:55 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.2.1292
@@ -14,21 +15,45 @@ Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.05s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
+=======
+Sat Apr  3 19:00:26 2021
+Darwin-20.3.0-x86_64-i386-64bit
+Ren'Py 7.4.2.1292
+ 
+
+Bootstrap to the start of init.init took 0.11s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.04s
+Loading script took 0.28s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.10s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+>>>>>>> 873d5649069f030f67fc7b179fa67cbbd06932b8
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\DaHua\\AppData\\Roaming/RenPy/backups\\TimeTravelGame':
 Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
+<<<<<<< HEAD
 Analyze screens took 0.01s
 Save screen analysis took 0.05s
 Prepare screens took 0.04s
+=======
+Analyze screens took 0.02s
+Save screen analysis took 0.09s
+Prepare screens took 0.11s
+>>>>>>> 873d5649069f030f67fc7b179fa67cbbd06932b8
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -458,6 +483,7 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
+<<<<<<< HEAD
 Screen sizes: virtual=(1280, 720) physical=(1440, 810) drawable=(1440, 810)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
@@ -469,3 +495,9 @@ Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
+=======
+Screen sizes: virtual=(1280, 720) physical=(947, 533) drawable=(1894, 1066)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 1.3831820488s
+>>>>>>> 873d5649069f030f67fc7b179fa67cbbd06932b8
