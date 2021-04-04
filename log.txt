@@ -199,3 +199,6 @@ Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
+Screen sizes: virtual=(1280, 720) physical=(1440, 847) drawable=(2880, 1694)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048

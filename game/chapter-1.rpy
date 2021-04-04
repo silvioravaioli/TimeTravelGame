@@ -253,7 +253,7 @@ label chapter1_cafe_present3:
 
     show protagonist neutral zorder 2 at t11
     p "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
-    show protagonist at s33
+    show protagonist at s31
 
     show barista neutral zorder 2 at t33
     barista "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
