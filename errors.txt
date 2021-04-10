@@ -2,13 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/chapter-1.rpy", line 309: expected statement.
-    chapter1_end_success
-                        ^
+The label start_testingZone_BACKUP is defined twice, at
+  File "game/chapter-3.rpy", line 2 and
+  File "game/chapter-4.rpy", line 2.
 
-File "game/chapter-1.rpy", line 311: expected statement.
-    chapter1_end_failure
-                        ^
+The label start_testingZone is defined twice, at
+  File "game/chapter-3.rpy", line 21 and
+  File "game/chapter-4.rpy", line 21.
+
+The label start_testingZone_BACKUP is defined twice, at
+  File "game/chapter-4.rpy", line 2 and
+  File "game/testing-zone.rpy", line 2.
+
+The label start_testingZone is defined twice, at
+  File "game/chapter-4.rpy", line 21 and
+  File "game/testing-zone.rpy", line 21.
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Mar 27 22:54:28 2021
+Sat Apr 10 18:16:47 2021

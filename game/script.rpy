@@ -26,6 +26,20 @@ define f = Character("Friend",color="#33cc33")          # friend
 define m = Character("Mother",color="#ff0066")          # mother
 define n = Character("",color="#d9d9d9")               # narrator
 
+
+
+####################################################
+# INITIALIZE MISSIONS
+$ mission1personal_success = 0
+$ mission1timegod_success = 0
+$ mission2personal_success = 0
+$ mission2timegod_success = 0
+$ mission3personal_success = 0
+$ mission3timegod_success = 0
+$ mission4personal_success = 0
+$ mission4timegod_success = 0
+
+
 ####################################################
 # START
 
@@ -50,5 +64,9 @@ label start_game:
             jump start_chapter1
         "Chapter 2":
             jump start_chapter2
+        "Chapter 3":
+            jump start_chapter3
+        "Chapter 4":
+            jump start_chapter4
         "Testing Zone":
             jump start_testingZone
