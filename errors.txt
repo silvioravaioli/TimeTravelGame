@@ -2,21 +2,13 @@
 errors listed below, and try again.
 
 
-The label start_testingZone_BACKUP is defined twice, at
-  File "game/chapter-3.rpy", line 2 and
-  File "game/chapter-4.rpy", line 2.
+File "game/chapter-2.rpy", line 179: reached end of line when expecting ':'.
+    if $ mission2personal_success == 0
+                                      ^
 
-The label start_testingZone is defined twice, at
-  File "game/chapter-3.rpy", line 21 and
-  File "game/chapter-4.rpy", line 21.
-
-The label start_testingZone_BACKUP is defined twice, at
-  File "game/chapter-4.rpy", line 2 and
-  File "game/testing-zone.rpy", line 2.
-
-The label start_testingZone is defined twice, at
-  File "game/chapter-4.rpy", line 21 and
-  File "game/testing-zone.rpy", line 21.
+File "game/chapter-2.rpy", line 181: expected statement.
+    else
+        ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Apr 10 18:16:47 2021
+Sat Apr 10 19:25:51 2021

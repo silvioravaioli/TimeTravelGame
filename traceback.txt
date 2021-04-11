@@ -1,22 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/chapter-2.rpy", line 22, in script
-    b "What the HELL are you wearing?"
-Exception: Sayer 'b' is not defined.
+  File "game/chapter-2.rpy", line 179, in script
+    if $ mission2personal_success == 0:
+SyntaxError: invalid syntax (chapter-2.rpy, line 179)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/chapter-2.rpy", line 22, in script
-    b "What the HELL are you wearing?"
-  File "renpy/ast.py", line 680, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "renpy/ast.py", line 574, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'b' is not defined.
+  File "game/chapter-2.rpy", line 179, in script
+    if $ mission2personal_success == 0:
+  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 1852, in execute
+    if renpy.python.py_eval(condition):
+  File "/Applications/renpy-7.4.2-sdk/renpy/python.py", line 2247, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Applications/renpy-7.4.2-sdk/renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: invalid syntax (chapter-2.rpy, line 179)
 
-Windows-10-10.0.19041
+Darwin-20.3.0-x86_64-i386-64bit
 Ren'Py 7.4.2.1292
 Time Travel Game V01 1.0
-Sat Apr  3 19:32:25 2021
+Sat Apr 10 20:03:59 2021
