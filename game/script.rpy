@@ -10,8 +10,8 @@ call transforms
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define p = Character("",color="#ffff00")     # protagonist
-define pp = Character("",color="#888888")     # past protagonist
+define p = Character("You",color="#ffff00")     # protagonist
+define pp = Character("Past self",color="#888888")     # past protagonist
 define g = Character("timegod_name" ,color="#809fff", dynamic=True)        # god
 define timegod_name = "???"
 define coworker = Character("Coworker",color="#33cc33")        # coworker
