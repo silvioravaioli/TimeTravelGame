@@ -589,7 +589,7 @@ label chapter2_end_success:
     if mission1personal_success == 1:
         boss "You've been showing real improvement since you made coffee that last meeting."
     show protagonist joy at t31
-    p "OH YEAH! Well, how did it work out afterwords?"
+    p "OH YEAH! Well, how did it work out afterwards?"
     boss "Uh, less stellar than expected unfortunately. There was a slight issue..."
     n "Flashback graphic of the same scene except protagonist in normal clothing, looking fairly confident in presenting. Boss shown to be fairly panicked."
     p "Oh, okay. Well, thank you for the compliment! I'm a great worker, haha!"
