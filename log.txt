@@ -1,13 +1,13 @@
-Sun Apr 11 01:17:26 2021
+Sat Apr 17 19:08:13 2021
 Darwin-20.3.0-x86_64-i386-64bit
 Ren'Py 7.4.2.1292
  
 
-Bootstrap to the start of init.init took 0.09s
+Bootstrap to the start of init.init took 0.11s
 Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.02s
-Loading script took 0.25s
+Loader init took 0.02s
+Loading error handling took 0.03s
+Loading script took 0.27s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -27,13 +27,13 @@ Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.07s
+Save screen analysis took 0.08s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.16s
+Interface start took 0.18s
 
 Initializing gl renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -188,49 +188,7 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Screen sizes: virtual=(1280, 720) physical=(933, 525) drawable=(1866, 1050)
+Screen sizes: virtual=(1280, 720) physical=(939, 528) drawable=(1878, 1056)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.18535399437s
-
-Full traceback:
-  File "game/chapter-2.rpy", line 143, in script
-    jump chapter2_travelPast_home1
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 1711, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-7.4.2-sdk/renpy/script.py", line 900, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'chapter2_travelPast_home1'.
-
-While running game code:
-  File "game/chapter-2.rpy", line 143, in script
-    jump chapter2_travelPast_home1
-ScriptError: could not find label 'chapter2_travelPast_home1'.
-
-Full traceback:
-  File "game/chapter-2.rpy", line 145, in script
-    jump chapter2_travelPast_cafe1
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 1711, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-7.4.2-sdk/renpy/script.py", line 900, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'chapter2_travelPast_cafe1'.
-
-While running game code:
-  File "game/chapter-2.rpy", line 145, in script
-    jump chapter2_travelPast_cafe1
-ScriptError: could not find label 'chapter2_travelPast_cafe1'.
-
-Full traceback:
-  File "game/chapter-2.rpy", line 225, in script
-    jump chapter2_travelPast_cafe2
-  File "/Applications/renpy-7.4.2-sdk/renpy/ast.py", line 1711, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-7.4.2-sdk/renpy/script.py", line 900, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'chapter2_travelPast_cafe2'.
-
-While running game code:
-  File "game/chapter-2.rpy", line 225, in script
-    jump chapter2_travelPast_cafe2
-ScriptError: could not find label 'chapter2_travelPast_cafe2'.
+Total time until interface ready: 1.33286905289s

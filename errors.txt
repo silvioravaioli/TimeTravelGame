@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapter-2.rpy", line 179: reached end of line when expecting ':'.
-    if $ mission2personal_success == 0
-                                      ^
-
-File "game/chapter-2.rpy", line 181: expected statement.
-    else
-        ^
+File "game/chapter-4.rpy", line 78: choice menuitem expects a non-empty block.
+    "Panic":
+            ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Apr 10 19:25:51 2021
+Sat Apr 17 18:42:47 2021
