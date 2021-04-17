@@ -33,13 +33,13 @@ label chapter2_office_StarWarsDay1:
     show boss neutral at t33
     boss "What the HELL are you wearing?"
 
-    show protagonist wookie at t31
+    show protagonist wookie_normal at t31
     p "I'm a Wookie! Star Wars day? Said so on the poster on the wall?"
 
     show boss angry at t33
     boss "That's NEXT Monday! Not TODAY! Today's our investor meeting! You're presenting and you show up dressed as Bigfoot?"
 
-    show protagonist anxious at t31
+    show protagonist wookie_anxious at t31
     p "Oh..."
     scene black with Dissolve(2.0)
 
@@ -315,7 +315,7 @@ label chapter2_travelPast_home2_burn:
 
     show protagonist surprised at t11
     p "I can't believe I spent $300 on this"
-    show protagonist anxious at t11
+    show protagonist wookie_throw at t11
     p "Well... goodbye Wookie costume. You will be missed."
     show protagonist at thide
     hide protagonist
@@ -333,7 +333,7 @@ label chapter2_travelPast_home2_throw:
 
     show protagonist surprised at t11
     p "I can't believe I spent $300 on this"
-    show protagonist anxious at t11
+    show protagonist wookie_throw at t11
     p "Well... goodbye Wookie costume. You will be missed."
     show protagonist at thide
     hide protagonist
