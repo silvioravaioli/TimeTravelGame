@@ -11,12 +11,14 @@ call transforms
 # name of the character.
 
 define p = Character("You",color="#ffff00")     # protagonist
-define pp = Character("Past self",color="#888888")     # past protagonist
-define g = Character("timegod_name" ,color="#809fff", dynamic=True)        # god
-define timegod_name = "???"
+define pp = Character("You (from the past)",color="#888888")     # past protagonist
 define coworker = Character("Coworker",color="#33cc33")        # coworker
 define barista = Character("Barista",color="#ff0066")       # barista
 define boss = Character("Boss",color="#ff0066")         # boss
+define n = Character("",color="#d9d9d9")               # narrator
+
+define g = Character("timegod_name" ,color="#809fff", dynamic=True)        # god
+define timegod_name = "???"
 
 
 ## extra - in case we want to add more
@@ -24,7 +26,6 @@ define e = Character("Eileen")
 define s = Character("Unclear",color="#33cc33")        # coworker
 define f = Character("Friend",color="#33cc33")          # friend
 define m = Character("Mother",color="#ff0066")          # mother
-define n = Character("",color="#d9d9d9")               # narrator
 
 
 
