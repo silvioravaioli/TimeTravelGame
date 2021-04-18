@@ -118,9 +118,9 @@ label chapter4_home_meetTimeGod:
     show protagonist anxious at t11
     p "Is there anything I can do to fix this?"
     p "If only I could travel back again."
-    show protagonist suprised at s11
+    show protagonist surprised at s11
     p "If only I could travel back again."
-    show protagonist suprised at s31
+    show protagonist surprised at s31
 
     show timegod creepy at t33
     g "I have a mission for you."
@@ -131,13 +131,13 @@ label chapter4_home_meetTimeGod:
     p "I’ll do whatever, please just send me back."
     show protagonist at s31
 
-    show timegod normal at t33
+    show timegod neutral at t33
     g "Interesting. Very interesting."
     g "You have been performing quite satisfactorily. It is time to entrust you with a more important task."
-    show laugh normal
+    show timegod laugh
     g "Although important, this task is not particularly difficult."
     g "You must simply place a certain object at a specific place at a particular time."
-    show angry normal
+    show timegod angry
     g "However, being off by even a minute could have disastrous consequences."
     g "If you fail in this mission, I will never appear before you again."
     show timegod happy
@@ -152,11 +152,11 @@ label chapter4_home_meetTimeGod:
     menu:
         g "Are you ready to accept this responsibility?"
         "Yes. Yes, please send me back now":
-            show timegod normal at t11
+            show timegod neutral at t11
         "I am ready":
-            show timegod normal at t11
+            show timegod neutral at t11
         "I need to think about it":
-            show timegod normal at t11
+            show timegod neutral at t11
 
     g "Interesting answer. No time to waste!"
     show timegod happy
@@ -206,101 +206,210 @@ label chapter4_home_meetTimeGod:
     menu:
         p "Maybe I should head there early just to be safe?"
         "Go to the Street":
-            jump chapter3_street_early
+            jump chapter4_street_early
         "Go to the Cafe":
             $ flag_visited_cafe = 1;
-            jump chapter3_cafe_prelude
+            jump chapter4_cafe_prelude
         "Go to the Office":
             $ flag_visited_office = 1;
-            jump chapter3_office_prelude
+            jump chapter4_office_prelude
         "Stay Home for a while":
             $ flag_visited_home = 1;
-            jump chapter3_home_prelude
+            jump chapter4_home_prelude
 
 
 
 ####################################################
-label chapter3_street_early:
+label chapter4_street_early:
 
-    scene bg home
+    scene bg cafeoutdoor
 
     show protagonist neutral at t11
     p "Oof, finally made it here. What time is it?"
     p "Looks like it’s 8:05 am. I have plenty of time to kill."
     p "Guess I’ll wait at that bench."
 
-    jump chapter3_street_decision
+    jump chapter4_street_decision
 
 
 ####################################################
-label chapter3_street_decision:
+label chapter4_street_decision:
 
-    scene bg home
+    scene bg cafeoutdoor
+
+    show protagonist anxious at t11
+    n "You are standing in front of the road."
+    n "The road has a huge traffic..."
+
+    p "So... I just have to find the biggest rock I can"
+    p "Let's see..."
+    show protagonist at thide
+    hide protagonist
 
     show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    p "Ok, this should work."
+    p "Now, I just have to lay this big rock in the middle of the street at exactly 9:00 am."
+    p "..."
+    show protagonist talking
+    p "It’s 8:58 right now."
+    show protagonist neutral
+    p "..."
+    show protagonist talking
+    p "...Soon..."
+
+    n "A loud sound from the road distracts you"
+
+    show protagonist surprised
+    p "Wait!"
+    show protagonist hmm
+    p "This is a really huge rock..."
+    p "And that’s a busy road..."
+    p "..."
+    show protagonist anxious
+    p "What if the rock causes a car accident?"
+    show protagonist surprised
+    p "No. What if I am causing a car accident?"
+    show protagonist at t31
+    show protagonist at s31
+
+    show timegod neutral at t33
+    g "What is the matter here?"
+    show timegod laugh
+    g "Might I remind you, your time’s almost up."
+    g "You need to put down that rock in a minute"
+    show timegod angry
+    g "You need to put down that rock in a minute, or you will suffer the consequences."
+    show timegod at s33
+
+    show protagonist hmm at t31
+    p "But..."
+    show protagonist at s31
+
+    show timegod angry at t33
+    g "But what?"
+    g "You’ve done plenty of missions for me before. This is the same idea!"
+    show timegod at s33
+
+    show protagonist anxious at t31
+    p "But this seems... different. It... it just doesn’t seem safe."
+    show protagonist surprised at t31
+    p "What if there’s a car accident? What if we kill someone?"
+    show protagonist at s31
+
+    show timegod neutral at t33
+    g "Safe?! You know what’s not safe?"
+    show timegod laugh
+    g "TIME TRAVEL! But here you are, doing it anyway."
+    g "You’ve never been one to shrink from a challenge, have you?"
+    show timegod at s33
+
+    show protagonist anxious at t31
+    p "I mean, I guess not."
+    show protagonist at s31
+
+    show timegod happy at t33
+    g "Exactly! This mission though? Laying a rock in the middle of the intersection?"
+    g "That’s the safest thing you’ll do today."
+    show timegod at s33
+
+    show protagonist neutral at t31
+    p "Hmm..."
+    show protagonist at s31
+
+    show timegod happy at t33
+    g "Everything will be fine! Look at that rock. It’s tiny!"
+    show timegod at s33
+
+    show protagonist anxious at t31
+    p "Well, not really. It’s a pretty big rock."
+    show timegod angry
+    p "Well, not really. It’s a pretty big rock."
+    show protagonist at s31
+
+    show timegod happy at t33
+    g "It’s not. Trust me."
+    show timegod creepy
+    g "After all, when have I ever led you astray?"
+    show timegod at thide
+    hide timegod
+
+    show protagonist hmm at t31
     p "It’s 9am now. Now what should I do with this giant rock?"
+    hide protagonist
 
     menu:
         p "It’s 9am now. Now what should I do with this giant rock?"
         "Put the rock in the street":
-            jump chapter3_street_missionSuccess
+            jump chapter4_street_missionSuccess
         "Don’t do it!":
-            jump chapter3_street_missionFail
+            jump chapter4_street_missionFail
 
 
 
 ####################################################
-label chapter3_cafe_prelude:
+label chapter4_cafe_prelude:
 
     scene bg cafe
 
-    show protagonist neutral at t31
+    show protagonist talking at t31
     p "This seems kinda ominous"
     p "You were the one who dropped that letter off, right?"
     p "Uhm..."
+    show protagonist at s31
 
     show barista neutral at t33
     barista "Where did you get this? Do you realize what this did? I still don’t get how you even got a hold of this."
     barista "I don’t even know who you are really."
+    show barista at s33
 
+    show protagonist hmm at t31
     p "Uhm... I uh..."
+    show protagonist at s31
 
+    show barista at t33
     barista "You know, I couldn’t work after that."
     barista "Do you know how hard it is to work in the place where you found out someone is cheating on you?"
+
+    show protagonist surprised
+
     barista "Day in and day out being reminded of that."
+    show barista at s33
 
+    show protagonist anxious at t31
     p "I don’t uh... suppose I would..."
+    show protagonist at s31
 
+    show barista at t33
     barista "It took quite a bit of confidence to come in today."
     barista "I don’t think you’d know that, dropping that letter off for someone else."
+    show barista at s33
 
+    show protagonist at t31
     p "Yeah uh I guess. I think that I’m gonna leave now."
     p "Probably not the best idea to eat."
+    show protagonist at s31
 
+    show barista at t33
     barista "Probably a good idea."
     hide barista
 
+    show protagonist hmm at t31
     p "Where should I go now?"
     hide protagonist
 
     menu:
         p "Where should I go now?"
         "Go to the Street":
-            jump chapter3_street_decision
+            jump chapter4_street_decision
         "Go to the Office" (disabled=False) if flag_visited_office==0:
             $ flag_visited_office = 1;
-            jump chapter3_office_prelude
+            jump chapter4_office_prelude
         "Go to the Office" (disabled=True) if flag_visited_office==1:
             $ flag_visited_office = 1;
-            jump chapter3_office_prelude
+            jump chapter4_office_prelude
         "Go back Home" (disabled=False) if flag_visited_home==0:
             $ flag_visited_home = 1;
-            jump chapter3_home_prelude
+            jump chapter4_home_prelude
         "Go back Home" (disabled=True) if flag_visited_home==1:
             $ flag_visited_home = 1;
-            jump chapter3_home_prelude
+            jump chapter4_home_prelude

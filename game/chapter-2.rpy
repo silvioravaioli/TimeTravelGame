@@ -18,7 +18,7 @@ label start_chapter2:
     show protagonist excited at t11
     p "Oh YES! OH YES OH YES! Next Monday is STAR WARS DAY! I am going to absolutely SMOKE the competition."
     show protagonist anxious at t11
-    p "What should I be? Princess Leia? Stormtrooper? I do a mean Darth Vader impression too. Wookie? Hmm...."
+    p "What should I be? Princess Leia? Stormtrooper? I do a mean Darth Vader impression too. Wookiee? Hmm...."
 
     scene black with Dissolve(2.0)
     jump chapter2_office_StarWarsDay1
@@ -34,7 +34,7 @@ label chapter2_office_StarWarsDay1:
     boss "What the HELL are you wearing?"
 
     show protagonist wookie_normal at t31
-    p "I'm a Wookie! Star Wars day? Said so on the poster on the wall?"
+    p "I'm a Wookiee! Star Wars day? Said so on the poster on the wall?"
 
     show boss angry at t33
     boss "That's NEXT Monday! Not TODAY! Today's our investor meeting! You're presenting and you show up dressed as Bigfoot?"
@@ -316,11 +316,9 @@ label chapter2_travelPast_home2_burn:
     show protagonist surprised at t11
     p "I can't believe I spent $300 on this"
     show protagonist wookie_throw at t11
-    p "Well... goodbye Wookie costume. You will be missed."
+    p "Well... goodbye Wookiee costume. You will be missed."
     show protagonist at thide
     hide protagonist
-
-    n "Show same P with Wookie, but the costume is now on fire"
 
     jump chapter2_travelPast_home2_end
 
@@ -334,11 +332,9 @@ label chapter2_travelPast_home2_throw:
     show protagonist surprised at t11
     p "I can't believe I spent $300 on this"
     show protagonist wookie_throw at t11
-    p "Well... goodbye Wookie costume. You will be missed."
+    p "Well... goodbye Wookiee costume. You will be missed."
     show protagonist at thide
     hide protagonist
-
-    n "Show same P holding Wookie costume over trash can"
 
     jump chapter2_travelPast_home2_end
 
@@ -353,7 +349,7 @@ label chapter2_travelPast_home2_end:
         show protagonist talking at t11
         p "I rescued the pen, destroyed my costume."
         show protagonist anxious at t11
-        p "Now I definitely won't be showing up accidentally dressed as Wookie..."
+        p "Now I definitely won't be showing up accidentally dressed as Wookiee..."
         show protagonist hmm at t11
         p "So what now?"
         hide protagonist
@@ -607,7 +603,7 @@ label chapter2_end_failure:
     if mission1personal_success == 0:
         boss "First, the 'bean water' saga and now this."
     boss "That meeting was ridiculous, went as awful as possible for both of us."
-    n "Flashback graphic akin to prior (Image of Wookie P with a chart he's presenting. We see the backs of a bunch of people wearing suits in the foreground. B is standing off to the side, facepalming. P is visibly freaking out] albeit this time also shows the boss slightly panicking)"
+    n "Flashback graphic akin to prior (Image of Wookiee P with a chart he's presenting. We see the backs of a bunch of people wearing suits in the foreground. B is standing off to the side, facepalming. P is visibly freaking out] albeit this time also shows the boss slightly panicking)"
     boss "I still don't get how you missed the date on this one. The poster was quite clear on dates."
     p "Uhm, accidents happen? Was it at least a good costume? I spent around 300 dollars on it."
     boss "No, it really wasn't, now please leave. On another note, if you've seen a personalized pen with my initials, PLEASE return it."
