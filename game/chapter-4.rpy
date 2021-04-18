@@ -115,24 +115,35 @@ label chapter4_home_meetTimeGod:
 
     scene bg home
 
-    show protagonist neutral at t11
+    show protagonist anxious at t11
     p "Is there anything I can do to fix this?"
-    show protagonist neutral
     p "If only I could travel back again."
-    show protagonist neutral
+    show protagonist suprised at s11
+    p "If only I could travel back again."
+    show protagonist suprised at s31
 
+    show timegod creepy at t33
     g "I have a mission for you."
+    show timegod at s33
 
-    p "Wonderful. Send me back now. I need to go back. I’ll do whatever, please just send me back."
+    show protagonist anxious at t31
+    p "Wonderful. Send me back now. I need to go back."
+    p "I’ll do whatever, please just send me back."
+    show protagonist at s31
 
+    show timegod normal at t33
     g "Interesting. Very interesting."
     g "You have been performing quite satisfactorily. It is time to entrust you with a more important task."
+    show laugh normal
     g "Although important, this task is not particularly difficult."
     g "You must simply place a certain object at a specific place at a particular time."
+    show angry normal
     g "However, being off by even a minute could have disastrous consequences."
     g "If you fail in this mission, I will never appear before you again."
+    show timegod happy
     g "On the other hand, success will yield great rewards."
     g "If you achieve this goal, you will have the opportunity to fix any mistake of your choosing."
+    show timegod laugh
     g "Name a time, and I will send you there."
     g "Are you ready to accept this responsibility?"
     hide protagonist
@@ -141,36 +152,51 @@ label chapter4_home_meetTimeGod:
     menu:
         g "Are you ready to accept this responsibility?"
         "Yes. Yes, please send me back now":
-            show protagonist anxious at t11
+            show timegod normal at t11
         "I am ready":
-            show protagonist anxious at t11
+            show timegod normal at t11
         "I need to think about it":
-            show protagonist anxious at t11
-
+            show timegod normal at t11
 
     g "Interesting answer. No time to waste!"
-    n "holding rock"
+    show timegod happy
     g "Go to the intersection of Kronos Avenue with Fate Street."
-    p "There will be a pile of rocks at a construction site on the southeast corner."
-    p "Select the largest one."
-    p "You must place this stone exactly 47 inches to the east of the red bench on the median."
-    p "It must be placed at exactly 9:00 am."
-    p "Both the location and time are vitally important."
-    p "A second later or an inch further, and your efforts will result in failure."
-    p "Remember carefully: 9:00 am on the dot. 47 inches to the east of the red bench."
-    p "I wish you luck in your endeavour."
-
+    g "There will be a pile of rocks at a construction site on the southeast corner."
+    g "Select the largest one."
+    show timegod laugh
+    g "You must place this stone exactly 47 inches to the east of the red bench on the median."
+    g "It must be placed at exactly 9:00 am."
+    show timegod angry
+    g "Both the location and time are vitally important."
+    g "A second later or an inch further, and your efforts will result in failure."
+    show timegod creepy
+    g "Remember carefully: 9:00 am on the dot. 47 inches to the east of the red bench."
+    g "I wish you luck in your endeavour."
+    show timegod snap1 at t11
+    g "Ready..."
+    show timegod snap1 at t11
+    g "Set..."
+    show timegod snap1 at t11
+    g "Go!"
+    show timegod snap2 at t11
+    g "Go!"
+    hide timegod
 
     scene black with Dissolve(1.0)
-    p "Time God snaps fingers and you’re transported to 7:30 am in the morning"
 
+    n "{i}The Time God snaps his fingers and you are transported back in the past.{\i}"
+    n "{i}It's 7:30am.{\i}"
 
+    scene bg cafeoutdoor
+
+    show protagonist neutral at t11
     p "I just need to do this task."
     p "Then I can save my boss and my coworkers as well."
     p "I have another chance. Let’s do this."
     p "OK it looks like it’s 7:30 am."
     p "I have to put the rock down at 9 exactly."
     p "Maybe I should head there early just to be safe?"
+    hide protagonist
 
     # INITIALIZE VARIABLES FOR VISITED PLACES
     $ flag_visited_cafe = 0;
@@ -199,13 +225,11 @@ label chapter3_street_early:
     scene bg home
 
     show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    p "Oof, finally made it here. What time is it?"
+    p "Looks like it’s 8:05 am. I have plenty of time to kill."
+    p "Guess I’ll wait at that bench."
 
+    jump chapter3_street_decision
 
 
 ####################################################
@@ -219,46 +243,64 @@ label chapter3_street_decision:
     p "xxxx"
     p "xxxx"
     p "xxxx"
-    p "xxxx"
+    p "It’s 9am now. Now what should I do with this giant rock?"
+
+    menu:
+        p "It’s 9am now. Now what should I do with this giant rock?"
+        "Put the rock in the street":
+            jump chapter3_street_missionSuccess
+        "Don’t do it!":
+            jump chapter3_street_missionFail
+
 
 
 ####################################################
 label chapter3_cafe_prelude:
 
-    scene bg home
+    scene bg cafe
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show protagonist neutral at t31
+    p "This seems kinda ominous"
+    p "You were the one who dropped that letter off, right?"
+    p "Uhm..."
 
+    show barista neutral at t33
+    barista "Where did you get this? Do you realize what this did? I still don’t get how you even got a hold of this."
+    barista "I don’t even know who you are really."
 
-####################################################
-label chapter3_office_prelude:
+    p "Uhm... I uh..."
 
-    scene bg home
+    barista "You know, I couldn’t work after that."
+    barista "Do you know how hard it is to work in the place where you found out someone is cheating on you?"
+    barista "Day in and day out being reminded of that."
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    p "I don’t uh... suppose I would..."
 
+    barista "It took quite a bit of confidence to come in today."
+    barista "I don’t think you’d know that, dropping that letter off for someone else."
 
-####################################################
-label chapter3_home_prelude:
+    p "Yeah uh I guess. I think that I’m gonna leave now."
+    p "Probably not the best idea to eat."
 
-    scene bg home
+    barista "Probably a good idea."
+    hide barista
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    p "Where should I go now?"
+    hide protagonist
+
+    menu:
+        p "Where should I go now?"
+        "Go to the Street":
+            jump chapter3_street_decision
+        "Go to the Office" (disabled=False) if flag_visited_office==0:
+            $ flag_visited_office = 1;
+            jump chapter3_office_prelude
+        "Go to the Office" (disabled=True) if flag_visited_office==1:
+            $ flag_visited_office = 1;
+            jump chapter3_office_prelude
+        "Go back Home" (disabled=False) if flag_visited_home==0:
+            $ flag_visited_home = 1;
+            jump chapter3_home_prelude
+        "Go back Home" (disabled=True) if flag_visited_home==1:
+            $ flag_visited_home = 1;
+            jump chapter3_home_prelude

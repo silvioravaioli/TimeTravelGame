@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapter-4.rpy", line 78: choice menuitem expects a non-empty block.
-    "Panic":
-            ^
+File "game/chapter-4.rpy", line 295: end of line expected.
+    "Go to the Office": (disabled=False) if flag_visited_office==0:
+                        ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Apr 17 18:42:47 2021
+Sat Apr 17 19:59:18 2021
