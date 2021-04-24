@@ -405,7 +405,7 @@ label chapter2_returnPen:
 
     scene bg home
 
-    show timegod snap1 at t11
+    show timegod happy at t11
     g "Thank you for bringing me this pen."
     show timegod happy at t11
     g "This was truly a beneficial exchange."
