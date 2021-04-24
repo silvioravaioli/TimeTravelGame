@@ -366,14 +366,14 @@ label chapter1_office:
         "Return to the present":
             show timegod laugh at t11
             g "Nice try. Your job isn't finished yet."
-            g "You should make sure the mission is completed before you can come back!"
-            show timegod snap1 at t11
-            g "You should make sure the mission is completed before you can come back!"
-            show timegod snap2 at t11
+            hide timegod
+            menu:
+                p "What should I do now?"
+                "Follow the past self to the cafe":
+                    jump chapter1_cafe_past2
+                "Return to the present" (disabled=True):
+                    show timegod laugh at t11
 
-            scene black with Dissolve(2.0)
-            n "The Time God snaps fingers and sends you back to the past"
-            jump chapter1_cafe_past2
 
 
 
