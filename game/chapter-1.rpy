@@ -430,11 +430,45 @@ label chapter1_restartmission:
 
 ####################################################
 label chapter1_end:
-    scene black with Dissolve(2.0)
-    n "The mission is completed, and the mysterious Time God disappeared."
-    n "The day after, in the Office..."
 
-    scene bg office
+    scene black with Dissolve(0.5)
+    scene bg home with Dissolve(0.5)
+
+    show timegod neutral at t11
+    g "So... how do you think it went?"
+    hide timegod
+
+    menu:
+        g "So... how do you think it went?"
+        "Not great":
+            show timegod neutral at t11
+            g "Hmm... You’ll get better next time!"
+        "Went ok.":
+            show timegod neutral at t11
+            g "Good. Now you know what to expect next time!"
+
+    show timegod snap3
+    n "The Time God snaps the fingers and sends you back to the present."
+    show timegod at thide
+    hide timegod
+    scene black with Dissolve(0.5)
+    n "The Time God snaps the fingers and sends you back to the present."
+    scene bg home with Dissolve(0.5)
+
+    show protagonist anxious at t31
+    p "So... what happened when I was gone?"
+    show protagonist at s31
+    show timegod creepy at t33
+    g "Interesting question. Guess you’ll have to find out..."
+    show timegod at thide
+    hide timegod
+    show protagonist at thide
+    hide protagonist
+
+    scene black with Dissolve(0.5)
+    n "The day after, in the Office..."
+    scene bg office with Dissolve(0.5)
+
     show boss neutral at t11
     boss "I need you to file these documents, and sign these things for me."
     boss "Also I need those progress reports done by the end of the day."
