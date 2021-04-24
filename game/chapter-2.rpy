@@ -1,8 +1,6 @@
 ####################################################
 label start_chapter2:
 
-    jump chapter2_travelPast_cafe4
-
     ### INITIALIZE MISSIONS
     $ mission2personal_success = 0
     $ mission2timegod_success  = 0
