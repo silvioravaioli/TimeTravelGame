@@ -78,10 +78,16 @@ label chapter2_home_meetTimeGod:
     g "While you're at it, feel free to destroy this abomination of a Bigfoot costume."
     show timegod neutral at t11
     g "Are you ready to go?"
+    show timegod snap1 at t11
+    g "Are you ready to go?"
+    show timegod snap2 at t11
+    g "Are you ready to go?"
     hide timegod
 
+    scene black with Dissolve(1.0)
+    scene bg home with Dissolve(1.0)
+
     menu:
-        g "Are you ready to go?"
         "So what do you need me to get?":
             show timegod neutral at t11
             g "Interesting question."
