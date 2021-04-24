@@ -317,10 +317,14 @@ label chapter1_cafe_past3:
     barista "Oh, where'd this letter come from?"
     show barista shocked
     barista "Oh, where'd this letter come from?"
-    show barista at thide
-    hide barista
     show pastprotagonist at thide
     hide pastprotagonist
+    barista "Oh, where'd this letter come from?"
+    show barista at thide
+    hide barista
+
+    show protagonist neutral at t31
+    p "Oh, looks like I'm leaving. Better leave so that I don't run into myself."
 
     jump chapter1_end
 
