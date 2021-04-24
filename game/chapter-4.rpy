@@ -118,8 +118,6 @@ label chapter4_home_meetTimeGod:
     show protagonist anxious at t11
     p "Is there anything I can do to fix this?"
     p "If only I could travel back again."
-    show protagonist surprised at s11
-    p "If only I could travel back again."
     show protagonist surprised at s31
 
     show timegod creepy at t33
@@ -270,7 +268,7 @@ label chapter4_street_decision:
     show protagonist surprised
     p "No. What if I am causing a car accident?"
     show protagonist at t31
-    show protagonist at s31
+    show protagonist anxious at s31
 
     show timegod neutral at t33
     g "What is the matter here?"
@@ -294,7 +292,7 @@ label chapter4_street_decision:
     p "But this seems... different. It... it just doesn’t seem safe."
     show protagonist surprised at t31
     p "What if there’s a car accident? What if we kill someone?"
-    show protagonist at s31
+    show protagonist anxious at s31
 
     show timegod neutral at t33
     g "Safe?! You know what’s not safe?"
@@ -351,13 +349,14 @@ label chapter4_cafe_prelude:
 
     scene bg cafe
 
-    show protagonist talking at t31
+    show protagonist neutral at t31
     p "This seems kinda ominous"
-    p "You were the one who dropped that letter off, right?"
-    p "Uhm..."
     show protagonist at s31
 
     show barista neutral at t33
+    barista "You were the one who dropped that letter off, right?"
+    show protagonist anxious at s31
+    p "Uhm..."
     barista "Where did you get this? Do you realize what this did? I still don’t get how you even got a hold of this."
     barista "I don’t even know who you are really."
     show barista at s33
