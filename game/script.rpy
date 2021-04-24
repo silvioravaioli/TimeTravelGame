@@ -10,12 +10,16 @@ call transforms
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define p = Character("You",color="#ffff00")     # protagonist
+define p  = Character("You",color="#ffff00")     # protagonist
 define pp = Character("You (from the past)",color="#888888")     # past protagonist
-define coworker = Character("Coworker",color="#33cc33")        # coworker
-define barista = Character("Barista",color="#ff0066")       # barista
-define boss = Character("Boss",color="#ff0066")         # boss
-define n = Character("",color="#d9d9d9")               # narrator
+
+define barista = Character("Barista",color="#ff0066")        # barista
+define boss    = Character("Boss",color="#ff0066")           # boss
+define n       = Character("",color="#d9d9d9")               # narrator
+
+define coworker  = Character("Coworker",color="#33cc33")          # coworker
+define coworker2 = Character("Coworker 2",color="#33cc33")        # coworker 2
+
 
 define g = Character("timegod_name" ,color="#809fff", dynamic=True)        # god
 define timegod_name = "???"
@@ -69,5 +73,7 @@ label start_game:
             jump start_chapter3
         "Chapter 4":
             jump start_chapter4
+        "Chapter 5":
+            jump start_chapter5
         "Testing Zone":
             jump start_testingZone
