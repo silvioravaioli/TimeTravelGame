@@ -489,8 +489,8 @@ label chapter1_end:
     show boss at s33
 
     show protagonist talking at t31
-    boss "Ok, anything else?"
-    show protagonist at s31
+    p "Ok, anything else?"
+    show protagonist neutral at s31
 
     show boss at t33
     boss "Oh, yeah. Make me a cup of coffee"
