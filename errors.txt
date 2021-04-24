@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/chapter-4.rpy", line 295: end of line expected.
-    "Go to the Office": (disabled=False) if flag_visited_office==0:
-                        ^
+File "game/chapter-5.rpy", line 177: expected statement.
+    P: "You don’t think I’ve just been a huge doofus? The coffee... and the costume... not to mention the burger incident"
+     ^
+
+File "game/chapter-5.rpy", line 180: expected statement.
+    P: "I won’t let you down! Is there anything I can do to prove myself?"
+     ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Apr 17 19:59:18 2021
+Sat Apr 24 19:45:05 2021

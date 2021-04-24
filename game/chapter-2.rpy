@@ -5,6 +5,9 @@ label start_chapter2:
     $ mission2personal_success = 0
     $ mission2timegod_success  = 0
 
+    # TO BE REMOVED LATER
+    $ mission1personal_success = 0
+
     scene bg office
 
     show protagonist neutral at t11
@@ -273,7 +276,7 @@ label chapter2_travelPast_office2hide:
 
 
 ####################################################
-label chapter2_travelPast122:
+label chapter2_travelPast_home1:
 
     scene bg home
     # visiting home on time completes the personal mission
@@ -339,7 +342,7 @@ label chapter2_travelPast_home2_end:
     # NOTE: NOW THIS PART BRANCHES OUT BASED ON WHETHER YOU COMPLETED ALREADY THE MAIN MISSION
 
     # IF MAIN MISSION COMPLETED
-    if mission1timegod_success == 1:
+    if mission2timegod_success == 1:
         show protagonist talking at t11
         p "I rescued the pen, destroyed my costume."
         show protagonist anxious at t11
@@ -351,13 +354,13 @@ label chapter2_travelPast_home2_end:
         menu:
             p "So what now?"
             "Travel back to present and forget about all this":
-                jump chapter2_travelPast_home3
+                jump chapter2_returnPen
             "Destroying the costume made me hungry. I could have lunch now":
                 jump chapter2_travelPast_cafe4
 
 
     # IF MAIN MISSION NOT COMPLETED
-    if mission1timegod_success == 0:
+    if mission2timegod_success == 0:
         show timegod neutral at t11
         g "I see that you have disposed of the costume."
         show timegod creepy at t11
