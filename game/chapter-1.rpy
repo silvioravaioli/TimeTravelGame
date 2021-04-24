@@ -234,16 +234,16 @@ label chapter1_cafe_past2:
 
     scene bg cafeoutdoor
     show pastprotagonist neutral at t11
-    p "This must be the Hourglass Cafe."
-    p "OK, who am I supposed to deliver this to?"
-    p "I guess I can simply leave it to anyone."
+    pp "This must be the Hourglass Cafe."
+    pp "OK, who am I supposed to deliver this to?"
+    pp "I guess I can simply leave it to anyone."
     show pastprotagonist at thide
     hide pastprotagonist
 
     scene bg cafe
     show pastprotagonist neutral at t11
-    p "The food smells really good."
-    p "I might as well get some lunch while I’m at it."
+    pp "The food smells really good."
+    pp "I might as well get some lunch while I’m at it."
 
     jump chapter1_cafe_past3
 
@@ -336,12 +336,13 @@ label chapter1_office:
     show protagonist hmm
     p "Here’s what I'll do...write a delivery message on this letter and put it on my desk"
 
-    show protagonist excited
+    #show protagonist excited
+    hide protagonist
     n "The letter is now folded up nicely, with a post-it note on top that reads"
     n "\"URGENT: Deliver to Hourglass Cafe\" followed by the address"
     n "(Toilet flushes)"
 
-    show protagonist surprised
+    show protagonist surprised at t11
     p "HIDE!"
     show protagonist at thide
     hide protagonist
