@@ -448,17 +448,25 @@ label chapter1_end:
         "Not great":
             show timegod neutral at t11
             g "Hmm... You’ll get better next time!"
+            show timegod snap1 at t11
+            g "Hmm... You’ll get better next time!"
+            show timegod snap2 at t11
+            g "Hmm... You’ll get better next time!"
+
+            scene black with Dissolve(0.5)
+            n "{i}The Time God snaps their fingers and sends you back to the present.{\i}"
+            scene bg home with Dissolve(0.5)
         "Went ok.":
             show timegod neutral at t11
             g "Good. Now you know what to expect next time!"
+            show timegod snap1 at t11
+            g "Good. Now you know what to expect next time!"
+            show timegod snap2 at t11
+            g "Good. Now you know what to expect next time!"
 
-    show timegod snap3
-    n "The Time God snaps the fingers and sends you back to the present."
-    show timegod at thide
-    hide timegod
-    scene black with Dissolve(0.5)
-    n "The Time God snaps the fingers and sends you back to the present."
-    scene bg home with Dissolve(0.5)
+            scene black with Dissolve(0.5)
+            n "{i}The Time God snaps their fingers and sends you back to the present.{\i}"
+            scene bg home with Dissolve(0.5)
 
     show protagonist anxious at t31
     p "So... what happened when I was gone?"
