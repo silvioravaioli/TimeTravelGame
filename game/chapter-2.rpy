@@ -118,17 +118,7 @@ label chapter2_home_meetTimeGod:
 
     show timegod laugh at t11
     g "I hope your journey is fruitful!"
-    show timegod snap1 at t11
-    g "Ready..."
-    show timegod snap1 at t11
-    g "Set..."
-    show timegod snap1 at t11
-    g "Go!"
-    show timegod snap2 at t11
-    g "Go!"
-
-    scene black with Dissolve(2.0)
-    n "{i}The Time God snaps his fingers and you're transported back to last Sunday.{\i}"
+    scene bg home with Dissolve(1.0)
 
 
 
