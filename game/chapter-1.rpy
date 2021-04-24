@@ -412,7 +412,16 @@ label chapter1_restartmission:
     g "This is no time to nap!"
     show timegod angry at t11
     g "Have you already forgotten your mission???"
-    jump chapter1_introdialogue3
+    hide timegod
+
+    menu:
+        g "Have you already forgotten your mission???"
+        "Go to the Cafe":
+            jump chapter1_cafe_outdoor
+        "Go to the Office":
+            jump chapter1_office
+        "Stay Home and take a nap" (disabled=True):
+            jump chapter1_restartmission
 
 
 
