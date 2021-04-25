@@ -2,13 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/chapter-5.rpy", line 177: expected statement.
-    P: "You don’t think I’ve just been a huge doofus? The coffee... and the costume... not to mention the burger incident"
-     ^
-
-File "game/chapter-5.rpy", line 180: expected statement.
-    P: "I won’t let you down! Is there anything I can do to prove myself?"
-     ^
+File "game/script.rpy", line 17: Tab characters are not allowed in Ren'Py scripts.
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Apr 24 19:45:05 2021
+Sat Apr 24 23:42:09 2021
