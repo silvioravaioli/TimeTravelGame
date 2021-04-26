@@ -578,7 +578,7 @@ label chapter1_end_failure:
     boss "Actually after yesterday, you are banned from making coffee."
     show boss at s33
 
-    n "He is not joking. Pan to the coffee machine, there’s a huge printout with my face and a stop sign over it."
+    n "He is not joking. Above the coffee machine, there’s a huge printout with my face and a stop sign over it."
 
     show boss disgusted at t33
     boss "Bean water. My god..."
