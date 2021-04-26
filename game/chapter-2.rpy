@@ -15,41 +15,43 @@ label start_chapter2:
 
     show protagonist neutral at t11
     p "Ok it's almost 5pm. I'm heading out."
-    n "{i}You walk past and see a poster on the wall{\i}"
-    show protagonist hmm at t11
+    n "{i}You walk past and see a poster on the wall"
+    show protagonist hmm
     p "Hmm... I wonder what that is?"
-    n "{i}Poster says \"STAR WARS DAY\"{\i}"
-    show protagonist excited at t11
-    p "Oh YES! OH YES OH YES! Next Monday is STAR WARS DAY! I am going to absolutely SMOKE the competition."
-    show protagonist anxious at t11
-    p "What should I be? Princess Leia? Stormtrooper? I do a mean Darth Vader impression too. Wookiee? Hmm...."
+    n "{i}There are a bunch of stormtroopers forming the words {w}\"STAR {w}- WARS {w}- DAY\" "
+    show protagonist excited
+    p "Oh YES! OH YES OH YES! Next Monday is STAR WARS DAY! {w}I am going to absolutely SMOKE the competition."
+    show protagonist anxious
+    p "What should I be? {w}Princess Leia? {w}Stormtrooper? {w}I do a mean Darth Vader impression too. {w}Wookiee? Hmm...."
 
-    scene black with Dissolve(2.0)
+    scene black with Dissolve(0.5)
     jump chapter2_office_StarWarsDay1
 
 
 ####################################################
 label chapter2_office_StarWarsDay1:
 
-    scene bg office
+    n "{i}One week later..."
+    scene bg office with Dissolve(0.5)
 
-    n "{i}One week later...{\i}"
-    show boss neutral at t33
+    show boss normal at t33
     boss "What the HELL are you wearing?"
 
     show protagonist wookie_normal at t31
     p "I'm a Wookiee! Star Wars day? Said so on the poster on the wall?"
 
     show boss angry at t33
-    boss "That's NEXT Monday! Not TODAY! Today's our investor meeting! You're presenting and you show up dressed as Bigfoot?"
+    boss "That's NEXT Monday! Not TODAY! {w}Today's our investor meeting! You're presenting and you show up dressed as Bigfoot?"
 
     show protagonist wookie_anxious at t31
     p "Oh..."
-    scene black with Dissolve(2.0)
 
-    n "TODO - image of poster and scene with people in suits, protagonist and boss reactions"
+    n "This probably looks embarassing... {w}Everyone else suited up, and I... {w}am a Wookiee!"
+    #n "TODO - image of poster and scene with people in suits, protagonist and boss reactions"
     # [Image of Wookie P with a chart he's presenting. We see the backs of a bunch of people wearing suits in the foreground.
     # B is standing off to the side, facepalming. P is visibly freaking out]
+
+    scene black with Dissolve(0.5)
     jump chapter2_home_meetTimeGod
 
 
@@ -57,18 +59,18 @@ label chapter2_office_StarWarsDay1:
 ####################################################
 label chapter2_home_meetTimeGod:
 
-    scene bg home
+    scene bg home with Dissolve(0.5)
 
     show timegod neutral at t11
-    g "Whoa you really messed that up. I see you've had a bad day...again."
-    show timegod laugh at t11
+    g "Whoa you really messed that up. I see you've had a bad day... {w}again!"
+    show timegod laugh
     g "I have a proposition for you."
-    show timegod creepy at t11
-    g "Would you like a do over...a chance to undo your mistakes?"
+    show timegod creepy
+    g "Would you like a do over... a chance to undo your mistakes?"
     hide timegod
 
     menu:
-        g "Would you like a do over...a chance to undo your mistakes?"
+        g "Would you like a do over... a chance to undo your mistakes?"
         "You again!":
             show timegod neutral at t11
             g "Interesting statement."
@@ -80,18 +82,19 @@ label chapter2_home_meetTimeGod:
             g "Interesting thought."
 
     g "I'm going to need you to pick something up for me."
-    show timegod laugh at t11
+    show timegod laugh
     g "While you're at it, feel free to destroy this abomination of a Bigfoot costume."
-    show timegod neutral at t11
+    show timegod neutral
     g "Are you ready to go?"
-    show timegod snap1 at t11
+    show timegod snap1
     g "Are you ready to go?"
-    show timegod snap2 at t11
+    show timegod snap2
     g "Are you ready to go?"
+    show timegod at thide
     hide timegod
 
-    scene black with Dissolve(1.0)
-    scene bg home with Dissolve(1.0)
+    scene black with Dissolve(0.5)
+    scene bg home with Dissolve(0.5)
 
     menu:
         "So what do you need me to get?":
@@ -104,12 +107,12 @@ label chapter2_home_meetTimeGod:
             show timegod neutral at t11
             g "Interesting question."
 
-    show timegod neutral at t11
+    show timegod happy
     g "Your boss has a particularly nice fountainhead pen which I have admired for quite a while."
     g "During work hours, he always maintained at most a 4 foot distance from this favorite object of his."
-    show timegod angry at t11
+    show timegod angry
     g "Regrettably, this past Sunday he dropped this pen down the elevator shaft of your office building."
-    show timegod happy at t11
+    show timegod happy
     g "I wish to rescue this prize before it becomes lost forever."
     hide timegod
 
@@ -124,27 +127,29 @@ label chapter2_home_meetTimeGod:
 
     show timegod laugh at t11
     g "I hope your journey is fruitful!"
-    scene bg home with Dissolve(1.0)
+    scene bg home with Dissolve(0.5)
 
 
 
 ####################################################
 label chapter2_travelPast1:
 
-    scene bg home
+    scene bg home with Dissolve(0.5)
 
     show protagonist neutral at t11
-    p "I need to obtain that pen and somehow get rid of my costume. What should I do first?"
+    p "I need to obtain that pen and somehow get rid of my costume. {w}What should I do first?"
     hide protagonist
 
     menu:
         p "I need to obtain that pen and somehow get rid of my costume. What should I do first?"
         "Go to the office":
+            scene bg home with Dissolve(0.5)
             jump chapter2_travelPast_office1
+        "Go to the cafe":
+            scene bg home with Dissolve(0.5)
+            jump chapter2_travelPast_cafe1
         "Stay home":
             jump chapter2_travelPast_home1
-        "Go to the cafe":
-            jump chapter2_travelPast_cafe1
 
 
 
@@ -157,15 +162,20 @@ label chapter2_travelPast_office1:
 
     show protagonist neutral at t11
     p "So I just have to go get the boss's lucky pen."
-    show protagonist excited at t11
+    show protagonist excited
     p "EASY!"
     show protagonist at thide
     hide protagonist
 
-    n "{i}B pops into view but not talking to P or anything. and B is holding his pen{\i}"
+    show boss pen at t11
+    n "{i}The boss is really here, even if it's Sunday. He really cannot take a break from work."
+    n "{i}So focused, so motivated, he is really impressive!"
+    n "{i}But, he still has the pen..."
+    n "{i}Oh shoot, he went back to his office!!!"
+    show boss at thide
+    hide boss
 
     show protagonist anxious at t11
-    p "Oh. Shoot. He's literally in his office holding his pen."
     p "Ahhh.. What do I do now?"
     hide protagonist
 
@@ -184,35 +194,37 @@ label chapter2_travelPast_office2fire:
     #scene bg office
 
     show protagonist hmm at t11
-    p "Hmmm"
-    p "What if I pulled the fire alarm? That should empty the building"
+    p "Hmmm..."
+    p "What if I pulled the fire alarm? That should empty the building."
     show protagonist at thide
     hide protagonist
 
-    n "{i}P sprite turns into P sprite pulling fire alarm{\i}"
-    n "Alternative (if it's easier to draw): {i}full-screen image of fire alarm on wall, with hand pulling it{\i}"
-    n "You hear the sound of the fire alarm"
+    n "{i}Pulling the fire alarm seems the fastest solution..."
+    #n "{i}P sprite turns into P sprite pulling fire alarm{\i}"
+    #n "Alternative (if it's easier to draw): {i}full-screen image of fire alarm on wall, with hand pulling it{\i}"
+    #n "You hear the sound of the fire alarm"
 
     show boss neutral at t11
     boss "Uhm?"
-    boss "B {i}panicking, is either not holding the pen or is seen dropping it {\i}"
+    show boss panicking
     boss "FIRE! FIRE! EVERYONE, GET OUTTA HERE!"
     show boss at thide
     hide boss
 
     show protagonist joy at t11
     p "OK, this is my chance."
-    show protagonist woohoo at t11
+    show protagonist woohoo
     p "Go go go!"
     show protagonist at thide
     hide protagonist
 
-    n "{i}P sneaks off screen in the direction of the pen{\i}"
-    n "{i}P returns, triumphant, holding the pen{\i}"
+    n "{i}It must be somewhere down here..."
+    #n "{i}P sneaks off screen in the direction of the pen{\i}"
+    #n "{i}P returns, triumphant, holding the pen{\i}"
 
     show protagonist joy at t11
     p "AH HA! I got it!"
-    show protagonist neutral at t11
+    show protagonist neutral
     p "What should I do now?"
     hide protagonist
 
@@ -527,14 +539,17 @@ label chapter2_failedDestruction:
     p "Wait! But –– but my costume!"
     show timegod snap1 at t11
     show timegod snap2 at t11
-    scene black with Dissolve(2.0)
+    scene black with Dissolve(0.5)
     jump chapter2_returnPen
 
 
 ####################################################
 label chapter2_travelPast_cafe1:
+
     $ mission2cafe = 1
-    show bg cafe
+
+    show bg cafe with Dissolve(0.5)
+
     show protagonist neutral at t11
     p "Is that Time God even real? I need to clear my mind. Maybe I should grab something to eat."
     p "Oh, looks like there's a new barista around. I wonder what happened to the old one."
@@ -556,37 +571,51 @@ label chapter2_travelPast_cafe1:
 
 ####################################################
 label chapter2_travelPast_cafe2:
+
     $ mission2cafe = 1
-    show bg cafe
+
+    show bg cafe with Dissolve(0.5)
+
     show protagonist excited at t11
     p "YES! I GOT THE PEN!"
-    hide protagonist excited
     show protagonist anxious at t11
     p "Oh dang. I stole a pen."
     p "Am I going to be arrested?"
     p "Oh dang."
-    hide protagonist anxious
     show protagonist neutral at t11
     p "No it's fine. The pen was going to be lost anyway."
     p "But maybe he could find it again?"
     p "I need to clear my mind. Maybe I should grab something to eat."
+    hide protagonist
+
     menu:
         "Grab some food":
+            scene black with Dissolve(0.5)
             jump chapter2_travelPast_cafe3
         "Go home":
+            scene black with Dissolve(0.5)
             jump chapter2_travelPast_home1
 
 
 ####################################################
 label chapter2_travelPast_cafe3:
-    scene bg cafe
+
+    scene bg cafe with Dissolve(0.5)
+
     show protagonist neutral at t11
     p "Oh, looks like there's a new barista around. I wonder what happened to the old one."
+    show protagonist joy
     p "Hmm... I'll have an egg salad sandwich."
     p "Oh, also extra onions."
     p "And extra pickles."
     p "And extra garlic."
-    n "TODO: Image of protagonist eating, followed by the same image but with darker sky. (That is, it becomes night while eating)."
+    show protagonist at thide
+    hide protagonist
+
+    #n "TODO Image of protagonist eating, followed by the same image but with darker sky. (That is, it becomes night while eating)."
+    n "{i}This sandwich is delicious. How did I discover this place again?"
+
+    scene black with Dissolve(0.5)
     if mission2personal_success == 0:
         jump chapter2_failedDestruction
     else:
@@ -596,49 +625,56 @@ label chapter2_travelPast_cafe3:
 ####################################################
 label chapter2_travelPast_cafe4:
     $ mission2cafe = 1
-    scene bg cafe
+
+    scene bg cafe with Dissolve(0.5)
+
     show protagonist anxious at t11
     p "Oh dang. I stole a pen."
     p "Am I going to be arrested?"
     p "Oh dang."
-    hide protagonist anxious
-    show protagonist neutral at t11
+    show protagonist neutral
     p "No it's fine. The pen was going to be lost anyway."
-    hide protagonist neutral
-    show protagonist hmm at t11
+    show protagonist hmm
     p "But maybe he could find it again?"
     p "Is that Time God even real?"
-    hide protagonist hmm
-    show protagonist neutral at t11
+    show protagonist neutral
     p "Oh, looks like there's a new barista around. I wonder what happened to the old one."
+    show protagonist joy
     p "Hmm... I'll have an egg salad sandwich."
     p "Oh, also extra onions."
     p "And extra pickles."
     p "And extra garlic."
-    n "TODO Image of protagonist eating, followed by the same image but with darker sky. (That is, it becomes night while eating)."
-    hide protagonist neutral
+    show protagonist at thide
+    hide protagonist
+
+    #n "TODO Image of protagonist eating, followed by the same image but with darker sky. (That is, it becomes night while eating)."
+    n "{i}This sandwich is delicious. How did I discover this place again?"
+
     show timegod angry at t11
     g "Where in the world have you been?"
-    hide timegod angry
-    show timegod laugh at t11
+    show timegod laugh
     g "Oh! You're still eating?"
-    g "I'm bringing you back."
-    show timegod snap1 at t11
-    g "I'm bringing you back."
-    show timegod snap2 at t11
-    g "I'm bringing you back."
-    scene black with Dissolve(2.0)
+    g "I'm bringing you back right now!"
+    show timegod snap1
+    g "I'm bringing you back right now!"
+    show timegod snap2
+    g "I'm bringing you back right now!"
+    show timegod at thide
+    hide timegod
+
+    scene black with Dissolve(0.5)
     jump chapter2_end
 
 
 
 ####################################################
 label chapter2_end:
-    scene bg office
-    # Boss is either talking w/ P or asks him to come in
+
+    scene bg office with Dissolve(0.5)
     show protagonist anxious at t31
     p "Jeez, I guarantee this isn't gonna be good."
-    p "You wanted to see me?"
+    p "Hi boss, you wanted to see me?"
+
     # if True:
     if mission2personal_success == 1:
         jump chapter2_end_success
@@ -650,18 +686,37 @@ label chapter2_end:
 ####################################################
 label chapter2_end_success:
     # 6.2 - Lose Costume
-    show boss neutral at t33
-    boss "I'd like to congratulate you for your work yesterday, really knocked it out of the park on this one."
+
+    show boss happy at t33
+    boss "I'd like to congratulate you for your work yesterday, {w}really knocked it out of the park on this one."
 
     # (If personal mission from level 1 passed)
     if mission1personal_success == 1:
         boss "You've been showing real improvement since you made coffee that last meeting."
-    show protagonist joy at t31
+    show boss at s33
+
+    show protagonist blush at t31
     p "OH YEAH! Well, how did it work out afterwards?"
+    show protagonist at s31
+
+    show boss sad at t33
     boss "Uh, less stellar than expected unfortunately. There was a slight issue..."
-    n "Flashback graphic of the same scene except protagonist in normal clothing, looking fairly confident in presenting. Boss shown to be fairly panicked."
+    show boss at s33
+
+    #n "{i}Flashback graphic of the same scene except protagonist in normal clothing, looking fairly confident in presenting. Boss shown to be fairly panicked."
+    n "{i}I guess the meeting with the clients went much better without a wookiee costume."
+
+    show boss neutral
+    show protagonist woohoo
     p "Oh, okay. Well, thank you for the compliment! I'm a great worker, haha!"
-    boss "That is all, also, let me know if you have seen a personalized fountainhead pen with my initials. Please, it would mean quite a lot to me."
+    show protagonist at s31
+
+    show boss sad at t33
+    boss "That is all, also, let me know if you have seen a personalized fountainhead pen with my initials. {w}Please, it would mean quite a lot to me."
+    show boss at s33
+
+    scene black with Dissolve(1.0)
+    n "END OF MISSION 2"
     return
 
 
@@ -669,17 +724,40 @@ label chapter2_end_success:
 
 label chapter2_end_failure:
     # 6.1 - Doesn't Lose Costume (Similar to original)
+
     show boss angry at t33
     boss "I don't think this needs to be said, but yesterday was a disaster."
+
     # (If personal mission from level 1 failed)
     if mission1personal_success == 0:
         boss "First, the 'bean water' saga and now this."
+
+    show boss neutral
     boss "That meeting was ridiculous, went as awful as possible for both of us."
+
     n "Flashback graphic akin to prior (Image of Wookiee P with a chart he's presenting. We see the backs of a bunch of people wearing suits in the foreground. B is standing off to the side, facepalming. P is visibly freaking out] albeit this time also shows the boss slightly panicking)"
+
+    show boss angry at t33
     boss "I still don't get how you missed the date on this one. The poster was quite clear on dates."
-    p "Uhm, accidents happen? Was it at least a good costume? I spent around 300 dollars on it."
-    boss "No, it really wasn't, now please leave. On another note, if you've seen a personalized pen with my initials, PLEASE return it."
+    show boss at s33
+
+    show protagonist anxious at t31
+    p "Uhm, accidents happen? {w}Was it at least a good costume? I spent around 300 dollars on it."
+    show protagonist at s31
+
+    show boss neutral at t33
+    boss "No, it really wasn't, now please leave."
+    show boss sad
+    boss "On another note, if you've seen a personalized pen with my initials, PLEASE return it. {w}It would mean quite a lot to me."
+    show boss at s33
+
+    scene black with Dissolve(1.0)
+    n "END OF MISSION 2"
     return
+
+
+
+
 
 label chapter2_EXAMPLE:
 
