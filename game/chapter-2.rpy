@@ -5,6 +5,9 @@ label start_chapter2:
     $ mission2personal_success = 0
     $ mission2timegod_success  = 0
 
+    ### CAFE TRACKER
+    $ mission2cafe = 0
+
     # TO BE REMOVED LATER
     $ mission1personal_success = 0
 
@@ -213,15 +216,24 @@ label chapter2_travelPast_office2fire:
     p "What should I do now?"
     hide protagonist
 
-    menu:
-        p "What should I do now?"
-        "Go home":
-            if mission2personal_success == 0:
-                jump chapter2_travelPast_home1
-            else:
-                jump chapter2_travelPast_home3
-        "Go to the cafe":
-            jump chapter2_travelPast_cafe2
+    if mission2personal_cafe == 0:
+        menu:
+            p "What should I do now?"
+            "Go home":
+                if mission2personal_success == 0:
+                    jump chapter2_travelPast_home1
+                else:
+                    jump chapter2_travelPast_home3
+            "Go to the cafe":
+                jump chapter2_travelPast_cafe2
+    else:
+        menu:
+            p "What should I do now?"
+            "Go home":
+                if mission2personal_success == 0:
+                    jump chapter2_travelPast_home1
+                else:
+                    jump chapter2_travelPast_home3
 
 
 
@@ -351,12 +363,18 @@ label chapter2_travelPast_home2_end:
         p "So what now?"
         hide protagonist
 
-        menu:
-            p "So what now?"
-            "Travel back to present and forget about all this":
-                jump chapter2_returnPen_snap
-            "Destroying the costume made me hungry. I could have lunch now":
-                jump chapter2_travelPast_cafe4
+        if mission2cafe == 0:
+            menu:
+                p "So what now?"
+                "Travel back to present and forget about all this":
+                    jump chapter2_returnPen_snap
+                "Destroying the costume made me hungry. I could have lunch now":
+                    jump chapter2_travelPast_cafe4
+        else:
+            menu:
+                p "So what now?"
+                "Travel back to present and forget about all this":
+                    jump chapter2_returnPen_snap
 
 
     # IF MAIN MISSION NOT COMPLETED
@@ -376,12 +394,18 @@ label chapter2_travelPast_home2_end:
         p "Where should I go now?"
         hide protagonist
 
-        menu:
-            p "Where should I go now?"
-            "Go to the office":
-                jump chapter2_travelPast_office1
-            "Go to the cafe":
-                jump chapter2_travelPast_cafe1
+        if mission2cafe == 0:
+            menu:
+                p "Where should I go now?"
+                "Go to the office":
+                    jump chapter2_travelPast_office1
+                "Go to the cafe":
+                    jump chapter2_travelPast_cafe1
+        else:
+            menu:
+                p "Where should I go now?"
+                "Go to the office":
+                    jump chapter2_travelPast_office1
 
 
 
@@ -505,6 +529,7 @@ label chapter2_failedDestruction:
 
 ####################################################
 label chapter2_travelPast_cafe1:
+    $ mission2cafe = 1
     show bg cafe
     show protagonist neutral at t11
     p "Is that Time God even real? I need to clear my mind. Maybe I should grab something to eat."
@@ -513,7 +538,7 @@ label chapter2_travelPast_cafe1:
     scene black with Dissolve(2.0)
     show bg cafe with Dissolve(2.0)
     p "Now that I've eaten, I think I'm ready to complete the Time God's task."
-    if mission2personal_success == 1:
+    if mission2personal_success == 0:
         menu:
             "Go home":
                 jump chapter2_travelPast_home1
@@ -527,6 +552,7 @@ label chapter2_travelPast_cafe1:
 
 ####################################################
 label chapter2_travelPast_cafe2:
+    $ mission2cafe = 1
     show bg cafe
     show protagonist excited at t11
     p "YES! I GOT THE PEN!"
@@ -562,6 +588,7 @@ label chapter2_travelPast_cafe3:
 
 ####################################################
 label chapter2_travelPast_cafe4:
+    $ mission2cafe = 1
     scene bg cafe
     show protagonist anxious at t11
     p "Oh dang. I stole a pen."
