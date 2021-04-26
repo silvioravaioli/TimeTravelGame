@@ -354,7 +354,7 @@ label chapter2_travelPast_home2_end:
         menu:
             p "So what now?"
             "Travel back to present and forget about all this":
-                jump chapter2_returnPen
+                jump chapter2_returnPen_snap
             "Destroying the costume made me hungry. I could have lunch now":
                 jump chapter2_travelPast_cafe4
 
@@ -397,7 +397,7 @@ label chapter2_travelPast_home3:
     menu:
         p "This is done. What's next?"
         "Deliver the pen":
-            jump chapter2_returnPen
+            jump chapter2_returnPen_snap
         "Destroy the costume" (disabled=False) if mission2personal_success==0:
             jump chapter2_failedDestruction
         "Destroy the costume" (disabled=True)  if mission2personal_success==1:
@@ -425,6 +425,43 @@ label chapter2_returnPen:
 
     show timegod at thide
     hide timegod
+
+    jump chapter2_end
+
+
+####################################################
+label chapter2_returnPen_snap:
+
+    scene bg home
+
+    show timegod happy at t11
+    g "Thank you for bringing me this pen."
+    show timegod happy at t11
+    g "This was truly a beneficial exchange."
+    hide timegod
+
+    menu:
+        p "Ahhh.. What do I do now?"
+        "Yeah, that went well.":
+            show timegod neutral at t11
+            g "Interesting. I trust you will continue to have such success in the future."
+            show timegod snap1 at t11
+            g "Interesting. I trust you will continue to have such success in the future."
+            show timegod snap2 at t11
+            g "Interesting. I trust you will continue to have such success in the future."
+            show timegod at thide
+            hide timegod
+            scene black with Dissolve(2.0)
+        "I feel like something is wrong here.":
+            show timegod neutral at t11
+            g "Interesting. It seems to me you performed splendidly. I trust you will continue to have such success in the future."
+            show timegod snap1 at t11
+            g "Interesting. It seems to me you performed splendidly. I trust you will continue to have such success in the future."
+            show timegod snap2 at t11
+            g "Interesting. It seems to me you performed splendidly. I trust you will continue to have such success in the future."
+            show timegod at thide
+            hide timegod
+            scene black with Dissolve(2.0)
 
     jump chapter2_end
 
