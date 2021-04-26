@@ -216,7 +216,7 @@ label chapter2_travelPast_office2fire:
     p "What should I do now?"
     hide protagonist
 
-    if mission2personal_cafe == 0:
+    if mission2cafe == 0:
         menu:
             p "What should I do now?"
             "Go home":
@@ -283,7 +283,10 @@ label chapter2_travelPast_office2hide:
             scene bg cafeoutdoor
             n "{i}The cafe is closed.{\i}"
             n "{i}It makes sense. It is almost 11 pm...{\i}"
-            jump chapter2_failedDestruction
+            if mission2personal_success == 0:
+                jump chapter2_failedDestruction
+            else:
+                jump chapter2_travelPast_home3
 
 
 
@@ -413,19 +416,20 @@ label chapter2_travelPast_home2_end:
 label chapter2_travelPast_home3:
 
     scene bg home
+    jump chapter2_returnPen_snap
 
-    show protagonist neutral at t11
-    p "This is done. What's next?"
-    hide protagonist
+    # show protagonist neutral at t11
+    # p "This is done. What's next?"
+    # hide protagonist
 
-    menu:
-        p "This is done. What's next?"
-        "Deliver the pen":
-            jump chapter2_returnPen_snap
-        "Destroy the costume" (disabled=False) if mission2personal_success==0:
-            jump chapter2_failedDestruction
-        "Destroy the costume" (disabled=True)  if mission2personal_success==1:
-            jump chapter2_failedDestruction
+    # menu:
+    #     p "This is done. What's next?"
+    #     "Deliver the pen":
+    #         jump chapter2_returnPen_snap
+    #     "Destroy the costume" (disabled=False) if mission2personal_success==0:
+    #         jump chapter2_failedDestruction
+        # "Destroy the costume" (disabled=True)  if mission2personal_success==1:
+        #     jump chapter2_failedDestruction
 
 ####################################################
 label chapter2_returnPen:
@@ -439,7 +443,7 @@ label chapter2_returnPen:
     hide timegod
 
     menu:
-        p "Ahhh.. What do I do now?"
+        g "This was truly a beneficial exchange."
         "Yeah, that went well.":
             show timegod neutral at t11
             g "Interesting. I trust you will continue to have such success in the future."
@@ -465,7 +469,7 @@ label chapter2_returnPen_snap:
     hide timegod
 
     menu:
-        p "Ahhh.. What do I do now?"
+        g "This was truly a beneficial exchange."
         "Yeah, that went well.":
             show timegod neutral at t11
             g "Interesting. I trust you will continue to have such success in the future."
@@ -570,7 +574,7 @@ label chapter2_travelPast_cafe2:
         "Grab some food":
             jump chapter2_travelPast_cafe3
         "Go home":
-            jump chapter2_travelPast_home3
+            jump chapter2_travelPast_home1
 
 
 ####################################################
@@ -583,7 +587,10 @@ label chapter2_travelPast_cafe3:
     p "And extra pickles."
     p "And extra garlic."
     n "TODO: Image of protagonist eating, followed by the same image but with darker sky. (That is, it becomes night while eating)."
-    jump chapter2_failedDestruction
+    if mission2personal_success == 0:
+        jump chapter2_failedDestruction
+    else:
+        jump chapter2_travelPast_home3
 
 
 ####################################################
