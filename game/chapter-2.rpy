@@ -279,7 +279,7 @@ label chapter2_travelPast_office2hide:
                 jump chapter2_failedDestruction
             else:
                 jump chapter2_travelPast_home3
-        "Go to the cafe":
+        "Go to the cafe" (disabled=False) if mission2cafe == 0:
             scene bg cafeoutdoor
             n "{i}The cafe is closed.{\i}"
             n "{i}It makes sense. It is almost 11 pm...{\i}"
@@ -623,6 +623,10 @@ label chapter2_travelPast_cafe4:
     show timegod laugh at t11
     g "Oh! You're still eating?"
     g "I'm bringing you back."
+    show timegod snap1 at t11
+    g "I'm bringing you back."
+    show timegod snap2 at t11
+    g "I'm bringing you back."
     scene black with Dissolve(2.0)
     jump chapter2_end
 
@@ -635,8 +639,8 @@ label chapter2_end:
     show protagonist anxious at t31
     p "Jeez, I guarantee this isn't gonna be good."
     p "You wanted to see me?"
-    if True:
-    # if mission2personal_success == 1:
+    # if True:
+    if mission2personal_success == 1:
         jump chapter2_end_success
     else:
         jump chapter2_end_failure
