@@ -285,10 +285,18 @@ label chapter2_travelPast_office2hide:
             scene bg cafeoutdoor_dark
             n "{i}The cafe is closed.{\i}"
             n "{i}It makes sense. It is almost 11 pm...{\i}"
+            
             if mission2personal_success == 0:
+                show protagonist hmm at t11
+                p "Shoot...{w}I should go prevent the Wookie fiasco"
                 jump chapter2_failedDestruction
             else:
-                jump chapter2_travelPast_home3
+                show timegod laugh at t11
+                g "Oh, you amuse me so much. {w}Getting hungry at 11 pm?. {w}I'm taking you back"
+                show timegod snap1 at t11
+                show timegod snap2 at t11
+                scene black with Dissolve(2.0)
+                jump chapter2_returnPen
 
 
 
@@ -695,7 +703,7 @@ label chapter2_end_success:
     scene black with Dissolve(1.0)
     n "{i}As the boss recaps the meeting, you can somehow exactly picture the scene.{\i}"
     n "{i}You were wearing a suit, and were quite confident in your presentation. The investors all seemed impressed.{\i}"
-    n "{i}The boss, however, seemed to be a bit anxious. Perhaps they were distracted by something?{\i}"
+    n "{i}The boss, however, seemed to be a bit anxious. Perhaps he was distracted by something?{\i}"
     scene bg office with Dissolve(1.0)
     show protagonist talking at t31
     show boss neutral at t33
