@@ -496,48 +496,105 @@ label chapter3_past1_Street_distract:
 ####################################################
 label chapter3_past1_street_distract_FailTG:
 
-    scene bg home
+    #scene bg home
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show timegod angry at t33
+    g "My task for you was incredibly simple. All you needed to do was go and remove a poster."
+    g "I don’t get how you can mess that up. It’s quite simple."
+    g "Go to the office."
+    g "Remove the poster."
+    g "How do you function?"
 
+    show protagonist neutral at t31
+    p "I get around pretty decently."
 
+    g "You’re lucky I’m merciful. I know you’re capable of doing what I’ve entrusted you to. Still, in comparison to those other tasks, this should have been as easy as breathing. We’re going back."
+
+    scene black with Dissolve(0.5)
+    show bg home with Dissolve(0.5)
+
+    g "If I call upon you again, do not fail me."
+
+    p "Uh alright, I got work right now though."
+    jump chapter3_past1_Home_distract_Outcome
 
 
 ####################################################
 label chapter3_past1_street_distract_SucceedTG:
 
-    scene bg home
+    #scene bg home
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show timegod happy at t33
+    g "Regardless of what you are doing on this street with that rancid jerky, you’ve completed what I had asked of you."
+    g "Congratulations. You’ve been working quite well under me."
 
+    p "Thank you, I’m a pretty handy guy."
 
+    g "Indeed. Let’s return to the present."
+
+    scene black with Dissolve(0.5)
+    show bg home with Dissolve(0.5)
+
+    g "Yet again, I thank you for your work. Goodbye."
+    p "Uh thanks, I probably should get back to work."
+    jump chapter3_past1_Home_distract_Outcome
 
 
 ####################################################
 label chapter3_past1_office_distract_Outcome:
 
-    scene bg home
+    #scene bg home
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show protagonist neutral at t31
+    p "Work time. Princess should just be waiting, no jerky dilemma here."
 
+    show boss happy at t33
+    boss "Hey [Character_name], how was Princess?"
+
+    show dog happy at t11
+    p "Uh, absolutely amazing! No running away, no sickness, just me watching a dog I think."
+    show dog cool at t11
+
+    boss "Well, that’s what I asked of you. Good job on completing that menial task. I know I can count on you."
+
+    p "Yup, that’s me!"
+    show boss at thide
+    hide boss
+    show dog at thide
+    hide dog
+
+    if mission3timegod_success==0:
+        p "{i}I wonder why I was supposed to get rid of that poster..."
+        #[Boss leaves without walking into glass, scene ends].
+
+    if mission3timegod_success==1:
+        n "{i}You hear a loud crash sound from the corridor"
+        #[crash/bonk sound in the background]
+        show protagonist surprised at t31
+        p "What the heck! What was that?"
+
+        show boss angry at t33
+        n "{i}The boss is back... but is his head pouring blood?"
+        boss "God DANG IT!"
+
+        p "What happened? Are you ok?"
+
+        boss "I just walked into that glass wall there! There are usually a bunch of posters on that wall! I don’t know who the HELL took them down"
+
+        show protagonist anxious
+        p "Oh no..."
+
+        boss "[protagonist_name], was it you?!"
+
+        p "Uh... No? Definitely not me."
+
+        boss "Then stop oh no-ing and get back to work!"
+        boss "I swear, one of you idiots is TRYING to kill me"
+        show boss at thide
+        hide boss
+
+    show protagonist at thide
+    hide protagonist
     scene black with Dissolve(1.0)
     n "END OF MISSION 3"
     n "  "
@@ -551,31 +608,173 @@ label chapter3_present_Home_tackleOutcome:
 
     scene bg home
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show protagonist hey at t31
+    p "Hey! Why did you do that?"
+    p "I could have gotten the beef jerky back!"
 
+    show timegod creepy at t33
+    g "Why did you do that?"
+    show timegod angry
+    g "I could ask the same of you."
 
+    show proatonist anxiouos
+    p "Huh?"
+
+    show timegod creepy
+    g "Huh?"
+
+    if mission3timegod_success==1:
+        show protagonist hey
+        p "What?! I did your whole song and dance! I took the poster off the wall!"
+        p "But my boss’s dog is still lost and I have to get her back!"
+        show timegod laugh
+        g "Unimaginably stupid actions have consequences!"
+
+    if mission3timegod_success==0:
+        show timegod angry
+        g "That was ONE simple task. Take down a piece of paper."
+        g "ONE PIECE OF PAPER!!!"
+        show timegod neutral
+        g "I gave you the power to travel through time..."
+        show timegod happy
+        g "The ability to change your past, present, and future."
+        g "All of that in exchange for ONE TASK."
+        show timegod angry
+        g "The bar COULDN’T be any lower. And yet, you STILL FAILED!"
+        p "I didn’t think––"
+        g "You’re absolutely right! You did NOT think!"
+
+    show timegod angry
+    g "If you had even one ounce of brain, you would realize that tackling your past self was a TERRIBLE idea"
+    g "Oh but that’s not even the problem"
+    show timegod neutral
+    g "Death and injuries? Oh, those are part of the job when you time travel"
+    show timegod angry
+    g "But you failed me so completely, that you were about to give away EVERYTHING!"
+
+    show protagonist anxious
+    p "I... I really thought it would work..."
+
+    show timegod creepy
+    g "I’m you but from the future"
+    show timegod angry
+    g "You can’t just tell ANYONE about time travel!"
+
+    p "But... it was still me!"
+
+    g "Don’t you understand? This ability that you and I have..."
+    show timegod happy
+    g "It’s something that EVERYBODY wants but nobody has! And its scarcity, its elusiveness..."
+    g "That’s how I––"
+    show timegod angry
+    g "We--"
+    show timegod happy
+    g "That’s how we stay in control."
+    P "Please, let me fix this! {w}I can go back! {p}I still have to make sure my boss’s dog doesn’t get lost!"
+    show timegod laugh
+    g "Ha! Go back?! You are in no position to beg for favors"
+    show timegod angry
+    g "Now, get out of here!"
+
+    p "But... but this is my house!"
+
+    g "I said GET {w}OUT {w}OF {w}HERE!"
+    g "It’s the middle of the day! Go to work!"
+
+    jump chapter3_present_Office_tackleOutcome
 
 
 ####################################################
 label chapter3_present_Office_tackleOutcome:
 
-    scene bg home
+    scene black with Dissolve(0.5)
+    scene bg office with Dissolve(0.5)
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show protagonist neutral at t31
+    show boss neutral at t33
+    boss "Hey, [protagonist_name]! How was Princess?"
+    boss "Was she a good girl? I bet she was"
+
+    show protagonist anxious
+    p "{i}Oh no... How in the world am I going to explain this???"
+    p "Uh... {w}So...."
+
+    show boss angry
+    boss "What? Spit it out, [protagonist_name]"
+
+    p "So I might have... {w}maybe... {w}lost your dog..."
+
+    show boss angry
+    boss "YOU WHAT?"
+
+    p "You see I couldn’t go out to lunch because I didn’t want to take Princess out and risk losing her."
+    p "So I decided to eat in the office and I found this really old beef jerky in my backpack."
+    p "And then just when I was about to eat it Princess LEAPED at me and took it and ran out of the back door to the stairwell and I couldn’t find her... and I’m really sorry."
+
+    boss "She stole your lunch and ran out the backdoor?"
+
+    p "Yeah..."
+
+    show boss facepalm
+    boss "Oh, Princess. Not again."
+    show boss neutral
+    boss "Baby Princess! Come here Princess!"
 
 
+    show dog neutral at t11
+    p "It was that easy?"
+
+    boss "Oh here you are, little baby!"
+    show dog cool
+    boss "Did you steal another poor man’s lunch again? Oh did you?"
+    show dog happy
+    boss "Oh, you’re so sweet! You are one adorable little girl!"
+
+    p "What?? I literally looked for her all over the office!"
+
+    boss "That’s because you didn’t sing her song."
+
+    p "I had to sing a song???"
+
+    show boss angry
+    B "Yes! Her song. Now get back to work"
+    show boss at thide
+    hide boss
+    show dog at thide
+    hide dog
+
+    if mission3timegod_success==0:
+        p "{i}I wonder why I was supposed to get rid of that poster..."
+        #[Boss leaves without walking into glass, scene ends].
+
+    if mission3timegod_success==1:
+        n "{i}You hear a loud crash sound from the corridor"
+        #[crash/bonk sound in the background]
+        show protagonist surprised at t31
+        p "What the heck! What was that?"
+
+        show boss angry at t33
+        n "{i}The boss is back... but is his head pouring blood?"
+        boss "God DANG IT!"
+
+        p "What happened? Are you ok?"
+
+        boss "I just walked into that glass wall there! There are usually a bunch of posters on that wall! I don’t know who the HELL took them down"
+
+        show protagonist anxious
+        p "Oh no..."
+
+        boss "[protagonist_name], was it you?!"
+
+        p "Uh... No? Definitely not me."
+
+        boss "Then stop oh no-ing and get back to work!"
+        boss "I swear, one of you idiots is TRYING to kill me"
+        show boss at thide
+        hide boss
+
+    show protagonist at thide
+    hide protagonist
     scene black with Dissolve(1.0)
     n "END OF MISSION 3"
     n "  "
