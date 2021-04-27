@@ -443,7 +443,7 @@ label chapter1_home:
 ####################################################
 label chapter1_restartmission:
 
-    scene home with Dissolve(0.5)
+    scene bg home with Dissolve(0.5)
     show timegod neutral at t11
     g "This is no time to nap!"
     show timegod angry at t11
