@@ -373,45 +373,123 @@ label chapter3_past1_Street:
     # MARK THE LOCATION AS VISITED
     $ mission3visited_past1_Street=1
 
-    scene bg home
+    scene bg cafeoutdoor
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show pastprotagonist anxious at t33
+    pp "Oh dear, oh dear, oh dear."
+    show pastprotagonist at thide
+    hide pastprotagonist
+
+
+    show protagonist talking at t31
+    p "Ah of course. Late to work. Why didn’t I think of that sooner?"
+    p "Good. He– I mean, I am carrying that backpack too! So the beef jerky’s gotta be in there"
+    p "Now, how do I get that backpack off my past self?"
+    hide protagonist
+
+    menu:
+        p "Now, how do I get that backpack off my past self?"
+        "Tackle past self":
+            jump chapter3_past1_Street_tackle
+        "Distract past self":
+            jump chapter3_past1_Street_distract
 
 
 ####################################################
 label chapter3_past1_Street_tackle:
 
-    scene bg home
+    #scene bg home
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    show protagonist hmm at t31
+    p "I could knock out my past self, take the backpack, and bolt?"
+    show protagonist joy
+    p "Let’s do this!"
+    show protagonist joy at t11
 
+    show pastprotagonist hey at t33
+    pp "HEY! Who just hit me??"
+
+    show protagonist anxious
+    p "Uh oh... that should’ve knocked me out"
+
+    show pastprotagonist hey_left
+    pp "What do you THINK you’re do––"
+    show pastprotagonist surprise
+    pp "What.... What? Are you?"
+
+    show protagonist anxious
+    p "Well... that wasn’t supposed to happen."
+
+    show pastprotagonist hey_left
+    pp "Who are you and why do you look exactly like me?"
+
+    p "Uh...."
+    p "I don’t even know how to answer that. Can you just forget you saw me?"
+
+    pp "NO??"
+
+    p "Please? I really have no time for this. If you could just..."
+    p "Let me take your backpack for one sec"
+
+    pp "And let you steal my stuff? I don’t THINK so"
+
+    p "I’m not a thief!"
+    p "I just need to see your backpack!"
+    p "There’s something in there that I need! Please!"
+
+    pp "No! Get away from me!"
+
+    p "I need you to just give me..."
+    p "Please! Trust me."
+
+    pp "I don’t even know who you are! WHY DO YOU LOOK LIKE ME?"
+    pp "Doppelganger? ARE YOU MY SECRET CLONE?"
+
+    p "Ok, ok fine! You leave me no choice"
+    p "I’m you but from the future––"
+
+    show pastprotagonist surprise
+    pp "YOU’RE WHAT?!"
+
+    show timegod angry at t31
+    g "That’s it. I’m taking you back"
+    p "No! But––"
+    show timegod snap1
+
+    scene black with Dissolve(0.5)
+    jump chapter3_present_Home_tackleOutcome
 
 
 ####################################################
 label chapter3_past1_Street_distract:
 
-    scene bg home
+    #scene bg home
 
     show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    p "Gotta distract him somehow. It’s gonna be tough, I’m a fairly smart guy."
+    p "Just need to get that backpack away from ‘em. Good thing I don’t fully wear my backpack, just sort of carry it. In hindsight, that’s probably an awful idea."
+    p "Should be a pretty straightforward rouse, I’ll just get him to run and drop it. I enjoy puppies quite a bit, so that should work well."
 
+    n "You hide in a bush"
+
+    p "Hmmm. Definitely need to hide my voice. He’ll recognize me. I’m gonna be real surprised if this works."
+    p "HEY YOU, [protagonist_name], there’s a puppy around the corner! Get there quick before it runs away!"
+
+    pp "What? No way! I gotta see this!"
+    n "{i}Past you runs to dog, abandoning backpack as he runs"
+    show pastprotagonist at thide
+    hide pastprotagonist
+
+    p "Wow, that really shouldn’t have worked. That somewhat worries me how effective it was. Thankfully that beef jerky is mine now. Probably should just throw it away, I’ve seen what it did to Princess. That’s a dog though, and I’m a person, it’ll be fine to eat SOME of it."
+    p "Should be good to go then. Time to jet."
+
+    show timegod angry at t33
+    g "This is a fairly interesting spot to find you considering your task was at your office-building."
+
+    if mission3timegod_success == 0:
+        jump chapter3_past1_street_distract_FailTG
+    else:
+        jump chapter3_past1_street_distract_SucceedTG
 
 
 ####################################################
