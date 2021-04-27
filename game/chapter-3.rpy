@@ -706,7 +706,7 @@ label chapter3_present_Home_tackleOutcome:
     g "Why did you do that?"
     show timegod angry
     g "I could ask the same of you."
-    show timegot at s33
+    show timegod at s33
 
     show protagonist anxious at t31
     p "Huh?"
@@ -838,7 +838,7 @@ label chapter3_present_Office_tackleOutcome:
     p "I had to sing a song???"
 
     show boss angry
-    b "Yes! Her song. Now get back to work"
+    boss "Yes! Her song. Now get back to work"
     show boss at thide
     hide boss
     show dog at thide

@@ -10,3 +10,10 @@ traceback.txt
 *.rpyc
 errors.txt
 game/saves/navigation.json
+game/chapter-1.rpyc
+game/chapter-2.rpyc
+game/chapter-3.rpyc
+game/chapter-4.rpyc
+game/chapter-5.rpyc
+game/saves/navigation.json
+game/saves/persistent
