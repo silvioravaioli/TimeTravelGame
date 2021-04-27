@@ -1,13 +1,22 @@
 ####################################################
 label start_chapter4:
 
+    # INITIALIZE VARIABLES FOR VISITED PLACES
+    $ flag_visited_cafe = 0;
+    $ flag_visited_office = 0;
+    $ flag_visited_home = 0;
+
     # play music "funiculifunicula.mp3" fadeout 1       # ADD MUSIC
 
-    scene bg office
+    n "{i}At some point in time... {p}When you really do not expect to be surprised by anything..."
+    scene bg office with Dissolve(0.5)
 
-    show boss neutral at t33
-    boss "Tomorrow's supposed to be the annual employee retreat. But budget cuts this year."
-    boss "I was thinking of organizing a nice outdoor picnic for everyone instead. You want to take care of the grill?"
+    show boss talking at t33
+    boss "Tomorrow's supposed to be the annual employee retreat. {w}But budget cuts this year."
+    show boss happy
+    boss "I was thinking of organizing a nice outdoor picnic for everyone instead."
+    show boss neutral
+    boss "[protagonist_name], do you want to take care of the grill?"
     show boss neutral at s33
 
     show protagonist excited at t31
@@ -19,23 +28,22 @@ label start_chapter4:
     hide protagonist
     show boss at thide
     hide boss
-    scene black with Dissolve(2.0)
+    scene black with Dissolve(0.5)
 
 
 
 label chapter4_office_start:
 
-    n "The day after..."
+    n "The day after..." with Dissolve(0.5)
 
-    scene bg office
+    scene bg office_grill
 
     show protagonist excited at t31
     n "Picture of the protagonist, happy, holding burger in plate"
     p "So... what does everyone think?"
     show protagonist excited at s31
 
-    show boss neutral at t33
-    n "The boss seems very happy"
+    show boss happy at t33
     boss "Wow, I truly was not expecting this from you. This is truly the best burger I've ever had!"
     show boss neutral at s33
 
@@ -43,8 +51,9 @@ label chapter4_office_start:
     coworker "MMM! The onion, the extra pickles, the garlic scent."
     show coworker neutral at s11
 
-    show boss neutral at t33
+    show boss talking_happy at t33
     boss "It's strong... but not overpowering. Really highlights the umami of the meat."
+    show boss talking
     boss "Speaking of, that is some REALLY good burger meat. Where did you get it from?"
     show boss neutral at s33
 
@@ -52,13 +61,12 @@ label chapter4_office_start:
     p "Oh, just the grocery store here on the way here. I'm so happy you like it!"
     show protagonist joy at s31
 
-    show boss neutral at t33
-    n "The boss starts panicking"
+    show boss panicking at t33
     boss "Wait."
     boss "What is going on."
     boss "Oh, noooo. MY STOMACH!"
     n "image of boss throwing up"
-    show boss neutral at s33
+    show boss at s33
 
     show protagonist surprised at t31
     p "Are you ok? What's going on?"
@@ -67,7 +75,7 @@ label chapter4_office_start:
     show boss neutral at t33
     boss "I'm... fine. You said the grocery store here? You know that place..."
     n "The boss vomits again"
-    show boss neutral at s33
+    show boss at s33
 
     show protagonist anxious at t31
     p "Oh dang. Oh geez. Oh dang. Did I just poison the boss?"
@@ -108,13 +116,13 @@ label chapter4_office_start:
     p "Ok, I gotta get out of here."
     show protagonist at thide
     hide protagonist
-    scene black with Dissolve(2.0)
+    scene black with Dissolve(0.5)
 
 
 ####################################################
 label chapter4_home_meetTimeGod:
 
-    scene bg home
+    scene bg home with Dissolve(0.5)
 
     show protagonist anxious at t11
     p "Is there anything I can do to fix this?"
@@ -181,12 +189,12 @@ label chapter4_home_meetTimeGod:
     g "Go!"
     hide timegod
 
-    scene black with Dissolve(1.0)
+    scene black with Dissolve(0.5)
 
-    n "{i}The Time God snaps his fingers and you are transported back in the past.{\i}"
-    n "{i}It's 7:30am.{\i}"
+    n "{i}The Time God snaps his fingers and you are transported back in the past."
+    n "{i}It's 7:30am."
 
-    scene bg cafeoutdoor
+    scene bg cafeoutdoor with Dissolve(0.5)
 
     show protagonist neutral at t11
     p "I just need to do this task."
@@ -196,11 +204,6 @@ label chapter4_home_meetTimeGod:
     p "I have to put the rock down at 9 exactly."
     p "Maybe I should head there early just to be safe?"
     hide protagonist
-
-    # INITIALIZE VARIABLES FOR VISITED PLACES
-    $ flag_visited_cafe = 0;
-    $ flag_visited_office = 0;
-    $ flag_visited_home = 0;
 
     menu:
         p "Maybe I should head there early just to be safe?"
@@ -220,7 +223,7 @@ label chapter4_home_meetTimeGod:
 ####################################################
 label chapter4_street_early:
 
-    scene bg cafeoutdoor
+    scene bg cafeoutdoor with Dissolve(0.5)
 
     show protagonist neutral at t11
     p "Oof, finally made it here. What time is it?"
@@ -347,7 +350,7 @@ label chapter4_street_decision:
 ####################################################
 label chapter4_cafe_prelude:
 
-    scene bg cafe
+    scene bg cafe with Dissolve(0.5)
 
     show protagonist neutral at t31
     p "This seems kinda ominous."
@@ -399,18 +402,23 @@ label chapter4_cafe_prelude:
     menu:
         p "Where should I go now?"
         "Go to the Street":
+            scene black with Dissolve(0.5)
             jump chapter4_street_decision
         "Go to the Office" (disabled=False) if flag_visited_office==0:
             $ flag_visited_office = 1;
+            scene black with Dissolve(0.5)
             jump chapter4_office_prelude
         "Go to the Office" (disabled=True) if flag_visited_office==1:
             $ flag_visited_office = 1;
+            scene black with Dissolve(0.5)
             jump chapter4_office_prelude
         "Go back Home" (disabled=False) if flag_visited_home==0:
             $ flag_visited_home = 1;
+            scene black with Dissolve(0.5)
             jump chapter4_home_prelude
         "Go back Home" (disabled=True) if flag_visited_home==1:
             $ flag_visited_home = 1;
+            scene black with Dissolve(0.5)
             jump chapter4_home_prelude
 
 label chapter4_office_prelude:
@@ -418,7 +426,7 @@ label chapter4_office_prelude:
     show protagonist neutral at t31
     p "I was late to work today because I was buying food for the party. I wonder what was going on in the office."
     p "I have time, maybe I should check it out?"
-    scene black with Dissolve(1.0)
+    scene black with Dissolve(0.5)
     scene bg office
     show protagonist neutral at s31
     show coworker neutral at t33
@@ -443,9 +451,10 @@ label chapter4_office_prelude:
     show protagonist at t31
     p "See you! Have a good one."
     show protagonist at s31
-    scene black with Dissolve(1.0)
+    scene black with Dissolve(0.5)
     p "Where should I go now?"
     menu:
+        p "Where should I go now?"
         "Go to the street":
             jump chapter4_street_decision
         "Go to the cafe" if flag_visited_cafe == 0:
@@ -463,7 +472,7 @@ label chapter4_home_prelude:
     p "And with time to spare. I've been working pretty hard and I'm pretty sure you aren't meant to time travel tired."
     if mission2personal_success == 1:
         p "Hopefully with all these bonuses I can buy another Wookie costume."
-    scene black with Dissolve(2.0)
+    scene black with Dissolve(0.5)
     n "Three hours later..."
     scene bg home
     show protagonist neutral at t11
@@ -471,9 +480,10 @@ label chapter4_home_prelude:
     if mission1personal_success == 1:
         p "Glad I learned to make coffee. Heh, bean water."
 
-    scene black with Dissolve(1.0)
+    scene black with Dissolve(0.5)
     p "Where should I go now?"
     menu:
+        p "Where should I go now?"
         "Go to the street":
             jump chapter4_street_decision
         "Go to the cafe" if flag_visited_cafe == 0:
@@ -484,7 +494,7 @@ label chapter4_home_prelude:
             jump chapter4_office_prelude
 
 label chapter4_street_missionFail:
-    scene bg cafeoutdoor
+    scene bg road
     show protagonist anxious at t31
     p "I'm not so sure about this. I don't think I can."
     show protagonist at s31
@@ -519,11 +529,11 @@ label chapter4_street_missionFail:
     show timegod creepy at t33
     g "Are you sure? Look across the street, see how you've failed."
     show timegod at s33
-    scene black with Dissolve(1.0)
-    scene bg cafeoutdoor
+    scene black with Dissolve(0.5)
+    scene bg road
     show pastprotagonist neutral at t11
     pp "Welp, I've got the burger meat. I got a good feeling about today. These last few weeks have been coming up all me. This grocery store never lets me down."
-    scene black with Dissolve(1.0)
+    scene black with Dissolve(0.5)
     show protagonist neutral at s31
     show timegod neutral at t33
     g "See? You've failed. Your entire office is going to suffer from this. Poisoning your coworkers isn't exactly beneficial. Do you realize what you've done?"
@@ -539,7 +549,7 @@ label chapter4_street_missionFail:
     g "Here, your reputation can be salvaged. Simply, complete this mission for me. Let us try this again."
     show timegod snap1 at s33
     show timegod snap2 at s33
-    scene black with Dissolve(1.0)
+    scene black with Dissolve(0.5)
     scene bg home
     # [Jumps to present (home), akin to beginning of mission]
     show timegod laugh at t33
@@ -563,8 +573,6 @@ label chapter4_street_missionFail:
     g "You're going to regret this."
     hide timegod creepy
 
-
-
     scene black with Dissolve(1.0)
     n "END OF MISSION 4"
     jump start_chapter5
@@ -574,8 +582,10 @@ label chapter4_street_missionFail:
 
 
 
+
+
 label chapter4_street_missionSuccess:
-    scene bg cafeoutdoor
+    scene bg road
     show protagonist neutral at t31
     p "Whew. Ok, I did it. Now what?"
     # [fullscreen image of boss in car]
@@ -591,8 +601,8 @@ label chapter4_street_missionSuccess:
     # [fullscreen image of boss in car. But now instead of neutral face, boss is PANICKING]
     n "You see your boss is panicking."
     n "The car crashes and you hear a cacophony of car horns."
-    scene black with Dissolve(1.0)
-    scene bg cafeoutdoor
+    scene black with Dissolve(0.5)
+    scene bg road_carcrash with Dissolve(0.5)
     n "The scene looks like the remnants of a car accident."
     # [crash sound]
     # [cacophony of car horns]
@@ -629,8 +639,10 @@ label chapter4_street_missionSuccess:
     pp "AND there's a car accident blocking traffic. Great."
     pp "Ok, you know what? Burger day can wait. The boss will understand. I gotta get to work."
     hide pastprotagonist neutral
-    scene black with Dissolve(1.0)
-    scene bg cafeoutdoor
+
+    scene black with Dissolve(0.5)
+    scene bg road
+
     show protagonist neutral at s31
     show timegod happy at t33
     g "See? What did I tell you? You avoided the burger situation. Everything's worked out just fine."
@@ -676,12 +688,12 @@ label chapter4_street_missionSuccess:
     g "I'm saying my goodbyes."
     show timegod snap1 at t33
     show timegod snap2 at t33
-    scene black with Dissolve(2.0)
-    jump chapter4_home_missionSuccess_present
+    scene black with Dissolve(0.5)
+    #jump chapter4_home_missionSuccess_present
 
 
 label chapter4_home_missionSuccess_present:
-    scene bg home
+    scene bg home with Dissolve(0.5)
     show protagonist anxious at t11
     p "What. What just happened?"
     p "What do I do now?"

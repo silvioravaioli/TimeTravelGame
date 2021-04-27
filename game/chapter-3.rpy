@@ -1,5 +1,12 @@
 ####################################################
 label start_chapter3:
+
+
+
+    n "{i}Some days, hours, minutes, and seconds later..."
+    scene bg office with Dissolve(0.5)
+
+
     # play music "funiculifunicula.mp3" fadeout 1       # ADD MUSIC
     scene bg restaurant room
     show eileen vhappy

@@ -8,17 +8,15 @@ label start_chapter2:
     ### CAFE TRACKER
     $ mission2cafe = 0
 
-    # TO BE REMOVED LATER
-    $ mission1personal_success = 0
-
-    scene bg office
+    n "{i}A few weeks later... {p}At the end of another exciting day in the office..."
+    scene bg office with Dissolve(0.5)
 
     show protagonist neutral at t11
     p "Ok it's almost 5pm. I'm heading out."
     n "{i}You walk past and see a poster on the wall"
     show protagonist hmm
     p "Hmm... I wonder what that is?"
-    n "{i}There are a bunch of stormtroopers forming the words {w}\"STAR {w}- WARS {w}- DAY\" "
+    n "{i}There are a bunch of stormtroopers forming the words {p}\"STAR {w}- WARS {w}- DAY\" "
     show protagonist excited
     p "Oh YES! OH YES OH YES! Next Monday is STAR WARS DAY! {w}I am going to absolutely SMOKE the competition."
     show protagonist anxious
@@ -34,7 +32,7 @@ label chapter2_office_StarWarsDay1:
     n "{i}One week later..."
     scene bg office with Dissolve(0.5)
 
-    show boss normal at t33
+    show boss neutral at t33
     boss "What the HELL are you wearing?"
 
     show protagonist wookie_normal at t31
