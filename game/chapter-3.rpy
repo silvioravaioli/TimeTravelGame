@@ -689,7 +689,7 @@ label chapter3_present_Home_tackleOutcome:
     g "Why did you do that?"
     show timegod angry
     g "I could ask the same of you."
-    show timegot at s33
+    show timegod at s33
 
     show protagonist anxious at t31
     p "Huh?"
