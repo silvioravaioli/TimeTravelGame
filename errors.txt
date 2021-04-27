@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/chapter-2.rpy", line 508: end of line expected.
-    show pastprotagonist hey at t33 x-zoom = -1.0 
-                                    ^
+File "game/chapter-3.rpy", line 319: reached end of line when expecting ':'.
+    if mission3visited_past1_Office==0
+                                      ^
+
+File "game/chapter-3.rpy", line 327: reached end of line when expecting ':'.
+    if mission3visited_past1_Office==0
+                                      ^
+
+File "game/chapter-3.rpy", line 331: reached end of line when expecting ':'.
+    if mission3visited_past1_Office==1
+                                      ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 11:14:29 2021
+Tue Apr 27 15:49:39 2021

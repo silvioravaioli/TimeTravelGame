@@ -4,12 +4,11 @@ label start_chapter3:
     # INITIALIZE VARIABLES FOR VISITED PLACES
     $ mission3visited_past1_Cafe = 0
     $ mission3visited_past1_Office = 0
+    $ mission3visited_past1_Home = 0
+    $ mission3visited_past1_Street = 0
 
 
     n "{i}Some days, hours, minutes, and seconds later..."
-
-####################################################
-label chapter3_travel1DogSearch_Cafe:
 
     scene bg office with Dissolve(0.5)
 
@@ -30,12 +29,13 @@ label chapter3_travel1DogSearch_Cafe:
     show dog neutral at t11
     show boss happy
     boss "Be good, little Princess girl ok?"
-    show dog happy
+    show dog cool
     boss "Oh, you’re so cute."
+    show dog cool at s11
     boss "Look at those eyes."
-    show dog neutral
-    boss "Oh Princess, you are one adorable girl"
     show dog happy
+    boss "Oh Princess, you are one adorable girl"
+    show dog neutral
     boss "I love you! I love you!"
 
     show protagonist blush
@@ -49,7 +49,7 @@ label chapter3_travel1DogSearch_Cafe:
 
     show protagonist talking
     p "Looks like it’s just you and me, Princess."
-    show protagonist happy
+    show protagonist joy
     p "Huh, I guess you are kinda cute."
     hide protagonist
 
@@ -59,7 +59,7 @@ label chapter3_travel1DogSearch_Cafe:
 
     show protagonist talking at t11
     p "HA! I finally finished my work. Now, it’s time for my..."
-    show protagonist happy
+    show protagonist joy
     p "LUNCH BREAK!"
     p "Egg salad sandwich, here I come!"
 
@@ -119,14 +119,34 @@ label chapter3_travel1DogSearch_Cafe:
             jump chapter3_travel1DogSearch_Home
 
 
+
+####################################################
+label chapter3_travel1DogSearch_Cafe:
+
+    scene bg cafe with Dissolve(0.5)
+
+    show protagonist neutral at t11
+    p "Hmmm... {w}I don’t see the dog here either."
+    p "Probably a bad time to order something as well. Princess could have eaten that whole bag by now"
+    p "Where could she have possibly gone?"
+    hide protagonist
+
+    menu:
+        p "Where could she have possibly gone?"
+        "Street":
+            scene black with Dissolve(0.5)
+            jump chapter3_travel1DogSearch_Street
+        "Home":
+            scene black with Dissolve(0.5)
+            jump chapter3_travel1DogSearch_Home
+
 ####################################################
 label chapter3_travel1DogSearch_Street:
 
-    scene bg home with Dissolve(0.5)
+    scene bg road with Dissolve(0.5)
 
     show protagonist neutral at t11
-    p "Hmmm... I don’t see the dog here either."
-    p "Probably a bad time to order something as well. Princess could have eaten that whole bag by now"
+    p "Hmmm... {w}The dog is nowhere to be seen."
     p "Where could she have possibly gone?"
     hide protagonist
 
@@ -161,7 +181,9 @@ label chapter3_travel1DogSearch_Home:
 
     p "Sounds good, the past is always pretty neat. Would definitely help"
 
-    g "Exquisite. The mission is fairly simple. You have probably seen a poster commemorating the birth date of one of your colleagues on a glass wall near the back of your workplace. The poster is quite out of date and needs to be removed. This needs to be done exactly two weeks ago."
+    g "Exquisite. The mission is fairly simple."
+    g "You have probably seen a poster commemorating the birth date of one of your colleagues on a glass wall near the back of your workplace."
+    g "The poster is quite out of date and needs to be removed. This needs to be done exactly two weeks ago."
     hide timegod
     hide protagonist
 
@@ -187,125 +209,169 @@ label chapter3_travel1DogSearch_Home:
 ####################################################
 label chapter3_past1_Home:
 
+    # MARK THE LOCATION AS VISITED
+    $ mission3visited_past1_Home=1
+
     scene bg home with Dissolve(0.5)
-
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-
-    p "Where could she have possibly gone?"
+    show protagonist hmm at t11
+    p "Wow, my house really doesn’t change that much."
+    p "Alright, taking that poster down shouldn’t be too hard, I should have enough time to fix the whole dog issue as well."
+    p "I don’t even think that beef jerky is safe for people."
+    p "Has it really been there for five years? I guess I haven't cleaned that backpack out since I found it."
+    p "I probably could just take it out, although I wouldn’t have an emergency snack then."
+    p "Where would I even be at this point? Guess I’ll start looking. I probably should get that poster down though."
     hide protagonist
 
     menu:
-        p "Where could she have possibly gone?"
-        "Cafe":
+        p "Where would I even be at this point?"
+        "Go to Cafe":
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Cafe
-        "Street":
+            jump chapter3_past1_Cafe
+        "Go to Office":
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Street
-        "Home":
-            scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Home
-
-
-
+            jump chapter3_past1_Office
 
 
 ####################################################
 label chapter3_past1_Office:
 
-    scene bg home with Dissolve(0.5)
+    # MARK THE LOCATION AS VISITED
+    $ mission3visited_past1_Office=1
 
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    scene bg office with Dissolve(0.5)
+    show protagonist hmm at t11
+    p "I'm surprised I’m not in the office yet. Seems it's the wrong time..."
+
+    if mission3visited_past1_Cafe==0:
+        p "Oh jeez, was this the day I was late cause I set my alarm for 8 PM? Seriously?"
+        p "If I remember correctly, I would either be at the Cafe for that donut-coffee deal or trying to get to work. Might as well just finish what I was brought to do."
+
+    p "I guess I really don’t go back here that much, but that poster has been up for a while."
+    p "Not sure why the custodians don’t just take it down, can’t even tell there is a glass wall here without it. They do a pretty good job."
+    p "Seems kind of odd for a literal Time God to want me to take down a poster."
+    p "Gotta be something here. At the same time, their words seemed pretty strong."
+    p "Found it! What should I do now?"
+    hide protagonist
 
     menu:
-        "Cafe":
-            scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Cafe
-        "Street":
-            scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Street
-        "Home":
-            scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Home
+        p "Found it! What should I do now?"
+        "Take down poster":
+            jump chapter3_past1_OfficeMissionSuccess
+        "Do not take down poster":
+            jump chapter3_past1_OfficeMissionFail
+
 
 ####################################################
 label chapter3_past1_OfficeMissionFail:
 
-    scene bg home with Dissolve(0.5)
-
     show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    p "Well... I should take down that poster. But..."
+    show protagonist anxious
+    p "It is someone else’s birthday poster... What if they get mad at me?"
+    p "Yeah, maybe I can come back to it later? After everyone’s left the office?"
+    show protagonist neutral
+    p "Either way, I gotta find that backpack. There’s a dog waiting on me here."
+    p "Not sure if it’s considered waiting if it’s in the future though."
+
+    if mission3visited_past1_Cafe==0:
+        p "I can’t really remember where I was right now. Could be at the cafe or trying to book it to work."
+
+    if mission3visited_past1_Cafe==1:
+        p "Pretty sure my past self is trying to get to work right now"
+
+    p "Where should I go next?"
+    hide protagonist
 
     menu:
-        "Cafe":
+        p "Where should I go next?"
+        "Go to Street":
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Cafe
-        "Street":
+            jump chapter3_past1_Street
+        "Go to Cafe" (disabled=False) if mission3visited_past1_Cafe==0:
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Street
-        "Home":
+            jump chapter3_past1_Cafe
+        "Go to Cafe" (disabled=True) if mission3visited_past1_Cafe==1:
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Home
+            jump chapter3_past1_Cafe
 
 
 ####################################################
 label chapter3_past1_OfficeMissionSucc:
 
-    scene bg home with Dissolve(0.5)
+    #[SET THE PERSONAL MISSION TO SUCCESS]
+    $ mission3personal_success = 1
 
     show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+    p "Sorry old friend, but your birthday celebrations will finally end. I’ve been sent back in time just to remove you. I kinda wonder why."
+    p "Still need to find myself though, gotta get that jerky and save Princess."
+
+    if mission3visited_past1_Office==0:
+        p "I can’t really remember where I was right now. Could already be at the office or trying to book it to work. Still gotta remove that poster too."
+
+    if mission3visited_past1_Office==1:
+        p "Pretty sure my past self is trying to get to work right now."
+
+    p "Where should I go next?"
+    hide protagonist
 
     menu:
-        "Cafe":
+        p "Where should I go next?"
+        "Go to Street":
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Cafe
-        "Street":
+            jump chapter3_past1_Street
+        "Go to Cafe" (disabled=False) if mission3visited_past1_Cafe==0:
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Street
-        "Home":
+            jump chapter3_past1_Cafe
+        "Go to Cafe" (disabled=True) if mission3visited_past1_Cafe==1:
             scene black with Dissolve(0.5)
-            jump chapter3_travel1DogSearch_Home
+            jump chapter3_past1_Cafe
 
 
 ####################################################
 label chapter3_past1_Cafe:
 
-    scene bg home
+    # MARK THE LOCATION AS VISITED
+    $ mission3visited_past1_Cafe=1
 
+    scene bg cafe with Dissolve(0.5)
     show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
+
+    if mission3visited_past1_Office==0:
+        p "Oh, cool. The cafe’s doing that special deal for coffee and a donut."
+        p "That really saved my morning vibe when I was late a few weeks ago."
+        p "Guess that means I’m either at the office or trying to hustle to work."
+
+    p "Hmmmm. I don’t see myself anywhere, my timing was a bit off."
+    p "Was worth a shot though."
+
+    if mission3visited_past1_Office==0:
+        p "This is gonna be interesting. Should I go take that poster down or get the jerky?"
+        p "Probably can’t doddle here too long."
+
+    if mission3visited_past1_Office==1:
+        p "Guess I got one option. I’ve gotta be near my house at this point."
+
+    p "Where should I go next?"
+    hide protagonist
+
+    menu:
+        p "Where should I go next?"
+        "Go to Street":
+            scene black with Dissolve(0.5)
+            jump chapter3_past1_Street
+        "Go to Office" (disabled=False) if mission3visited_past1_Office==0:
+            scene black with Dissolve(0.5)
+            jump chapter3_past1_Office
+        "Go to Office" (disabled=True) if mission3visited_past1_Office==1:
+            scene black with Dissolve(0.5)
+            jump chapter3_past1_Office
 
 
 ####################################################
 label chapter3_past1_Street:
+
+    # MARK THE LOCATION AS VISITED
+    $ mission3visited_past1_Street=1
 
     scene bg home
 
