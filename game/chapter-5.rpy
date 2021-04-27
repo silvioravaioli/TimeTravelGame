@@ -239,7 +239,7 @@ label epilogue_finalMissionFail_lowRep:
 
     show boss neutral at t33
     boss "On the topic of great things, the work you’ve done these past few weeks has been incredible."
-    boss "This month’s promotion is going to ---insert OLD coworker name----, but keep up the good work and you might just get lucky next time."
+    boss "This month’s promotion is going to [coworker_name], but keep up the good work and you might just get lucky next time."
     show boss at s33
 
     show protagonist anxious at t31
@@ -275,13 +275,13 @@ label epilogue_finalMissionFail_lowRep:
     #show coworker2 at s11
 
     show boss happy at t33
-    boss "Welcome to the company, ----NEW COWORKER NAME---. You have impeccable timing, that will take you far."
+    boss "Welcome to the company, [new_coworker_name]. You have impeccable timing, that will take you far."
     boss "I was just about to ask [protagonist_name] here if he would be willing to show you around."
     show boss at thide
     hide boss
 
     show protagonist at t31
-    p "Nice to meet you, -----NEW COWORKER NAME-----. It’d be a pleasure to show off our exquisite linoleum flooring."
+    p "Nice to meet you, [new_coworker_name]. It’d be a pleasure to show off our exquisite linoleum flooring."
     #show coworker2 at s33
     show protagonist at s31
 
@@ -345,7 +345,7 @@ label epilogue_finalMissionFail_lowRep:
     scene bg office_grill with Dissolve(0.5)
 
     n "{i}It is a beautiful day, and you do not mind so much the fact you did not get the promotion you wanted."
-    n "{i}While you are headed to the cafe with -----NAME----, an image on the billboard catches your attention."
+    n "{i}While you are headed to the cafe with [new_coworker_name], an image on the billboard catches your attention."
 
     scene black with Dissolve(0.5)
     scene bg ending3_image1 with Dissolve(0.5)
