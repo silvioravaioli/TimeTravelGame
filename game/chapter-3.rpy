@@ -809,7 +809,7 @@ label chapter3_present_Office_tackleOutcome:
     p "I had to sing a song???"
 
     show boss angry
-    b "Yes! Her song. Now get back to work"
+    boss "Yes! Her song. Now get back to work"
     show boss at thide
     hide boss
     show dog at thide
