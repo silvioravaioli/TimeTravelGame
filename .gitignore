@@ -6,3 +6,7 @@ RenPy General Folder/.DS_Store
 *.save
 log.txt
 traceback.txt
+*.rpyc
+*.rpyc
+errors.txt
+game/saves/navigation.json
