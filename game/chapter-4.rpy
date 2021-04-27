@@ -37,10 +37,9 @@ label chapter4_office_start:
 
     scene bg office_grill
 
-    show protagonist excited at t31
-    n "Picture of the protagonist, happy, holding burger in plate"
+    show protagonist joy at t31
     p "So... what does everyone think?"
-    show protagonist excited at s31
+    show protagonist blush at s31
 
     show boss happy at t33
     boss "Wow, I truly was not expecting this from you. This is truly the best burger I've ever had!"
@@ -58,22 +57,22 @@ label chapter4_office_start:
 
     show protagonist joy at t31
     p "Oh, just the grocery store here on the way here. I'm so happy you like it!"
-    show protagonist joy at s31
+    show protagonist neutral at s31
 
     show boss panicking at t33
     boss "Wait."
     boss "What is going on."
     boss "Oh, noooo. MY STOMACH!"
-    n "image of boss throwing up"
     show boss at s33
 
     show protagonist surprised at t31
+    n "{i}The boss starts vomiting. {w}This is not good.{\i}"
+    show protagonist despair at s31
     p "Are you ok? What's going on?"
-    show protagonist surprised at s31
 
     show boss neutral at t33
     boss "I'm... fine. You said the grocery store here? You know that place..."
-    n "The boss vomits again"
+    n "{i}The boss vomits again.{\i}"
     show boss at s33
 
     show protagonist anxious at t31
@@ -108,8 +107,12 @@ label chapter4_office_start:
             show protagonist anxious at t11
 
     show protagonist anxious at t11
-    n "image of dialing 911, ambulance arriving, and coworkers/boss being carried on a stretcher"
-    show protagonist surprised
+    scene black with Dissolve(0.5)
+    n "{i}Not knowing what else to do, you pull out your phone and dial 911.{\i}"
+    n "{i}An ambulance quickly arrives on the scene.{\i}"
+    n "{i}Your boss, and several of your coworkers, are carried away on stretchers.{\i}"
+    scene bg office_grill with Dissolve(0.5)
+    show protagonist surprised at t11
     p "Oh no. Oh no. Oh, no no no no."
     show protagonist hmm
     p "Ok, I gotta get out of here."
@@ -132,10 +135,10 @@ label chapter4_home_meetTimeGod:
     g "I have a mission for you."
     show timegod at s33
 
-    show protagonist anxious at t31
+    show protagonist despair at t31
     p "Wonderful. Send me back now. I need to go back."
     p "I'll do whatever, please just send me back."
-    show protagonist at s31
+    show protagonist anxious at s31
 
     show timegod neutral at t33
     g "Interesting. Very interesting."
@@ -472,7 +475,7 @@ label chapter4_home_prelude:
     if mission2personal_success == 1:
         p "Hopefully with all these bonuses I can buy another Wookie costume."
     scene black with Dissolve(0.5)
-    n "Three hours later..."
+    n "{i}One hour later...{\i}"
     scene bg home
     show protagonist neutral at t11
     p "Welp, back to the grindstone."
