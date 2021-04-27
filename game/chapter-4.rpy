@@ -48,7 +48,7 @@ label chapter4_office_start:
 
     show coworker happy at t11
     coworker "MMM! The onion, the extra pickles, the garlic scent."
-    show coworker at s11
+    show coworker neutral at s11
 
     show boss talking_happy at t33
     boss "It's strong... but not overpowering. {p}Really highlights the umami of the meat."
@@ -87,8 +87,8 @@ label chapter4_office_start:
     p "Oh no, are they going to die??? Did I just kill the boss?"
     show protagonist surprised at s31
 
-    show coworker neutral at t11
-    n "The coworker also starts vomiting."
+    show coworker puking at t11
+    n "The coworker also starts vomiting"
 
     show coworker at thide
     hide coworker
