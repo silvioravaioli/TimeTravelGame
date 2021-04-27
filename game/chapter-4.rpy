@@ -245,14 +245,14 @@ label chapter4_street_decision:
     n "{i}You check the street sign. {w}This is the correct intersection.{\i}"
     n "{i}The road has a huge amount of traffic...{\i}"
 
-    p "So... I just have to find the biggest rock I can."
+    p "So... I just need to find the biggest rock I can."
     p "Let's see..."
     show protagonist at thide
     hide protagonist with Pause(1.0)
 
     show protagonist neutral at t11
-    p "Ok, this should work."
-    p "Now, I just have to lay this big rock in the middle of the street at exactly 9:00 am."
+    p "Ok, this one should work."
+    p "Now, I just have to lay this big rock in the middle of the street at exactly 9:00 A.M."
     p "..."
     show protagonist talking
     p "It's 8:58 right now."
@@ -279,7 +279,7 @@ label chapter4_street_decision:
     show timegod neutral at t33
     g "What is the matter here?"
     show timegod laugh
-    g "Might I remind you, your time's almost up."
+    g "Might I remind you, your time is almost up."
     g "You need to put down that rock in a minute."
     show timegod angry
     g "You need to put down that rock in a minute, or you will suffer the consequences."
@@ -338,11 +338,11 @@ label chapter4_street_decision:
     hide timegod
 
     show protagonist hmm at t31
-    p "It's 9am now. Now what should I do with this giant rock?"
+    p "It's 9 A.M. now. What should I do with this giant rock?"
     hide protagonist
 
     menu:
-        p "It's 9am now. Now what should I do with this giant rock?"
+        p "It's 9 A.M. now. What should I do with this giant rock?"
         "Put the rock in the street.":
             jump chapter4_street_missionSuccess
         "Don't do it!":
@@ -464,7 +464,7 @@ label chapter4_home_prelude:
     scene bg home
     show protagonist joy at t11
     p "Ahh, home sweet home."
-    p "And with time to spare. I've been working pretty hard and I'm pretty sure you aren't meant to time travel tired."
+    p "And with time to spare. I've been working fairly hard and I'm also pretty sure you aren't meant to time travel tired."
     if mission2personal_success == 1:
         p "Hopefully with all these bonuses I can buy another Wookie costume."
     scene black with Dissolve(0.5)
@@ -479,19 +479,19 @@ label chapter4_home_prelude:
     p "Where should I go now?"
     menu:
         p "Where should I go now?"
-        "Go to the street":
+        "Go to the Street":
             jump chapter4_street_decision
-        "Go to the cafe" if flag_visited_cafe == 0:
+        "Go to the Cafe" if flag_visited_cafe == 0:
             $ flag_visited_cafe = 1
             jump chapter4_cafe_prelude
-        "Go to the office" if flag_visited_office == 0:
+        "Go to the Office" if flag_visited_office == 0:
             $ flag_visited_office = 1
             jump chapter4_office_prelude
 
 label chapter4_street_missionFail:
     scene bg road
     show protagonist anxious at t31
-    p "I'm not so sure about this. I don't think I can."
+    p "I'm not so sure about this. I don't think I can go through with this."
     show protagonist at s31
     n "{i}You see your boss driving by. {w}He waves to you.{\i}"
     show protagonist surprised at t31
@@ -527,7 +527,7 @@ label chapter4_street_missionFail:
     scene black with Dissolve(0.5)
     scene bg road with Dissolve(0.5)
     show pastprotagonist neutral at t11
-    pp "Welp, I've got the burger meat. I got a good feeling about today. These last few weeks have been coming up all me. This grocery store never lets me down."
+    pp "Welp, I've got the burger meat. I got a good feeling about today. These last few weeks have been coming up ALL me. This grocery store has never me down."
     scene black with Dissolve(0.5)
     scene bg road with Dissolve(0.5)
     show protagonist neutral at s31
@@ -539,7 +539,7 @@ label chapter4_street_missionFail:
     show protagonist at s31
     show timegod angry at t33
     g "You don't realize the repercussions of your actions. You do understand that I am a TIME GOD?"
-    g "There is a perfectly good reason for why I tell you what I do."
+    g "There is a perfectly good reason for why I tell you what to do."
     show timegod happy at t33
     g "It's to your benefit that I'm a kind lord. You have an opportunity here to undo your mistakes, although you're testing the limits of my kindness."
     g "Here, your reputation can be salvaged. Simply, complete this mission for me. Let us try this again."
@@ -549,10 +549,10 @@ label chapter4_street_missionFail:
     scene bg home
     # [Jumps to present (home), akin to beginning of mission]
     show timegod laugh at t33
-    g "Hopefully that brief jump has allowed you to regain your sanity. My kindness can only go so far so please do not fail this again."
+    g "Hopefully that brief jump has allowed you to regain your sanity. My kindness can only go so far. So please, do not fail this again."
     show timegod at s33
     show protagonist hey at t31
-    p "No! I don't know who's benefit this is for, but it certainly isn't mine. Or anyone's. In what world is dying better than food poisoning?"
+    p "No! I don't know whose benefit this is for, but it certainly isn't mine. Or anyone's. In what world is dying better than food poisoning?"
     p "I'm pretty sure one of those is treatable. Why are you doing this?"
     show protagonist hey at t31 #should have another angry image to make more dynamic
     g "You wouldn't understand. I'm simply taking care of what is important."
@@ -561,7 +561,7 @@ label chapter4_street_missionFail:
     show protagonist hey at s31
     show timegod neutral at t33
     g "Interesting question, but I didn't come to you to respond to these questions."
-    g "I came to you so you could complete these tasks for the benefit of all."
+    g "I came to you so you could complete these tasks for the benefit of all. Remember, you can improve yourself this way."
     show timegod at s33
     show protagonist hey at t31
     p "I can't do this! I'm not going to kill anyone! I'm done. Consider this working relationship terminated. I don't need time travel to improve myself."
@@ -608,7 +608,7 @@ label chapter4_street_missionSuccess:
     p "What... What did I just do?"
     show protagonist at s31
     show timegod happy at t33
-    g "Oh, turn that frown upside down. You succeeded!"
+    g "Oh, turn that frown upside down. You've succeeded!"
     show timegod at s33
     show protagonist hey at t31
     p "SUCCEEDED?"
@@ -629,9 +629,9 @@ label chapter4_street_missionSuccess:
     hide protagonist hey
     hide timegod happy
     # TODO: past protagonist anxious assets
-    show pastprotagonist neutral at t11
+    show pastprotagonist anxious at t11
     pp "Oh no. Oh no. Oh no. It's 9:05. I'm late for work, again!"
-    pp "AND I still have to get the burger meat."
+    pp "AND I still have to get that burger meat."
     n "You notice the scene."
     pp "AND there's a car accident blocking traffic. Great."
     pp "Ok, you know what? Burger day can wait. The boss will understand. I gotta get to work."
@@ -672,10 +672,10 @@ label chapter4_street_missionSuccess:
     g "That's an interesting question."
     show timegod at s33
     show protagonist hmm at t31
-    p "Oh, great. Yet another non-answer."
+    p "Oh, great. Yet ANOTHER non-answer."
     show protagonist at s31
     show timegod at t33
-    g "Speaking of taking care... now that we've both gotten what we wanted, I'm sorry to inform you that our working relationship will be terminated."
+    g "Speaking of taking care... Now that we've both gotten what we wanted, I'm sorry to inform you that our working relationship will be terminated."
     g "It was truly a pleasure working with you. I wish you the best luck in your future professional endeavors."
     show timegod at s33
     show protagonist hey at t31
