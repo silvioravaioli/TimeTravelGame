@@ -613,7 +613,7 @@ label chapter3_past1_street_distract_SucceedTG:
 
 
 ####################################################
-label chapter3_past1_office_distract_Outcome:
+label chapter3_past1_Home_distract_Outcome:
 
     #scene bg home
 
