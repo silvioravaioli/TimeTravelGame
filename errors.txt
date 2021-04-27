@@ -15,4 +15,8 @@ File "game/chapter-1.rpy", line 52: expected statement.
                                                     ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
+<<<<<<< Updated upstream
 Tue Apr 27 16:49:25 2021
+=======
+Tue Apr 27 19:43:46 2021
+>>>>>>> Stashed changes
