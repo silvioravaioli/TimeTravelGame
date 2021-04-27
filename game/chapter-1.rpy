@@ -41,15 +41,9 @@ label start_chapter1:
     boss "THIS COFFEE IS DISGUSTING! {p}BLEAH!!!"
     show boss at s33
 
-<<<<<<< HEAD
-    show coworker neutral at t31
-    coworker "Woah you really messed that up."
-    show coworker at s31
-=======
     show coworker talking at t31
-    coworker "Woah you really messed that up"
+    coworker "Woah you really messed that up."
     show coworker neutral at s31
->>>>>>> 69dad2aeddcf60dc949cb28ba73d6449c4954c51
 
     show boss angry at t33
     boss "[protagonist_name], out of my way!!!"
