@@ -268,74 +268,75 @@ label epilogue_finalMissionFail_lowRep:
 
 
     show coworker2 neutral at t11
-    n "{i}A new coworker stumbles into office, {w}he trips over nothing, and just barely catches himself."
+    n "{i}A new coworker stumbles into office, {w}she trips over nothing, and just barely catches herself."
 
-    show coworker2 at t11
+    show coworker2 happy at t11
     coworker2 "Hello boss. It’s nice to finally meet you in person!"
-    #show coworker2 at s11
+    show coworker2 neutral at s11
 
     show boss happy at t33
     boss "Welcome to the company, [new_coworker_name]. You have impeccable timing, that will take you far."
     boss "I was just about to ask [protagonist_name] here if he would be willing to show you around."
     show boss at thide
     hide boss
+    show coworker2 neutral at t33
 
-    show protagonist at t31
+    show protagonist talking at t31
     p "Nice to meet you, [new_coworker_name]. It’d be a pleasure to show off our exquisite linoleum flooring."
     #show coworker2 at s33
-    show protagonist at s31
+    show protagonist neutral at s31
 
     n "{i}As you are leaving the office, you pass the old Star Wars day poster."
 
-    show coworker2 at t33
+    show coworker2 excited at t33
     coworker2 "OH SHOOT! YOU GUYS HAD STAR WARS DAY!"
     show coworker2 at s33
 
-    show protagonist at t31
+    show protagonist talking at t31
     p "Are you a Star Wars fan?"
-    show protagonist at s31
+    show protagonist neutral at s31
 
-    show coworker2 at t33
+    show coworker2 happy at t33
     coworker2 "Am I?! HECK YEAH!!! If only I joined this company earlier you would have seen my sweet homemade Wookiee costume."
-    show coworker2 at s33
+    show coworker2 excited at s33
 
-    show protagonist at t31
+    show protagonist talking at t31
     p "Well good thing you weren’t here, because there’s no way you could have held a candle to mine."
     p "I even used Wookiee-scented paint to make the outfit truly authentic."
-    show protagonist at s31
+    show protagonist neutral at s31
 
-    show coworker2 at t33
+    show coworker2 hmm at t33
     coworker2 "What’s even the point of a Wookiee costume without Wookiee-scented paint? {p}At that point it’s just a bigfoot costume."
-    show coworker2 at s33
+    show coworker2 neutral at s33
 
-    show protagonist at t31
+    show protagonist talking at t31
     p "I know, right?"
-    show protagonist at s31
+    show protagonist neutral at s31
 
-    show coworker2 at t33
+    show coworker2 happy at t33
     coworker2 "By the way, is there a place to get coffee around here?"
-    show coworker2 at s33
+    show coworker2 neutral at s33
 
-    show protagonist at t31
+    show protagonist talking at t31
     p "Yeah, there’s a coffee machine right by the conference room."
-    show protagonist at s31
+    show protagonist neutral at s31
 
-    show coworker2 at t33
+    show coworker2 hmm at t33
     coworker2 "Umm..."
     coworker2 "This is pretty awkward, but I don’t actually know how to use a coffee machine. I’ve always gotten my coffee at Starbucks."
     coworker2 "Would you mind showing me how to use it?"
-    show coworker2 at s33
+    show coworker2 neutral at s33
 
-    show protagonist at t31
+    show protagonist anxious at t31
     p "Umm..."
     p "To be honest, I don’t know either. I don’t really drink coffee very often so I didn’t think I’d need to learn."
     p "You know what? There’s a pretty good cafe a few blocks from here."
     p "How about we take a short break and grab some coffee there. It’ll be my treat."
-    show protagonist at s31
+    show protagonist neutral at s31
 
-    show coworker2 at t33
+    show coworker2 happy at t33
     coworker2 "I’m down. Show the way!"
-    show coworker2 at s33
+    show coworker2 neutral at s33
 
     show coworker2 at thide
     hide coworker2
@@ -357,24 +358,24 @@ label epilogue_finalMissionFail_lowRep:
 
     show protagonist surprised at t31
     p "..."
-    show protagonist at s31
+    show protagonist neutral at s31
+
+    show coworker2 happy at t33
+    coworker2 "Ugh, I hate that guy so much!"
+    show coworker2 neutral at s33
+
+    show protagonist surprised at t31
+    p "You know him????"
+    show protagonist neutral at s31
 
     show coworker2 neutral at t33
-    coworker2 "Ugh, I hate that guy so much!"
-    show coworker2 at s33
-
-    show protagonist at t31
-    p "You know him????"
-    show protagonist at s31
-
-    show coworker2 angry at t33
     coworker2 "Where do you think I worked before I came here? That guy’s my former boss."
     coworker2 "Absolute pill of a manager. He has no respect for anyone."
     show coworker2 happy
     coworker2 "You have no idea how happy I am to be out from under his thumb."
-    show coworker2 at s33
+    show coworker2 neutral at s33
 
-    show protagonist at t31
+    show protagonist talking at t31
     p "Yeah, I know that feeling. {w}It seems you had your second chance..."
     show coworker2 at thide
     hide coworker2
