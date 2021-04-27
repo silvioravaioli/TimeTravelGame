@@ -242,9 +242,9 @@ label epilogue_finalMissionFail_lowRep:
     boss "This month’s promotion is going to ---insert OLD coworker name----, but keep up the good work and you might just get lucky next time."
     show boss at s33
 
-    show protagonist at t31
+    show protagonist anxious at t31
     p "You don’t think I’ve just been a huge doofus? {w}The coffee... {w}and the costume... {w}not to mention the burger incident!"
-    show protagonist at s31
+    show protagonist neutral at s31
 
     show boss neutral at t33
     boss "Everyone makes these kinds of mistakes."
@@ -268,7 +268,7 @@ label epilogue_finalMissionFail_lowRep:
 
 
     show coworker2 neutral at t11
-    n "A new coworker stumbles into office, and trips while entering!"
+    n "{i}A new coworker stumbles into office, {w}he trips over nothing, and just barely catches himself."
 
     show coworker2 at t11
     coworker2 "Hello boss. It’s nice to finally meet you in person!"
@@ -285,7 +285,7 @@ label epilogue_finalMissionFail_lowRep:
     #show coworker2 at s33
     show protagonist at s31
 
-    n "P and NC walk out of office, pass old star wars day posted"
+    n "{i}As you are leaving the office, you pass the old Star Wars day poster."
 
     show coworker2 at t33
     coworker2 "OH SHOOT! YOU GUYS HAD STAR WARS DAY!"
@@ -296,16 +296,16 @@ label epilogue_finalMissionFail_lowRep:
     show protagonist at s31
 
     show coworker2 at t33
-    coworker2 "Am I?! HECK YEAH!!! If only I joined this company earlier you would have seen my sweet homemade wookiee costume."
+    coworker2 "Am I?! HECK YEAH!!! If only I joined this company earlier you would have seen my sweet homemade Wookiee costume."
     show coworker2 at s33
 
     show protagonist at t31
     p "Well good thing you weren’t here, because there’s no way you could have held a candle to mine."
-    p "I even used wookiee-scented paint to make the outfit truly authentic."
+    p "I even used Wookiee-scented paint to make the outfit truly authentic."
     show protagonist at s31
 
     show coworker2 at t33
-    coworker2 "What’s even the point of a wookiee costume without wookiee-scented paint? {p}At that point it’s just a bigfoot costume."
+    coworker2 "What’s even the point of a Wookiee costume without Wookiee-scented paint? {p}At that point it’s just a bigfoot costume."
     show coworker2 at s33
 
     show protagonist at t31
@@ -383,7 +383,6 @@ label epilogue_finalMissionFail_lowRep:
 
     scene black with Dissolve(0.5)
     scene bg ending3_image1 with Dissolve(0.5)
-    p "Yeah, I know that feeling. {w}It seems you had your second chance..."
     n "--- SAME IMAGE AS BEFORE, TIME GOD NEUTRAL/SMILING ---"
     scene black with Dissolve(1.0)
     scene bg ending3_image2 with Dissolve(1.0)
