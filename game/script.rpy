@@ -28,32 +28,37 @@ define timegod_name = "???"
 
 
 
-
-####################################################
-# INITIALIZE MISSIONS
-$ mission1personal_success = 0
-$ mission1timegod_success = 0
-$ mission2personal_success = 0
-$ mission2timegod_success = 0
-$ mission3personal_success = 0
-$ mission3timegod_success = 0
-$ mission4personal_success = 0
-$ mission4timegod_success = 0
-
-
 ####################################################
 # START
 
 label start:
+
+    # INITIALIZE MISSIONS
+    $ mission1personal_success = 0
+    $ mission1timegod_success = 0
+    $ mission2personal_success = 0
+    $ mission2timegod_success = 0
+    $ mission3personal_success = 0
+    $ mission3timegod_success = 0
+    $ mission4personal_success = 0
+    $ mission4timegod_success = 0
+
     $ testing_mode = False
-    if not testing_mode:
+
+    if testing_mode:
         jump start_game
+
+    if not testing_mode:
+        jump start_chapter1
+
     menu:
         n "Do you need the RenPy short tutorial?"
         "Yes - show the tutorial":
             jump start_tutorial
         "No - skip to the game":
             jump start_game
+
+
 ####################################################
 # START GAME
 
@@ -71,5 +76,3 @@ label start_game:
             jump start_chapter4
         "Chapter 5":
             jump start_chapter5
-
-

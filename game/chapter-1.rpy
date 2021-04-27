@@ -1,10 +1,5 @@
 ####################################################
 label start_chapter1:
-    # play music "funiculifunicula.mp3" fadeout 1       # ADD MUSIC
-
-    ### INITIALIZE MISSIONS
-    $ mission1personal_success = 0
-
 
     scene bg office
     n "{i}Just another day in the office..."
@@ -592,6 +587,3 @@ label chapter1_end_failure:
     n "END OF MISSION 1"
     jump start_chapter2
     #return
-
-
-    

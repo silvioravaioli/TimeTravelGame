@@ -220,11 +220,11 @@ label epilogue_finalMissionFail_highRep:
     n "{i}Something on the corner of the screen catches your attention. {w}It is an ad for the rival company{w}, you click it without even thinking why you are doing that."
     scene black with Dissolve(0.5)
     scene bg ending2_image1 with Dissolve(0.5)
-    n "{i}It is supposed to be a picture of the team of best representatives for the rival company, but something is off..."    
-    n "BLURRY IMAGE - ONLY A BUNCH OF SHADOWS, NOT ABLE TO SEE THE FACES, ZOOM FURTHER"    
+    n "{i}It is supposed to be a picture of the team of best representatives for the rival company, but something is off..."
+    n "BLURRY IMAGE - ONLY A BUNCH OF SHADOWS, NOT ABLE TO SEE THE FACES, ZOOM FURTHER"
     scene bg ending2_image2 with Dissolve(0.5)
     n "{i}You got your second chance. {i}You fixed your mistakes. {p}This is what you always wanted{w}, right?"
-    n "ZOOM AND SEE THE IMAGE OF THE TIME GOD THERE"    
+    n "ZOOM AND SEE THE IMAGE OF THE TIME GOD THERE"
 
     scene black with Dissolve(1.0)
     n "ENDING 2 OUT OF 3 {p}You can change your choices to discover other endings."

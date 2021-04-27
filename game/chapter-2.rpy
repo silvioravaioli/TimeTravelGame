@@ -1,12 +1,9 @@
 ####################################################
 label start_chapter2:
 
-    ### INITIALIZE MISSIONS
-    $ mission2personal_success = 0
-    $ mission2timegod_success  = 0
-
-    ### CAFE TRACKER
+    # INITIALIZE VARIABLES FOR VISITED PLACES
     $ mission2cafe = 0
+
 
     n "{i}A few weeks later... {p}At the end of another exciting day in the office..."
     scene bg office with Dissolve(0.5)
@@ -528,7 +525,7 @@ label chapter2_failedDestruction:
     show timegod laugh at t11
     g "Well... Looks like you're not going to get anything done. Im bringing you back."
     p "Wait! But –– but my costume!"
-    show timegod snap1 at t11    
+    show timegod snap1 at t11
     p "Wait! But –– but my costume!"
     show timegod snap2 at t11
     scene black with Dissolve(0.5)
@@ -602,7 +599,7 @@ label chapter2_travelPast_cafe3:
     p "And extra pickles."
     p "And extra garlic."
     scene black with Dissolve(0.5)
-    scene bg cafe with Dissolve(0.5)    
+    scene bg cafe with Dissolve(0.5)
     show protagonist neutral at t11
     p "Mmm. This is delicious."
     p "It's so nice here, I think I'll stay for a while."
@@ -638,7 +635,7 @@ label chapter2_travelPast_cafe4:
     p "And extra pickles."
     p "And extra garlic."
     scene black with Dissolve(0.5)
-    scene bg cafe with Dissolve(0.5)    
+    scene bg cafe with Dissolve(0.5)
     show protagonist neutral at t11
     p "Mmm. This is delicious."
     p "It's so nice here, I think I'll stay for a while."
@@ -706,15 +703,15 @@ label chapter2_end_success:
     p "Oh, okay. Well, thank you for the compliment! I'm a great worker, haha!"
     show protagonist neutral at t31
     boss "That is all, also, let me know if you have seen a personalized fountainhead pen with my initials. {w}Please, it would mean quite a lot to me."
-    
+
     show boss at thide
     hide boss
     show protagonist at thide
     hide protagonist
-    
+
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
-    jump start_chapter3
+    jump start_chapter4
     #return
 
 
@@ -757,9 +754,5 @@ label chapter2_end_failure:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
-    jump start_chapter3
+    jump start_chapter4
     #return
-
-
-
-
