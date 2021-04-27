@@ -37,10 +37,9 @@ label chapter4_office_start:
 
     scene bg office_grill
 
-    show protagonist excited at t31
-    n "Picture of the protagonist, happy, holding burger in plate"
+    show protagonist joy at t31
     p "So... what does everyone think?"
-    show protagonist excited at s31
+    show protagonist blush at s31
 
     show boss happy at t33
     boss "Wow, I truly was not expecting this from you. This is truly the best burger I've ever had!"
@@ -58,22 +57,22 @@ label chapter4_office_start:
 
     show protagonist joy at t31
     p "Oh, just the grocery store here on the way here. I'm so happy you like it!"
-    show protagonist joy at s31
+    show protagonist neutral at s31
 
     show boss panicking at t33
     boss "Wait."
     boss "What is going on."
     boss "Oh, noooo. MY STOMACH!"
-    n "image of boss throwing up"
     show boss at s33
 
     show protagonist surprised at t31
+    n "{i}The boss starts vomiting. {w}This is not good.{\i}"
+    show protagonist despair at s31
     p "Are you ok? What's going on?"
-    show protagonist surprised at s31
 
     show boss neutral at t33
     boss "I'm... fine. You said the grocery store here? You know that place..."
-    n "The boss vomits again"
+    n "{i}The boss vomits again.{\i}"
     show boss at s33
 
     show protagonist anxious at t31
@@ -108,8 +107,12 @@ label chapter4_office_start:
             show protagonist anxious at t11
 
     show protagonist anxious at t11
-    n "image of dialing 911, ambulance arriving, and coworkers/boss being carried on a stretcher"
-    show protagonist surprised
+    scene black with Dissolve(0.5)
+    n "{i}Not knowing what else to do, you pull out your phone and dial 911.{\i}"
+    n "{i}An ambulance quickly arrives on the scene.{\i}"
+    n "{i}Your boss, and several of your coworkers, are carried away on stretchers.{\i}"
+    scene bg office_grill with Dissolve(0.5)
+    show protagonist surprised at t11
     p "Oh no. Oh no. Oh, no no no no."
     show protagonist hmm
     p "Ok, I gotta get out of here."
@@ -132,10 +135,10 @@ label chapter4_home_meetTimeGod:
     g "I have a mission for you."
     show timegod at s33
 
-    show protagonist anxious at t31
+    show protagonist despair at t31
     p "Wonderful. Send me back now. I need to go back."
     p "I'll do whatever, please just send me back."
-    show protagonist at s31
+    show protagonist anxious at s31
 
     show timegod neutral at t33
     g "Interesting. Very interesting."
@@ -229,22 +232,23 @@ label chapter4_street_early:
     p "Looks like it's 8:05 am. I have plenty of time to kill."
     p "Guess I'll wait at that bench."
 
+    scene black with Dissolve(0.5)
     jump chapter4_street_decision
 
 
 ####################################################
 label chapter4_street_decision:
 
-    scene bg cafeoutdoor
+    scene bg cafeoutdoor with Dissolve(0.5)
 
-    show protagonist anxious at t11
-    n "You are standing in front of the road."
-    n "The road has a huge traffic..."
+    show protagonist neutral at t11
+    n "{i}You check the street sign. {w}This is the correct intersection.{\i}"
+    n "{i}The road has a huge amount of traffic...{\i}"
 
     p "So... I just have to find the biggest rock I can."
     p "Let's see..."
     show protagonist at thide
-    hide protagonist
+    hide protagonist with Pause(1.0)
 
     show protagonist neutral at t11
     p "Ok, this should work."
@@ -352,7 +356,7 @@ label chapter4_cafe_prelude:
     scene bg cafe with Dissolve(0.5)
 
     show protagonist neutral at t31
-    p "This seems kinda ominous."
+    p "Wow, the cafe is totally deserted. This seems kinda ominous."
     show protagonist at s31
 
     show barista neutral at t33
@@ -403,19 +407,11 @@ label chapter4_cafe_prelude:
         "Go to the Street":
             scene black with Dissolve(0.5)
             jump chapter4_street_decision
-        "Go to the Office" (disabled=False) if flag_visited_office==0:
+        "Go to the Office" if flag_visited_office==0:
             $ flag_visited_office = 1;
             scene black with Dissolve(0.5)
             jump chapter4_office_prelude
-        "Go to the Office" (disabled=True) if flag_visited_office==1:
-            $ flag_visited_office = 1;
-            scene black with Dissolve(0.5)
-            jump chapter4_office_prelude
-        "Go back Home" (disabled=False) if flag_visited_home==0:
-            $ flag_visited_home = 1;
-            scene black with Dissolve(0.5)
-            jump chapter4_home_prelude
-        "Go back Home" (disabled=True) if flag_visited_home==1:
+        "Go back Home" if flag_visited_home==0:
             $ flag_visited_home = 1;
             scene black with Dissolve(0.5)
             jump chapter4_home_prelude
@@ -431,15 +427,15 @@ label chapter4_office_prelude:
     show coworker neutral at t33
     coworker "Hey! I see you are early as well. I think this is the first time ever that I've been here before the boss."
     show coworker at s33
-    show protagonist neutral at t31
+    show protagonist talking at t31
     p "The boss isn't here yet? Don't they usually get in at like 6?"
-    show protagonist at s31
+    show protagonist neutral at s31
     show coworker at t33
     coworker "Yeah, no clue what's going on. Although yesterday it seemed like they only just got here when I arrived."
     show coworker at s33
-    show protagonist at t31
+    show protagonist talking at t31
     p "Maybe something is stressing them out? Is there a big meeting coming up that I forgot about?"
-    show protagonist at s31
+    show protagonist neutral at s31
     show coworker at t33
     coworker "Nah you're good. This week is pretty light as far as I can tell."
     coworker "The only other thing I can think of that would stress them out to this extent is if they lost their lucky pen or something."
@@ -447,9 +443,9 @@ label chapter4_office_prelude:
     coworker "Anyway, I'm going to use this chance to take a small break. You should too, chances like these are rare."
     coworker "See you tonight at the picnic!"
     show coworker at s33
-    show protagonist at t31
+    show protagonist talking at t31
     p "See you! Have a good one."
-    show protagonist at s31
+    show protagonist neutral at s31
     scene black with Dissolve(0.5)
     p "Where should I go now?"
     menu:
@@ -472,7 +468,7 @@ label chapter4_home_prelude:
     if mission2personal_success == 1:
         p "Hopefully with all these bonuses I can buy another Wookie costume."
     scene black with Dissolve(0.5)
-    n "Three hours later..."
+    n "{i}One hour later...{\i}"
     scene bg home
     show protagonist neutral at t11
     p "Welp, back to the grindstone."
@@ -497,7 +493,7 @@ label chapter4_street_missionFail:
     show protagonist anxious at t31
     p "I'm not so sure about this. I don't think I can."
     show protagonist at s31
-    n "You see your boss driving by, waving to you."
+    n "{i}You see your boss driving by. {w}He waves to you.{\i}"
     show protagonist surprised at t31
     p "Hey, that was my boss!"
     show protagonist at s31
@@ -529,10 +525,11 @@ label chapter4_street_missionFail:
     g "Are you sure? Look across the street, see how you've failed."
     show timegod at s33
     scene black with Dissolve(0.5)
-    scene bg road
+    scene bg road with Dissolve(0.5)
     show pastprotagonist neutral at t11
     pp "Welp, I've got the burger meat. I got a good feeling about today. These last few weeks have been coming up all me. This grocery store never lets me down."
     scene black with Dissolve(0.5)
+    scene bg road with Dissolve(0.5)
     show protagonist neutral at s31
     show timegod neutral at t33
     g "See? You've failed. Your entire office is going to suffer from this. Poisoning your coworkers isn't exactly beneficial. Do you realize what you've done?"
@@ -556,11 +553,12 @@ label chapter4_street_missionFail:
     show timegod at s33
     show protagonist hey at t31
     p "No! I don't know who's benefit this is for, but it certainly isn't mine. Or anyone's. In what world is dying better than food poisoning?"
-    show protagonist neutral at t31
     p "I'm pretty sure one of those is treatable. Why are you doing this?"
+    show protagonist hey at t31 #should have another angry image to make more dynamic
     g "You wouldn't understand. I'm simply taking care of what is important."
+    show protagonist hey at s31
     p "What could be this important?"
-    show protagonist neutral at s31
+    show protagonist hey at s31
     show timegod neutral at t33
     g "Interesting question, but I didn't come to you to respond to these questions."
     g "I came to you so you could complete these tasks for the benefit of all."
@@ -589,20 +587,20 @@ label chapter4_street_missionSuccess:
     p "Whew. Ok, I did it. Now what?"
     # [fullscreen image of boss in car]
     # [return back to street background image with p in foreground]
-    n "You see your boss in the car."
+    n "{i}You see your boss driving by. {w}He waves to you."
     show protagonist surprised at s31
     p  "OH! Oh no!"
     # [fullscreen image of boss in car]
     # [fullscreen image of boss's car hitting that giant rock, car kinda tipping forward]
-    n "Your boss's car hits the giant rock, tipping forward."
+    scene black with Dissolve(0.5)
+    n "{i}Your boss's car hits the giant rock, {w}it starts to tip forward.{\i}"
     # [back to street background image with p in foreground]
     # p [still surprised, just watching in shock. No words]
     # [fullscreen image of boss in car. But now instead of neutral face, boss is PANICKING]
-    n "You see your boss is panicking."
-    n "The car crashes and you hear a cacophony of car horns."
-    scene black with Dissolve(0.5)
+    n "{i}You see your boss is panicking.{\i}"
+    n "{i}The car crashes and you hear a cacophony of car horns.{\i}"
+    # scene black with Dissolve(0.5)
     scene bg road_carcrash with Dissolve(0.5)
-    n "The scene looks like the remnants of a car accident."
     # [crash sound]
     # [cacophony of car horns]
     # [back to street background image with p in foreground. But now there are remnants of a car accident in the street]
@@ -697,13 +695,13 @@ label chapter4_home_missionSuccess_present:
     p "What. What just happened?"
     p "What do I do now?"
     p "I should... I should be at work."
-    n "You hear a ding message sound"
-    n "You receive a text from your coworker. It reads:"
-    n "WHERE ARE YOU? ARE YOU OK?"
-    n "BOSS WAS IN A CAR ACCIDENT AT KRONOS. MULTI-CAR PILEUP. ISN'T THAT CLOSE TO WHERE YOU LIVE?"
-    n "EVERYONE AT THE OFFICE IS PANICKING"
-    n "TEXT ME"
-    n "NOW"
+    n "{i}You hear a ding message sound.{\i}"
+    n "{i}You receive a text from your coworker. It reads:{\i}"
+    coworker "WHERE ARE YOU? ARE YOU OK?"
+    coworker "BOSS WAS IN A CAR ACCIDENT AT KRONOS. MULTI-CAR PILEUP. ISN'T THAT CLOSE TO WHERE YOU LIVE?"
+    coworker "EVERYONE AT THE OFFICE IS PANICKING"
+    coworker "TEXT ME"
+    coworker "NOW"
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 4"
