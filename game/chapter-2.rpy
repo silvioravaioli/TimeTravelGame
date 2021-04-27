@@ -725,7 +725,7 @@ label chapter2_end_success:
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
     n "  "
-    jump start_chapter4
+    jump start_chapter3
     #return
 
 
@@ -769,5 +769,5 @@ label chapter2_end_failure:
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
     n "  "
-    jump start_chapter4
+    jump start_chapter3
     #return
