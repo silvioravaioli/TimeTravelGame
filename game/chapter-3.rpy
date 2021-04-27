@@ -683,29 +683,36 @@ label chapter3_present_Home_tackleOutcome:
     show protagonist hey at t31
     p "Hey! Why did you do that?"
     p "I could have gotten the beef jerky back!"
+    show protagonist at s31
 
     show timegod creepy at t33
     g "Why did you do that?"
     show timegod angry
     g "I could ask the same of you."
+    show timegot at s33
 
     show protagonist anxious at t31
     p "Huh?"
+    show protagonist at s31
 
-    show timegod creepy
+    show timegod creepy at t33
     g "Huh?"
+    show timegod at s33
 
     if mission3timegod_success==1:
-        show protagonist hey
+        show protagonist hey at t31
         p "What?! I did your whole song and dance! I took the poster off the wall!"
         p "But my boss’s dog is still lost and I have to get her back!"
-        show timegod laugh
+        show protagonist at s31
+        show timegod laugh at t33
         g "Unimaginably stupid actions have consequences!"
+        show timegod at s33
 
     if mission3timegod_success==0:
-        show timegod angry
+        show timegod angry at t33
         g "That was ONE simple task. Take down a piece of paper."
         g "ONE PIECE OF PAPER!!!"
+        show timegod at s33
         show timegod neutral
         g "I gave you the power to travel through time..."
         show timegod happy
