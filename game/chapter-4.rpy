@@ -268,7 +268,7 @@ label chapter4_street_decision:
     show protagonist talking
     p "...Soon..."
 
-    n "A loud sound from the road distracts you"
+    n "A loud sound from the road distracts you."
 
     show protagonist surprised
     p "Wait!"

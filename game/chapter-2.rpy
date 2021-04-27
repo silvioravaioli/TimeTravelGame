@@ -195,7 +195,7 @@ label chapter2_travelPast_office2fire:
 
     # n "{i}P sprite turns into P sprite pulling fire alarm{\i}"
     # n "Alternative (if it's easier to draw): {i}full-screen image of fire alarm on wall, with hand pulling it{\i}"
-    n "{i}You do what needs to be done. A few seconds later, you hear the sound of the fire alarm{\i}"
+    n "{i}You do what needs to be done. A few seconds later, you hear the sound of the fire alarm.{\i}"
 
     show boss neutral at t11
     boss "Uhm?"
@@ -336,7 +336,7 @@ label chapter2_travelPast_home2_burn:
     scene bg home
 
     show protagonist anxious at t11
-    p "I can't believe I spent $300 on this"
+    p "I can't believe I spent $300 on this."
     show protagonist wookie_fire at t11
     p "Well... goodbye Wookiee costume. You will be missed."
     show protagonist at thide
