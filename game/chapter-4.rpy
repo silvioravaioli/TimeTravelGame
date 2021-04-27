@@ -239,7 +239,7 @@ label chapter4_street_decision:
     n "You are standing in front of the road."
     n "The road has a huge traffic..."
 
-    p "So... I just have to find the biggest rock I can"
+    p "So... I just have to find the biggest rock I can."
     p "Let's see..."
     show protagonist at thide
     hide protagonist
@@ -274,7 +274,7 @@ label chapter4_street_decision:
     g "What is the matter here?"
     show timegod laugh
     g "Might I remind you, your time's almost up."
-    g "You need to put down that rock in a minute"
+    g "You need to put down that rock in a minute."
     show timegod angry
     g "You need to put down that rock in a minute, or you will suffer the consequences."
     show timegod at s33
@@ -337,7 +337,7 @@ label chapter4_street_decision:
 
     menu:
         p "It's 9am now. Now what should I do with this giant rock?"
-        "Put the rock in the street":
+        "Put the rock in the street.":
             jump chapter4_street_missionSuccess
         "Don't do it!":
             jump chapter4_street_missionFail
@@ -350,7 +350,7 @@ label chapter4_cafe_prelude:
     scene bg cafe
 
     show protagonist neutral at t31
-    p "This seems kinda ominous"
+    p "This seems kinda ominous."
     show protagonist at s31
 
     show barista neutral at t33
