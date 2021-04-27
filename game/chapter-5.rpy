@@ -1,11 +1,20 @@
 ####################################################
 label start_chapter5:
 
-    menu:
-        n "Which ending do you want to test?"
-        "Final mission success":
+    # CHOOSE THE ENDING
+    if testing_mode:
+        menu:
+            n "Which ending do you want to test?"
+            "Final mission success":
+                jump epilogue_finalMissionSuccess
+            "Final mission failure":
+                jump epilogue_finalMissionFailure
+
+    # ENDING FROM THE STORY
+    if not testing_mode:
+        if mission4timegod_success == 1:
             jump epilogue_finalMissionSuccess
-        "Final mission failure":
+        else:
             jump epilogue_finalMissionFailure
 
 
@@ -133,16 +142,23 @@ label epilogue_finalMissionFailure:
     show boss neutral at s33
 
 
+    # CHOOSE THE ENDING
+    if testing_mode:
+        hide boss
+        hide protagonist
+        menu:
+            n "Which ending do you want to test?"
+            "High Reputation":
+                jump epilogue_finalMissionFail_highRep
+            "Low Reputation":
+                jump epilogue_finalMissionFail_lowRep
 
-    hide boss
-    hide protagonist
-
-    menu:
-        n "Which ending do you want to test?"
-        "High Reputation":
-            jump epilogue_finalMissionFail_highRep
-        "Low Reputation":
+    # ENDING FROM THE STORY
+    if not testing_mode:
+        if (mission1personal_success + mission2personal_success + mission3personal_success) == 0:
             jump epilogue_finalMissionFail_lowRep
+        else:
+            jump epilogue_finalMissionFail_highRep
 
 
 
@@ -172,6 +188,17 @@ label epilogue_finalMissionFail_highRep:
         show boss at s33
         show protagonist neutral at t31
         p "I know how to be professional when we have important clients!"
+        show protagonist at s31
+
+    # IF MISSION 3 SUCCESS
+    if mission3personal_success == 0:
+        show boss neutral at t33
+        boss "You took good care of Princess."
+
+        boss "I trust you will take care of our company with the same level of attention."
+        show boss at s33
+        show protagonist neutral at t31
+        p "I never lose sight of what is important."
         show protagonist at s31
 
     show boss neutral at t33
