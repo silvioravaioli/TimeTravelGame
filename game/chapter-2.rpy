@@ -40,6 +40,7 @@ label chapter2_office_StarWarsDay1:
 
     show protagonist wookie_anxious at t31
     p "Oh..."
+    p "I'm actually a Wookiee... {w}Not Bigfoot... {w}They're different"
 
     scene black with Dissolve(1.0)
     n "{i}In the meeting, you are the only one wearing a costume, while everyone else has a nice suit. The boss is facepalming while looking at you. It's an utter disaster.{\i}"
@@ -77,26 +78,15 @@ label chapter2_home_meetTimeGod:
     g "I'm going to need you to pick something up for me."
     show timegod laugh
     g "While you're at it, feel free to destroy this abomination of a Bigfoot costume."
-    show timegod neutral
-    g "Are you ready to go?"
-    show timegod snap1
-    g "Are you ready to go?"
-    show timegod snap2
-    g "Are you ready to go?"
-    show timegod at thide
-    hide timegod
-
-    scene black with Dissolve(0.5)
-    scene bg home with Dissolve(0.5)
 
     menu:
         "So what do you need me to get?":
             show timegod neutral at t11
             g "Interesting question."
-        "Are we in the past now? How did you do that?":
+        "Why me?":
             show timegod neutral at t11
             g "Interesting question."
-        "Shouldn't you wait until I agree before sending me back in time?":
+        "Can I say no?":
             show timegod neutral at t11
             g "Interesting question."
 
@@ -120,8 +110,17 @@ label chapter2_home_meetTimeGod:
 
     show timegod laugh at t11
     g "I hope your journey is fruitful!"
-    scene bg home with Dissolve(0.5)
 
+    show timegod neutral at t11
+    g "Are you ready to go?"
+    show timegod snap1
+    g "Are you ready to go?"
+    show timegod snap2
+    g "Are you ready to go?"
+    show timegod at thide
+    hide timegod
+
+    scene black with Dissolve(0.5)
 
 
 ####################################################
@@ -155,8 +154,8 @@ label chapter2_travelPast_office1:
 
     show protagonist neutral at t11
     p "So I just have to go get the boss's lucky pen."
-    show protagonist excited
-    p "EASY!"
+    show protagonist talking
+    p "Easy."
     show protagonist at thide
     hide protagonist
 
@@ -241,8 +240,6 @@ label chapter2_travelPast_office2fire:
 ####################################################
 label chapter2_travelPast_office2hide:
 
-    #scene bg home
-
     show protagonist hmm at t11
     p "It's 10am right now. I could just hide until the boss leaves work."
     show protagonist at thide
@@ -252,6 +249,7 @@ label chapter2_travelPast_office2hide:
     p "...."
     p "....."
     p "......"
+    scene bg office_dark
     p "......."
 
     show protagonist joy at t11
@@ -263,7 +261,7 @@ label chapter2_travelPast_office2hide:
     show protagonist at thide
     hide protagonist
 
-    scene bg office with Pause(1.5)
+    scene bg office_dark with Pause(1.5)
 
     # n "{i}P sneaks off screen in the direction of the pen{\i}"
     # n "{i}P returns, triumphant, holding the pen{\i}"
@@ -284,7 +282,7 @@ label chapter2_travelPast_office2hide:
             else:
                 jump chapter2_travelPast_home3
         "Go to the cafe" (disabled=False) if mission2cafe == 0:
-            scene bg cafeoutdoor
+            scene bg cafeoutdoor_dark
             n "{i}The cafe is closed.{\i}"
             n "{i}It makes sense. It is almost 11 pm...{\i}"
             if mission2personal_success == 0:
@@ -326,7 +324,7 @@ label chapter2_travelPast_home2_burn:
 
     scene bg home
 
-    show protagonist surprised at t11
+    show protagonist anxious at t11
     p "I can't believe I spent $300 on this"
     show protagonist wookie_throw at t11
     p "Well... goodbye Wookiee costume. You will be missed."
@@ -342,7 +340,7 @@ label chapter2_travelPast_home2_throw:
 
     scene bg home
 
-    show protagonist surprised at t11
+    show protagonist anxious at t11
     p "I can't believe I spent $300 on this"
     show protagonist wookie_throw at t11
     p "Well... goodbye Wookiee costume. You will be missed."
@@ -498,22 +496,23 @@ label chapter2_returnPen_snap:
 ####################################################
 ### TODO: replace some narrator lines with animations / correct images
 label chapter2_failedDestruction:
-    scene bg home
+    scene bg home_dark
     show protagonist neutral at t31
     p "Now, I just gotta get rid of that costume..."
     n "{i}You hear loud bangs in the background.{\i}"
     show protagonist anxious at t31
     p "Oh dang."
     p "My past self is home..."
-    show pastprotagonist neutral at t33
+    show pastprotagonist hey_left at t33
     pp "Hey...Hey!"
     p "HIDE!"
     n "{i}You hide under the table.{\i}"
     hide protagonist anxious
+    show pastprotagonist hmm at t33
     pp "Hmm...Huh?? Was that... me???"
     pp "What did I just witness?"
     n "{i}The smoke alarm rings.{\i}"
-    show pastprotagonist surprised
+    show pastprotagonist surprise
     # TODO show pp SURPRISED
     pp "SHOOT! Did I burn my pot roast?"
     n "{i}Your past self disappears from where he came from.{\i}"
@@ -731,7 +730,7 @@ label chapter2_end_failure:
     boss "That meeting was ridiculous, went as awful as possible for both of us."
     scene black with Dissolve(1.0)
     n "{i}As the boss recaps the meeting, you can somehow exactly picture the scene.{\i}"
-    n "{i}In the meeting, you were the only one wearing a costume, while everyone else had a nice suit. The boss was facepalming while looking at you. Not only It was an utter disaster.{\i}"
+    n "{i}In the meeting, you were the only one wearing a costume, while everyone else had a nice suit. The boss was facepalming while looking at you. It was an utter disaster.{\i}"
     n "{i}Not only that, but the boss seemed to be quite panicked about something. What could have been going on?{\i}"
     scene bg office with Dissolve(1.0)
     show protagonist anxious at t31

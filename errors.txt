@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapter-5.rpy", line 160: reached end of line when expecting ':'.
-    if mission1personal_success == 0
+File "game/chapter-2.rpy", line 508: end of line expected.
+    show pastprotagonist hey at t33 x-zoom = -1.0 
                                     ^
-
-File "game/chapter-5.rpy", line 169: reached end of line when expecting ':'.
-    if mission2personal_success == 0
-                                    ^
-
-File "game/chapter-5.rpy", line 257: expected statement.
-    how boss talking
-                    ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 01:01:24 2021
+Tue Apr 27 11:14:29 2021
