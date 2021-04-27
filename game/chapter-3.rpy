@@ -17,12 +17,12 @@ label chapter3_travel1DogSearch_Cafe:
     boss "Hey, [protagonist_name]! You busy?"
 
     show protagonist neutral at t31
-    P "Uh... Yeah, a little bit."
+    p "Uh... Yeah, a little bit."
 
     boss "Yeah, sure."
     boss "I need you to take care of my dog."
 
-    P "But I just said-"
+    p "But I just said-"
 
     boss "Our dog walker is sick today and there was nobody to take care of little Princess at home"
     boss "And I have back-to-back meetings today, so I need you to take her"
@@ -38,7 +38,7 @@ label chapter3_travel1DogSearch_Cafe:
     show dog happy
     boss "I love you! I love you!"
 
-    show protagonist blushing
+    show protagonist blush
     p "Uh..."
 
     show boss angry
@@ -91,7 +91,7 @@ label chapter3_travel1DogSearch_Cafe:
     show protagonist hey
     p "Hey! That’s my beef jerky!"
     p "Princess! Get back here!"
-    p "Remember when I said you were kinda cute?
+    p "Remember when I said you were kinda cute?"
     p "Well now I TAKE IT BACK!"
     p "PRINCESS!"
     p "PRINCESS! Princesssss!"
@@ -110,13 +110,13 @@ label chapter3_travel1DogSearch_Cafe:
         p "Where could she have possibly gone?"
         "Cafe":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Cafe
+            jump chapter3_travel1DogSearch_Cafe
         "Street":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Street
+            jump chapter3_travel1DogSearch_Street
         "Home":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Home
+            jump chapter3_travel1DogSearch_Home
 
 
 ####################################################
@@ -134,10 +134,10 @@ label chapter3_travel1DogSearch_Street:
         p "Where could she have possibly gone?"
         "Cafe":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Cafe
+            jump chapter3_travel1DogSearch_Cafe
         "Home":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Home
+            jump chapter3_travel1DogSearch_Home
 
 
 ####################################################
@@ -166,9 +166,9 @@ label chapter3_travel1DogSearch_Home:
     hide protagonist
 
     menu:
-	    "Sounds good. You can count on me.":
+        "Sounds good. You can count on me.":
             show timegod happy at t11
-	    "Why two weeks ago?":
+        "Why two weeks ago?":
             show timegod angry at t11
 
     g "That beef jerky has been in your backpack for five years. {w}But my task for you {i}needs{\i} to be completed two weeks ago."
@@ -204,13 +204,13 @@ label chapter3_past1_Home:
         p "Where could she have possibly gone?"
         "Cafe":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Cafe
+            jump chapter3_travel1DogSearch_Cafe
         "Street":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Street
+            jump chapter3_travel1DogSearch_Street
         "Home":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Home
+            jump chapter3_travel1DogSearch_Home
 
 
 
@@ -232,13 +232,13 @@ label chapter3_past1_Office:
     menu:
         "Cafe":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Cafe
+            jump chapter3_travel1DogSearch_Cafe
         "Street":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Street
+            jump chapter3_travel1DogSearch_Street
         "Home":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Home
+            jump chapter3_travel1DogSearch_Home
 
 ####################################################
 label chapter3_past1_OfficeMissionFail:
@@ -256,13 +256,13 @@ label chapter3_past1_OfficeMissionFail:
     menu:
         "Cafe":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Cafe
+            jump chapter3_travel1DogSearch_Cafe
         "Street":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Street
+            jump chapter3_travel1DogSearch_Street
         "Home":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Home
+            jump chapter3_travel1DogSearch_Home
 
 
 ####################################################
@@ -281,13 +281,13 @@ label chapter3_past1_OfficeMissionSucc:
     menu:
         "Cafe":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Cafe
+            jump chapter3_travel1DogSearch_Cafe
         "Street":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Street
+            jump chapter3_travel1DogSearch_Street
         "Home":
             scene black with Dissolve(0.5)
-            label chapter3_travel1DogSearch_Home
+            jump chapter3_travel1DogSearch_Home
 
 
 ####################################################
