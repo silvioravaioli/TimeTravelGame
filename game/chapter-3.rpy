@@ -575,19 +575,31 @@ label chapter3_past1_street_distract_FailTG:
     g "I don’t get how you can mess that up. It’s quite simple."
     g "Go to the office."
     g "Remove the poster."
-    g "How do you function?"
+    g "Instead..."
+    show timegod laugh at t33
+    g "Instead... You eat some expired beef jerky?!"
+    
 
-    show protagonist neutral at t31
-    p "I get around pretty decently."
+    show protagonist anxious at t31
+    p "I don't know what I was thinking..."
 
-    g "You’re lucky I’m merciful. I know you’re capable of doing what I’ve entrusted you to. Still, in comparison to those other tasks, this should have been as easy as breathing. We’re going back."
+    p "Please, let me fix this! {w}I can go back! {p}I still have to make sure my boss’s dog doesn’t get lost!"
+    show protagonist at s31
 
-    scene black with Dissolve(0.5)
-    show bg home with Dissolve(0.5)
+    show timegod laugh at t33
+    g "Ha! Go back?! You are in no position to beg for favors"
+    show timegod angry
+    g "Now, get out of here!"
 
-    g "If I call upon you again, do not fail me."
+    show protagonist at t31
+    p "But... but this is my house!"
+    show protagonist at s31
 
-    p "Uh alright, I got work right now though."
+    show timegod laugh at t33
+    g "I said"
+    show timegod angry at t33
+    g "GET {w}OUT {w}OF {w}HERE!"
+    g "It’s the middle of the day! Go to work!"
     jump chapter3_past1_Home_distract_Outcome
 
 
@@ -600,8 +612,10 @@ label chapter3_past1_street_distract_SucceedTG:
     g "Regardless of what you are doing on this street with that rancid jerky, you’ve completed what I had asked of you."
     g "Congratulations. You’ve been working quite well under me."
 
+    show protagonist talking at t31
     p "Thank you, I’m a pretty handy guy."
 
+    show timegod laugh at t33
     g "Indeed. Let’s return to the present."
 
     scene black with Dissolve(0.5)
@@ -624,7 +638,10 @@ label chapter3_past1_Home_distract_Outcome:
     boss "Hey [protagonist_name], how was Princess?"
 
     show dog happy at t11
-    p "Uh, absolutely amazing! No running away, no sickness, just me watching a dog I think."
+    show protagonist anxious at t31
+    p "Uh"
+    show protagonist joy at t31
+    p "absolutely amazing! No running away, no sickness, just me watching a dog I think."
     show dog cool at t11
 
     boss "Well, that’s what I asked of you. Good job on completing that menial task. I know I can count on you."
@@ -713,28 +730,33 @@ label chapter3_present_Home_tackleOutcome:
         g "That was ONE simple task. Take down a piece of paper."
         g "ONE PIECE OF PAPER!!!"
         show timegod at s33
-        show timegod neutral
+        show timegod neutral at t33
         g "I gave you the power to travel through time..."
         show timegod happy
         g "The ability to change your past, present, and future."
         g "All of that in exchange for ONE TASK."
         show timegod angry
         g "The bar COULDN’T be any lower. And yet, you STILL FAILED!"
+        show timegod at s33
+        show protagonist anxious at t31
         p "I didn’t think––"
+        show timegod at t33
         g "You’re absolutely right! You did NOT think!"
 
-    show timegod angry
+    show timegod angry at t33
     g "If you had even one ounce of brain, you would realize that tackling your past self was a TERRIBLE idea"
     g "Oh but that’s not even the problem."
     show timegod neutral
     g "Death and injuries? Oh, those are part of the job when you time travel."
     show timegod angry
     g "But you failed me so completely, that you were about to give away EVERYTHING!"
+    show timegod at s33
 
-    show protagonist anxious
+    show protagonist anxious at t31
     p "I... I really thought it would work..."
+    show protagonist at s31
 
-    show timegod creepy
+    show timegod creepy at t33
     g "I’m you but from the future."
     show timegod angry
     g "You can’t just tell ANYONE about time travel!"

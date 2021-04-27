@@ -15,4 +15,4 @@ File "game/chapter-1.rpy", line 52: expected statement.
                                                     ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 16:41:13 2021
+Tue Apr 27 16:49:25 2021
