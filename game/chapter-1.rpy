@@ -6,7 +6,7 @@ label start_chapter1:
 
     show coworker talking at t33
     coworker "Hey newbie, the boss is mad at you. At least, I guess he was referring to you. You are the new idiot, right? {p}What is your name again?!?"
-    show coworker at s33
+    show coworker neutral at s33
 
     show protagonist hmm at t31
     n "{i}This is me. I have just started this new job, but things are not going great..."
@@ -17,6 +17,7 @@ label start_chapter1:
     $ protagonist_name = protagonist_name.strip()
     if protagonist_name == "":
         $ protagonist_name="Eli"
+    show coworker talking at s33
     coworker "Right, [protagonist_name], the new idiot! Hurry up!"
     show coworker at thide
     hide coworker
@@ -40,9 +41,9 @@ label start_chapter1:
     boss "THIS COFFEE IS DISGUSTING! {p}BLEAH!!!"
     show boss at s33
 
-    show coworker neutral at t31
+    show coworker talking at t31
     coworker "Woah you really messed that up"
-    show coworker at s31
+    show coworker neutral at s31
 
     show boss angry at t33
     boss "[protagonist_name], out of my way!!!"
