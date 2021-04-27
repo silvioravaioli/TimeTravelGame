@@ -6,3 +6,4 @@ RenPy General Folder/.DS_Store
 *.save
 log.txt
 traceback.txt
+*.rpyc
