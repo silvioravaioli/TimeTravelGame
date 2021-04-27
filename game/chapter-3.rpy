@@ -461,6 +461,7 @@ label chapter3_past1_office_distract_Outcome:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 3"
+    n "  "
     jump start_chapter4
     #return
 
@@ -498,6 +499,7 @@ label chapter3_present_Office_tackleOutcome:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 3"
+    n "  "
     jump start_chapter4
     #return
 

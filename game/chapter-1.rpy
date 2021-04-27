@@ -40,7 +40,7 @@ label start_chapter1:
     boss "THIS COFFEE IS DISGUSTING! {p}BLEAH!!!"
     show boss at s33
 
-    show coworker normal at t31
+    show coworker neutral at t31
     coworker "Woah you really messed that up"
     show coworker at s31
 
@@ -275,10 +275,10 @@ label chapter1_cafe_present3:
 
     show protagonist joy at t11
     p "Can I get an egg salad sandwich {w}with extra onions, {w}extra pickles, {w}and extra garlic?"
-    show protagonist at s31
+    show protagonist at t31
 
     show barista neutral at t33
-    barista "Sure! Would you like to add a cup of coffee to that order? {w}Promotion week, only 25 cents extra"
+    barista "Sure! Would you like to add a cup of coffee to that order? {w}Promotion week, only 25 cents extra."
     show barista at s33
 
     show protagonist talking at t31
@@ -290,7 +290,7 @@ label chapter1_cafe_present3:
     show barista at thide
     hide barista
 
-    n "The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
+    n "{i}The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
 
     show protagonist hmm at t31
     p "So... that's how you make coffee. {w}Wish I knew that earlier."
@@ -314,11 +314,11 @@ label chapter1_cafe_present3:
 label chapter1_cafe_past3:
 
     show pastprotagonist joy at t11
-    pp "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
-    show pastprotagonist at s31
+    pp "Can I get an egg salad sandwich {w}with extra onions, {w}extra pickles, {w}and extra garlic?"
+    show pastprotagonist at t31
 
     show barista neutral at t33
-    barista "Sure! Would you like to add a cup of coffee to that order? {w}Promotion week, only 25 cents extra"
+    barista "Sure! Would you like to add a cup of coffee to that order? {w}Promotion week, only 25 cents extra."
     show barista at s33
 
     show pastprotagonist talking at t31
@@ -330,7 +330,7 @@ label chapter1_cafe_past3:
     show barista at thide
     hide barista
 
-    n "The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
+    n "{i}The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
 
     show pastprotagonist hmm at t31
     pp "So... that's how you make coffee. {w}Wish I knew that earlier."
@@ -346,7 +346,7 @@ label chapter1_cafe_past3:
     show barista at thide
     hide barista
 
-    show protagonist neutral at t31
+    show protagonist neutral at t11
     p "Oh, looks like I'm leaving. Better go so that I don't run into myself."
 
     scene black with Dissolve(0.5)
@@ -376,8 +376,9 @@ label chapter1_office:
     hide protagonist
     p "Better hide behind this potted plant"
 
-    show pastprotagonist neutral at t11
+    show pastprotagonist anxious at t11
     pp "What is this???"
+    show pastprotagonist despair
     pp "Hm... Maybe it's from the boss. {p}Guess I'll drop it off."
     hide pastprotagonist
 
@@ -525,7 +526,7 @@ label chapter1_end:
     show protagonist neutral at s31
 
     show boss talking at t33
-    boss "Oh, yeah. {w}Make me a cup of coffee"
+    boss "Oh, yeah. {w}Make me a cup of coffee."
     show boss at s33
 
     show protagonist anxious at t31
@@ -562,6 +563,7 @@ label chapter1_end_success:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 1"
+    n "  "
     jump start_chapter2
     #return
 
@@ -585,5 +587,6 @@ label chapter1_end_failure:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 1"
+    n "  "
     jump start_chapter2
     #return

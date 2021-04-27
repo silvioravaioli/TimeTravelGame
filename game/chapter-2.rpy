@@ -15,9 +15,9 @@ label start_chapter2:
     p "Hmm... I wonder what that is?"
     n "{i}There are a bunch of stormtroopers forming the words {p}\"STAR {w}- WARS {w}- DAY\" "
     show protagonist excited
-    p "Oh YES! OH YES OH YES! Next Monday is STAR WARS DAY! {w}I am going to absolutely SMOKE the competition."
+    p "Oh YES! OH YES OH YES! Next Monday is STAR WARS DAY! {p}I am going to absolutely SMOKE the competition."
     show protagonist anxious
-    p "What should I be? {w}Princess Leia? {w}Stormtrooper? {w}I do a mean Darth Vader impression too. {w}Wookiee? Hmm...."
+    p "What should I be? {w}Princess Leia? {w}Stormtrooper? {p}I do a mean Darth Vader impression too. {w}Wookiee? Hmm...."
 
     scene black with Dissolve(0.5)
     jump chapter2_office_StarWarsDay1
@@ -35,12 +35,12 @@ label chapter2_office_StarWarsDay1:
     show protagonist wookie_normal at t31
     p "I'm a Wookiee! Star Wars day? Said so on the poster on the wall?"
 
-    show boss angry at t33
+    show boss facepalm at t33
     boss "That's NEXT Monday! Not TODAY! {w}Today's our investor meeting! You're presenting and you show up dressed as Bigfoot?"
 
     show protagonist wookie_anxious at t31
     p "Oh..."
-    p "I'm actually a Wookiee... {w}Not Bigfoot... {w}They're different"
+    p "I'm actually a Wookiee... {w}Not Bigfoot... {w}They're different!!!"
 
     scene black with Dissolve(1.0)
     n "{i}In the meeting, you are the only one wearing a costume, while everyone else has a nice suit. The boss is facepalming while looking at you. It's an utter disaster.{\i}"
@@ -56,7 +56,7 @@ label chapter2_home_meetTimeGod:
     scene bg home with Dissolve(0.5)
 
     show timegod neutral at t11
-    g "Whoa you really messed that up. I see you've had a bad day... {w}again!"
+    g "Whoa you really messed that up. {p}I see you've had a bad day... {w}AGAIN!"
     show timegod laugh
     g "I have a proposition for you."
     show timegod creepy
@@ -164,9 +164,10 @@ label chapter2_travelPast_office1:
     n "{i}The boss is really here, even if it's Sunday. He really cannot take a break from work."
     n "{i}So focused, so motivated, he is really impressive!"
     n "{i}But, he still has the pen..."
-    n "{i}Oh shoot, he went back to his office!!!"
     show boss at thide
     hide boss
+
+    n "{i}Oh shoot, he went back to his office!!!"
 
     show protagonist anxious at t11
     p "Ahhh.. What do I do now?"
@@ -249,15 +250,15 @@ label chapter2_travelPast_office2hide:
     p "...."
     p "....."
     p "......"
-    scene bg office_dark
-    p "......."
+    scene bg office_dark with dissolve
+    #p "......."
 
     show protagonist joy at t11
     p "Yes! Finally, everyone left!"
     show protagonist surprised at t11
     p "Oh! My back! Crouching behind a potted plant really does things to your body."
     show protagonist talking at t11
-    p "Ok, now I gotta get that pen"
+    p "Ok, now I gotta get that pen!"
     show protagonist at thide
     hide protagonist
 
@@ -290,7 +291,7 @@ label chapter2_travelPast_office2hide:
 
             if mission2personal_success == 0:
                 show protagonist hmm at t11
-                p "Shoot...{w}I should go prevent the Wookie fiasco"
+                p "Shoot... {w}I should go prevent the Wookie fiasco!"
                 jump chapter2_failedDestruction
             else:
                 show timegod laugh at t11
@@ -336,7 +337,7 @@ label chapter2_travelPast_home2_burn:
 
     show protagonist anxious at t11
     p "I can't believe I spent $300 on this"
-    show protagonist wookie_throw at t11
+    show protagonist wookie_fire at t11
     p "Well... goodbye Wookiee costume. You will be missed."
     show protagonist at thide
     hide protagonist
@@ -353,7 +354,7 @@ label chapter2_travelPast_home2_throw:
     show protagonist anxious at t11
     p "I can't believe I spent $300 on this"
     show protagonist wookie_throw at t11
-    p "Well... goodbye Wookiee costume. You will be missed."
+    p "Well... Goodbye Wookiee costume. You will be missed."
     show protagonist at thide
     hide protagonist
 
@@ -514,10 +515,11 @@ label chapter2_failedDestruction:
     p "Oh dang."
     p "My past self is home..."
     show pastprotagonist hey_left at t33
-    pp "Hey...Hey!"
+    pp "Hey you!"
     p "HIDE!"
+    show protagonist at thide
+    hide protagonist
     n "{i}You hide under the table.{\i}"
-    hide protagonist anxious
     show pastprotagonist hmm at t33
     pp "Hmm...Huh?? Was that... me???"
     pp "What did I just witness?"
@@ -671,6 +673,8 @@ label chapter2_travelPast_cafe4:
 ####################################################
 label chapter2_end:
 
+    show black with Dissolve(0.5)
+    n "One day later"
     scene bg office with Dissolve(0.5)
     show protagonist anxious at t31
     p "Jeez, I guarantee this isn't gonna be good."
@@ -720,6 +724,7 @@ label chapter2_end_success:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
+    n "  "
     jump start_chapter4
     #return
 
@@ -763,5 +768,6 @@ label chapter2_end_failure:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
+    n "  "
     jump start_chapter4
     #return

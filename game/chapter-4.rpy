@@ -19,7 +19,7 @@ label start_chapter4:
     show boss neutral at s33
 
     show protagonist excited at t31
-    p "Oh yes, I'd love to! After all, I am a master chef. Boss, I promise you..."
+    p "Oh yes, I'd love to! After all, I am a master chef. {p}Boss, I promise you..."
     show protagonist joy
     p "Tomorrow you're going to eat the best burgers you've ever had!"
 
@@ -39,20 +39,21 @@ label chapter4_office_start:
 
     show protagonist joy at t31
     p "So... what does everyone think?"
-    show protagonist blush at s31
+    show protagonist at s31
 
     show boss happy at t33
-    boss "Wow, I truly was not expecting this from you. This is truly the best burger I've ever had!"
+    boss "Wow, I truly was not expecting this from you. {p}This is truly the best burger I've ever had!"
+    show protagonist blush at s31
     show boss neutral at s33
 
-    show coworker neutral at t11
+    show coworker happy at t11
     coworker "MMM! The onion, the extra pickles, the garlic scent."
-    show coworker neutral at s11
+    show coworker at s11
 
     show boss talking_happy at t33
-    boss "It's strong... but not overpowering. Really highlights the umami of the meat."
+    boss "It's strong... but not overpowering. {p}Really highlights the umami of the meat."
     show boss talking
-    boss "Speaking of, that is some REALLY good burger meat. Where did you get it from?"
+    boss "Speaking of, that is some REALLY good burger meat. {p}Where did you get it from?"
     show boss neutral at s33
 
     show protagonist joy at t31
@@ -62,16 +63,19 @@ label chapter4_office_start:
     show boss panicking at t33
     boss "Wait..."
     boss "What is going on..."
+    show boss disgusted
     boss "Oh, noooo! MY STOMACH!"
     show boss at s33
 
+    show boss puking
     show protagonist surprised at t31
-    n "{i}The boss starts vomiting. {w}This is not good.{\i}"
+    n "{i}The boss starts vomiting. {w}This is not good."
     show protagonist despair at s31
     p "Are you ok? What's going on?"
 
-    show boss neutral at t33
-    boss "I'm... fine. You said the grocery store near here? You know, that place..."
+    show boss disgusted at t33
+    boss "I'm... fine. You said the grocery store near here? {p}You know, that place..."
+    show boss puking at t33
     n "{i}The boss vomits again.{\i}"
     show boss at s33
 
@@ -142,7 +146,7 @@ label chapter4_home_meetTimeGod:
 
     show timegod neutral at t33
     g "Interesting. Very interesting."
-    g "You have been performing quite satisfactorily. It is time to entrust you with a more important task."
+    g "You have been performing quite satisfactorily. {p}It is time to entrust you with a more important task."
     show timegod laugh
     g "Although important, this task is not particularly difficult."
     g "You must simply place a certain object at a specific place at a particular time."
@@ -210,14 +214,18 @@ label chapter4_home_meetTimeGod:
     menu:
         p "Maybe I should head there early just to be safe?"
         "Go to the Street":
+            scene black with Dissolve(0.5)
             jump chapter4_street_early
         "Go to the Cafe":
+            scene black with Dissolve(0.5)
             $ flag_visited_cafe = 1;
             jump chapter4_cafe_prelude
         "Go to the Office":
+            scene black with Dissolve(0.5)
             $ flag_visited_office = 1;
             jump chapter4_office_prelude
-        "Stay Home for a while":
+        "Wait at Home for a while":
+            scene black with Dissolve(0.5)
             $ flag_visited_home = 1;
             jump chapter4_home_prelude
 
@@ -225,21 +233,20 @@ label chapter4_home_meetTimeGod:
 ####################################################
 label chapter4_street_early:
 
-    scene bg cafeoutdoor with Dissolve(0.5)
+    scene bg road with Dissolve(0.5)
 
     show protagonist neutral at t11
     p "Oof, finally made it here. What time is it?"
     p "Looks like it's 8:05 am. I have plenty of time to kill."
     p "Guess I'll wait at that bench."
 
-    scene black with Dissolve(0.5)
     jump chapter4_street_decision
 
 
 ####################################################
 label chapter4_street_decision:
 
-    scene bg cafeoutdoor with Dissolve(0.5)
+    scene bg road with Dissolve(0.5)
 
     show protagonist neutral at t11
     n "{i}You check the street sign. {w}This is the correct intersection.{\i}"
@@ -274,7 +281,7 @@ label chapter4_street_decision:
     show protagonist surprised
     p "No. What if I am causing a car accident?"
     show protagonist at t31
-    show protagonist anxious at s31
+    #show protagonist anxious at s31
 
     show timegod neutral at t33
     g "What is the matter here?"
@@ -572,6 +579,7 @@ label chapter4_street_missionFail:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 4"
+    n "  "
     jump start_chapter5
     #return
 
@@ -705,5 +713,6 @@ label chapter4_home_missionSuccess_present:
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 4"
+    n "  "
     jump start_chapter5
     #return
