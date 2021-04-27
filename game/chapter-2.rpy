@@ -281,11 +281,13 @@ label chapter2_travelPast_office2hide:
                 jump chapter2_failedDestruction
             else:
                 jump chapter2_travelPast_home3
+        "Go to the cafe" (disabled=True) if mission2cafe == 1:
+            scene bg cafeoutdoor_dark
         "Go to the cafe" (disabled=False) if mission2cafe == 0:
             scene bg cafeoutdoor_dark
             n "{i}The cafe is closed.{\i}"
             n "{i}It makes sense. It is almost 11 pm...{\i}"
-            
+
             if mission2personal_success == 0:
                 show protagonist hmm at t11
                 p "Shoot...{w}I should go prevent the Wookie fiasco"
@@ -423,20 +425,20 @@ label chapter2_travelPast_home2_end:
 label chapter2_travelPast_home3:
 
     scene bg home
-    jump chapter2_returnPen_snap
+    #jump chapter2_returnPen_snap
 
-    # show protagonist neutral at t11
-    # p "This is done. What's next?"
-    # hide protagonist
+    show protagonist neutral at t11
+    p "This is done. What's next?"
+    hide protagonist
 
-    # menu:
-    #     p "This is done. What's next?"
-    #     "Deliver the pen":
-    #         jump chapter2_returnPen_snap
-    #     "Destroy the costume" (disabled=False) if mission2personal_success==0:
-    #         jump chapter2_failedDestruction
-        # "Destroy the costume" (disabled=True)  if mission2personal_success==1:
-        #     jump chapter2_failedDestruction
+    menu:
+        p "This is done. What's next?"
+        "Deliver the pen":
+             jump chapter2_returnPen_snap
+        "Destroy the costume" (disabled=False) if mission2personal_success==0:
+             jump chapter2_failedDestruction
+        "Destroy the costume" (disabled=True)  if mission2personal_success==1:
+             jump chapter2_failedDestruction
 
 ####################################################
 label chapter2_returnPen:

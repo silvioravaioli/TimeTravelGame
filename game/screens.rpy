@@ -209,7 +209,9 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+            #textbutton i.caption action i.action
+            $ disabled = i.kwargs.get("disabled", False)
+            textbutton i.caption action i.action sensitive not disabled
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
