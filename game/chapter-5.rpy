@@ -71,7 +71,7 @@ label epilogue_finalMissionSuccess_jobSearch:
 
     show timegod laugh at t33
     $ timegod_name = "Tim (your new Boss)"
-    "Oh, [protagonist_name]. You must be mistaken! I’m Tim. You’ll be working under me here."
+    g "Oh, [protagonist_name]. You must be mistaken! I’m Tim. You’ll be working under me here."
     show timegod at s33
 
     show protagonist surprised at t31
@@ -85,7 +85,7 @@ label epilogue_finalMissionSuccess_jobSearch:
     show timegod happy at t11
     g "Here at TG Home Insurance, we think of our employees and our clients as one big family."
     g "Above all, we value providing the very best standard of service to our customers"
-    g "In reflection of this attitude, our mission is ‘‘taking care of what’s important.’’"
+    g "In reflection of this attitude, our mission is {p}‘‘taking care of what’s important.’’"
     g "Now that we’ve got the orientation spiel covered..."
     show timegod snap1
     g "Let’s get to work!"
@@ -272,7 +272,7 @@ label epilogue_finalMissionFail_lowRep:
 
     show coworker2 at t11
     coworker2 "Hello boss. It’s nice to finally meet you in person!"
-    show coworker2 at s11
+    #show coworker2 at s11
 
     show boss happy at t33
     boss "Welcome to the company, ----NEW COWORKER NAME---. You have impeccable timing, that will take you far."
@@ -282,7 +282,7 @@ label epilogue_finalMissionFail_lowRep:
 
     show protagonist at t31
     p "Nice to meet you, -----NEW COWORKER NAME-----. It’d be a pleasure to show off our exquisite linoleum flooring."
-    show coworker2 at s33
+    #show coworker2 at s33
     show protagonist at s31
 
     n "P and NC walk out of office, pass old star wars day posted"
