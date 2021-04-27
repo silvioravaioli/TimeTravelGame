@@ -309,10 +309,7 @@ label chapter2_travelPast_home1:
     show protagonist neutral at t11
     p "Now, I need to make sure I don't wear that costume to work."
     show protagonist at thide
-    hide protagonist
-
-    n "P disappears from the screen, sounds of digging/shuffling around"
-    n "P reappears with the costume"
+    hide protagonist with Pause(1.5)
 
     show protagonist neutral at t11
     p "Here it is. What an amazing costume..."
