@@ -296,7 +296,7 @@ label chapter3_past1_OfficeMissionFail:
 
 
 ####################################################
-label chapter3_past1_OfficeMissionSucc:
+label chapter3_past1_OfficeMissionSuccess:
 
     #[SET THE PERSONAL MISSION TO SUCCESS]
     $ mission3personal_success = 1
@@ -780,9 +780,6 @@ label chapter3_present_Office_tackleOutcome:
     n "  "
     jump start_chapter4
     #return
-
-
-
 
 
 
