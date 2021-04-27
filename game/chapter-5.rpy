@@ -194,12 +194,14 @@ label epilogue_finalMissionFail_highRep:
     if mission3personal_success == 0:
         show boss neutral at t33
         boss "You took good care of Princess."
-
+        show dog cool at t11
         boss "I trust you will take care of our company with the same level of attention."
         show boss at s33
         show protagonist neutral at t31
         p "I never lose sight of what is important."
         show protagonist at s31
+        show dog at thide
+        hide dog
 
     show boss neutral at t33
     boss "So, I’d like to offer you a promotion to my assistant. {p}You’ll get all the great bits and bobs: {w}experience, {w}more time in the office, {w}and a slightly higher salary!"

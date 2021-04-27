@@ -174,6 +174,7 @@ label chapter1_introdialogue4:
     show timegod snap2 at t11
     g "Go!"
 
+    play music "timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(1.0)
     n "{i}The Time God snaps his fingers and you’re transported to one week into the past.{\i}"
 
