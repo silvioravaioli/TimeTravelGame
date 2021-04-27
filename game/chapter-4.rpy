@@ -532,10 +532,11 @@ label chapter4_street_missionFail:
     g "Are you sure? Look across the street, see how you've failed."
     show timegod at s33
     scene black with Dissolve(0.5)
-    scene bg road
+    scene bg road with Dissolve(0.5)
     show pastprotagonist neutral at t11
     pp "Welp, I've got the burger meat. I got a good feeling about today. These last few weeks have been coming up all me. This grocery store never lets me down."
     scene black with Dissolve(0.5)
+    scene bg road with Dissolve(0.5)
     show protagonist neutral at s31
     show timegod neutral at t33
     g "See? You've failed. Your entire office is going to suffer from this. Poisoning your coworkers isn't exactly beneficial. Do you realize what you've done?"
@@ -559,11 +560,12 @@ label chapter4_street_missionFail:
     show timegod at s33
     show protagonist hey at t31
     p "No! I don't know who's benefit this is for, but it certainly isn't mine. Or anyone's. In what world is dying better than food poisoning?"
-    show protagonist neutral at t31
     p "I'm pretty sure one of those is treatable. Why are you doing this?"
+    show protagonist hey at t31 #should have another angry image to make more dynamic
     g "You wouldn't understand. I'm simply taking care of what is important."
+    show protagonist hey at s31
     p "What could be this important?"
-    show protagonist neutral at s31
+    show protagonist hey at s31
     show timegod neutral at t33
     g "Interesting question, but I didn't come to you to respond to these questions."
     g "I came to you so you could complete these tasks for the benefit of all."
