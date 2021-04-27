@@ -464,6 +464,7 @@ label chapter3_past1_Street_tackle:
 label chapter3_past1_Street_distract:
 
     #scene bg home
+    $ mission3personal_success=1
 
     show protagonist neutral at t11
     p "Gotta distract him somehow. It’s gonna be tough, I’m a fairly smart guy."
