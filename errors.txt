@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/chapter-3.rpy", line 485: expected 'image_name_component' not found.
-    show 
-         ^
+File "game/chapter-1.rpy", line 44: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/chapter-1.rpy", line 48: expected statement.
+    =======
+          ^
+
+File "game/chapter-1.rpy", line 52: expected statement.
+    >>>>>>> 69dad2aeddcf60dc949cb28ba73d6449c4954c51
+                                                    ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 16:01:02 2021
+Tue Apr 27 16:41:13 2021
