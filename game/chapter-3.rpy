@@ -35,9 +35,9 @@ label start_chapter3:
     p "But I just said-"
 
     show boss neutral at t33
-    boss "Our dog walker is sick today and there was nobody to take care of little Princess at home"
+    boss "Our dog walker is sick today and there was nobody to take care of little Princess at home."
     show protagonist anxious at s31
-    boss "And I have back-to-back meetings today, so I need you to take her"
+    boss "And I have back-to-back meetings today, so I need you to take her."
     show boss neutral at s33
 
     show dog neutral at t11
@@ -94,7 +94,7 @@ label start_chapter3:
     p "Oh... Wait... It did expire 5 year ago."
     show protagonist joy
     p "But what is life without a little bit of risk?"
-    p "Plus, expiration dates are basically suggestions, right"
+    p "Plus, expiration dates are basically suggestions, right?"
     p "Lunch!"
 
     show dog happy
@@ -109,7 +109,7 @@ label start_chapter3:
     p "Well now I TAKE IT BACK!"
     p "PRINCESS!"
     p "PRINCESS! Princesssss!"
-    p "PRINCESS, GIVE ME BACK MY LUNCH"
+    p "PRINCESS, GIVE ME BACK MY LUNCH!"
 
     show protagonist anxious
     p "Princess?"
@@ -199,7 +199,7 @@ label chapter3_travel1DogSearch_Home:
 
     show timegod neutral at s33
     show protagonist neutral at t31
-    p "Oh hey, it’s you again. Guess I shouldn’t be surprised"
+    p "Oh hey, it’s you again. Guess I shouldn’t be surprised."
 
     show timegod laugh at t33
     g "Well, it seems yet again, you’ve had another bad day."
@@ -214,7 +214,7 @@ label chapter3_travel1DogSearch_Home:
     show timegod neutral at s33
 
     show protagonist talking at t31
-    p "Sounds good, the past is always pretty neat. Would definitely help"
+    p "Sounds good, the past is always pretty neat. Would definitely help."
     show protagonist talking at s31
 
     show timegod happy at t33
@@ -425,7 +425,7 @@ label chapter3_past1_Street:
 
     show protagonist talking at t31
     p "Ah of course. Late to work. Why didn’t I think of that sooner?"
-    p "Good. He– I mean, I am carrying that backpack too! So the beef jerky’s gotta be in there"
+    p "Good. He– I mean, I am carrying that backpack too! So the beef jerky’s gotta be in there."
     p "Now, how do I get that backpack off my past self?"
     hide protagonist
 
@@ -477,11 +477,11 @@ label chapter3_past1_Street_tackle:
     show pastprotagonist at s33
 
     show protagonist despair at t11
-    p "Please? I really have no time for this. If you could just... {w}Let me take your backpack for one sec"
+    p "Please? I really have no time for this. If you could just... {w}Let me take your backpack for one sec..."
     show protagonist despair at s11
 
     show pastprotagonist at t33
-    pp "And let you steal my stuff? I don’t THINK so"
+    pp "And let you steal my stuff? I don’t THINK so."
     show pastprotagonist at s33
 
     show protagonist anxious at t11
@@ -505,14 +505,14 @@ label chapter3_past1_Street_tackle:
     show pastprotagonist at s33
 
     show protagonist at t11
-    p "Ok, ok fine! You leave me no choice"
+    p "Ok, ok fine! You leave me no choice."
     p "I’m you but from the future––"
 
     show pastprotagonist surprise_left at t33
     pp "YOU’RE WHAT?!"
 
     show timegod angry at t31
-    g "That’s it. I’m taking you back"
+    g "That’s it. I’m taking you back."
     p "No! But––"
     show timegod snap1
 
@@ -725,9 +725,9 @@ label chapter3_present_Home_tackleOutcome:
 
     show timegod angry
     g "If you had even one ounce of brain, you would realize that tackling your past self was a TERRIBLE idea"
-    g "Oh but that’s not even the problem"
+    g "Oh but that’s not even the problem."
     show timegod neutral
-    g "Death and injuries? Oh, those are part of the job when you time travel"
+    g "Death and injuries? Oh, those are part of the job when you time travel."
     show timegod angry
     g "But you failed me so completely, that you were about to give away EVERYTHING!"
 
@@ -735,7 +735,7 @@ label chapter3_present_Home_tackleOutcome:
     p "I... I really thought it would work..."
 
     show timegod creepy
-    g "I’m you but from the future"
+    g "I’m you but from the future."
     show timegod angry
     g "You can’t just tell ANYONE about time travel!"
 
@@ -749,7 +749,7 @@ label chapter3_present_Home_tackleOutcome:
     g "We--"
     show timegod happy
     g "That’s how we stay in control."
-    P "Please, let me fix this! {w}I can go back! {p}I still have to make sure my boss’s dog doesn’t get lost!"
+    p "Please, let me fix this! {w}I can go back! {p}I still have to make sure my boss’s dog doesn’t get lost!"
     show timegod laugh
     g "Ha! Go back?! You are in no position to beg for favors"
     show timegod angry
@@ -772,14 +772,14 @@ label chapter3_present_Office_tackleOutcome:
     show protagonist neutral at t31
     show boss neutral at t33
     boss "Hey, [protagonist_name]! How was Princess?"
-    boss "Was she a good girl? I bet she was"
+    boss "Was she a good girl? I bet she was."
 
     show protagonist anxious
     p "{i}Oh no... How in the world am I going to explain this???"
     p "Uh... {w}So...."
 
     show boss angry
-    boss "What? Spit it out, [protagonist_name]"
+    boss "What? Spit it out, [protagonist_name]."
 
     p "So I might have... {w}maybe... {w}lost your dog..."
 
@@ -816,7 +816,7 @@ label chapter3_present_Office_tackleOutcome:
     p "I had to sing a song???"
 
     show boss angry
-    B "Yes! Her song. Now get back to work"
+    b "Yes! Her song. Now get back to work"
     show boss at thide
     hide boss
     show dog at thide

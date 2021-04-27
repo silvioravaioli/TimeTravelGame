@@ -41,9 +41,15 @@ label start_chapter1:
     boss "THIS COFFEE IS DISGUSTING! {p}BLEAH!!!"
     show boss at s33
 
+<<<<<<< HEAD
+    show coworker neutral at t31
+    coworker "Woah you really messed that up."
+    show coworker at s31
+=======
     show coworker talking at t31
     coworker "Woah you really messed that up"
     show coworker neutral at s31
+>>>>>>> 69dad2aeddcf60dc949cb28ba73d6449c4954c51
 
     show boss angry at t33
     boss "[protagonist_name], out of my way!!!"
@@ -443,7 +449,7 @@ label chapter1_home:
 ####################################################
 label chapter1_restartmission:
 
-    scene home with Dissolve(0.5)
+    scene bg home with Dissolve(0.5)
     show timegod neutral at t11
     g "This is no time to nap!"
     show timegod angry at t11
@@ -511,7 +517,7 @@ label chapter1_end:
     hide protagonist
 
     scene black with Dissolve(0.5)
-    n "The day after, in the Office..."
+    n "The day after, in the office..."
     scene bg office with Dissolve(0.5)
 
     show boss neutral at t33
