@@ -11,7 +11,7 @@ label start_chapter4:
     scene bg office with Dissolve(0.5)
 
     show boss talking at t33
-    boss "Tomorrow's supposed to be the annual employee retreat. {w}But budget cuts this year."
+    boss "Tomorrow's supposed to be the annual employee retreat. {w}But due to budget cuts this year..."
     show boss happy
     boss "I was thinking of organizing a nice outdoor picnic for everyone instead."
     show boss neutral
@@ -19,7 +19,7 @@ label start_chapter4:
     show boss neutral at s33
 
     show protagonist excited at t31
-    p "Oh yes, I'd love to! I am a master chef. Boss, I promise you"
+    p "Oh yes, I'd love to! After all, I am a master chef. Boss, I promise you..."
     show protagonist joy
     p "Tomorrow you're going to eat the best burgers you've ever had!"
 
@@ -56,13 +56,13 @@ label chapter4_office_start:
     show boss neutral at s33
 
     show protagonist joy at t31
-    p "Oh, just the grocery store here on the way here. I'm so happy you like it!"
+    p "Oh, just the grocery store on the way here. I'm so happy you like it!"
     show protagonist neutral at s31
 
     show boss panicking at t33
-    boss "Wait."
-    boss "What is going on."
-    boss "Oh, noooo. MY STOMACH!"
+    boss "Wait..."
+    boss "What is going on..."
+    boss "Oh, noooo! MY STOMACH!"
     show boss at s33
 
     show protagonist surprised at t31
@@ -71,14 +71,14 @@ label chapter4_office_start:
     p "Are you ok? What's going on?"
 
     show boss neutral at t33
-    boss "I'm... fine. You said the grocery store here? You know that place..."
+    boss "I'm... fine. You said the grocery store near here? You know, that place..."
     n "{i}The boss vomits again.{\i}"
     show boss at s33
 
     show protagonist anxious at t31
     p "Oh dang. Oh geez. Oh dang. Did I just poison the boss?"
     show protagonist hmm
-    p "Oh heck that's a lot of throw-up. Are their guts coming out?"
+    p "Oh heck, that's a lot of throw-up. Are their guts coming out?"
     show protagonist anxious
     p "Oh no, are they going to die??? Did I just kill the boss?"
     show protagonist surprised at s31
@@ -128,7 +128,7 @@ label chapter4_home_meetTimeGod:
 
     show protagonist anxious at t11
     p "Is there anything I can do to fix this?"
-    p "If only I could travel back again."
+    p "If only I could travel back again..."
     show protagonist surprised at s31
 
     show timegod creepy at t33
@@ -136,8 +136,8 @@ label chapter4_home_meetTimeGod:
     show timegod at s33
 
     show protagonist despair at t31
-    p "Wonderful. Send me back now. I need to go back."
-    p "I'll do whatever, please just send me back."
+    p "Wonderful! Send me back now. I need to go back."
+    p "I'll do whatever, please, just send me back."
     show protagonist anxious at s31
 
     show timegod neutral at t33
@@ -147,7 +147,7 @@ label chapter4_home_meetTimeGod:
     g "Although important, this task is not particularly difficult."
     g "You must simply place a certain object at a specific place at a particular time."
     show timegod angry
-    g "However, being off by even a minute could have disastrous consequences."
+    g "However, being off by even a minute could result in disastrous consequences."
     g "If you fail in this mission, I will never appear before you again."
     show timegod happy
     g "On the other hand, success will yield great rewards."
@@ -177,9 +177,9 @@ label chapter4_home_meetTimeGod:
     g "It must be placed at exactly 9:00 am."
     show timegod angry
     g "Both the location and time are vitally important."
-    g "A second later or an inch further, and your efforts will result in failure."
+    g "A second later, or even an inch further, and your efforts will result in failure."
     show timegod creepy
-    g "Remember carefully: 9:00 am on the dot. 47 inches to the east of the red bench."
+    g "Carefully remember this: 9:00 A.M. on the dot. 47 inches to the east of the red bench."
     g "I wish you luck in your endeavour."
     show timegod snap1 at t11
     g "Ready..."
@@ -199,12 +199,12 @@ label chapter4_home_meetTimeGod:
     scene bg cafeoutdoor with Dissolve(0.5)
 
     show protagonist neutral at t11
-    p "I just need to do this task."
+    p "I simply need to do this task."
     p "Then I can save my boss and my coworkers as well."
     p "I have another chance. Let's do this."
-    p "OK it looks like it's 7:30 am."
+    p "Well, it looks like it's 7:30 A.M."
     p "I have to put the rock down at 9 exactly."
-    p "Maybe I should head there early just to be safe?"
+    p "Maybe I should head there early, just to be safe?"
     hide protagonist
 
     menu:
@@ -356,22 +356,22 @@ label chapter4_cafe_prelude:
     scene bg cafe with Dissolve(0.5)
 
     show protagonist neutral at t31
-    p "Wow, the cafe is totally deserted. This seems kinda ominous."
+    p "Wow, the cafe is COMPLETELY deserted. This seems kinda ominous."
     show protagonist at s31
 
     show barista neutral at t33
-    barista "You were the one who dropped that letter off, right?"
+    barista "Hey, you were the one who dropped that letter off, right?"
     show protagonist anxious at s31
     p "Uhm..."
-    barista "Where did you get this? Do you realize what this did? I still don't get how you even got a hold of this."
-    barista "I don't even know who you are really."
+    barista "Where did you get this? Do you EVEN realize what this did? I still don't get how you even got a hold of this."
+    barista "I really don't even know who you are."
     show barista at s33
 
     show protagonist hmm at t31
     p "Uhm... I uh..."
     show protagonist at s31
 
-    show barista at t33
+    show barista angry at t33
     barista "You know, I couldn't work after that."
     barista "Do you know how hard it is to work in the place where you found out someone is cheating on you?"
 
@@ -384,13 +384,13 @@ label chapter4_cafe_prelude:
     p "I don't uh... suppose I would..."
     show protagonist at s31
 
-    show barista at t33
+    show barista angry at t33
     barista "It took quite a bit of confidence to come in today."
-    barista "I don't think you'd know that, dropping that letter off for someone else."
+    barista "I don't think you'd understand confidence, dropping that letter off for someone else."
     show barista at s33
 
     show protagonist at t31
-    p "Yeah uh I guess. I think that I'm gonna leave now."
+    p "Yeah... uh... I guess. I think that I'm gonna leave now."
     p "Probably not the best idea to eat."
     show protagonist at s31
 
