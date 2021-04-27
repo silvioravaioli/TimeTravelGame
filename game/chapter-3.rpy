@@ -538,13 +538,13 @@ label chapter3_past1_Street_distract:
 
     pp "What? No way! I gotta see this!"
     n "{i}Past you runs to dog, abandoning the backpack as he runs"
-    show pastprotagonist at thide
+    show pastprotagonist neutral at thide
     hide pastprotagonist
 
     show protagonist at t11
     p "Wow, I'm surprised that worked. {w}Now I just gotta find that beef jerky"
     show protagonist at thide
-    show protatonist joy at t11
+    show protagonist joy at t11
     p "AHA! I got it! {w}Now that I've got the beef jerky, Princess for sure won't get lost!"
     show protagonist anxious
     p "But I'm a little bit hungry..."
@@ -627,15 +627,15 @@ label chapter3_past1_street_distract_SucceedTG:
 
 
 ####################################################
-label chapter3_past1_office_distract_Outcome:
+label chapter3_past1_Home_distract_Outcome:
 
-    #scene bg home
+    scene bg office
 
     show protagonist neutral at t31
     p "Work time. Princess should just be waiting, no jerky dilemma here."
 
     show boss happy at t33
-    boss "Hey [Character_name], how was Princess?"
+    boss "Hey [protagonist_name], how was Princess?"
 
     show dog happy at t11
     show protagonist anxious at t31

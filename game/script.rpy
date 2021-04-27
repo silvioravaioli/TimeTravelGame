@@ -45,7 +45,7 @@ label start:
     $ mission4personal_success = 0
     $ mission4timegod_success = 0
 
-    $ testing_mode = True
+    $ testing_mode = False
 
     if testing_mode:
         jump start_game
