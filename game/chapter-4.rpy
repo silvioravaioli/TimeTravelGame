@@ -88,7 +88,7 @@ label chapter4_office_start:
     show protagonist surprised at s31
 
     show coworker neutral at t11
-    n "The coworker also starts vomiting"
+    n "The coworker also starts vomiting."
 
     show coworker at thide
     hide coworker
@@ -268,7 +268,7 @@ label chapter4_street_decision:
     show protagonist talking
     p "...Soon..."
 
-    n "A loud sound from the road distracts you"
+    n "A loud sound from the road distracts you."
 
     show protagonist surprised
     p "Wait!"

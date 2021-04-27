@@ -41,7 +41,7 @@ label start_chapter1:
     show boss at s33
 
     show coworker neutral at t31
-    coworker "Woah you really messed that up"
+    coworker "Woah you really messed that up."
     show coworker at s31
 
     show boss angry at t33
@@ -510,7 +510,7 @@ label chapter1_end:
     hide protagonist
 
     scene black with Dissolve(0.5)
-    n "The day after, in the Office..."
+    n "The day after, in the office..."
     scene bg office with Dissolve(0.5)
 
     show boss neutral at t33
