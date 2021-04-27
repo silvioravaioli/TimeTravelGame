@@ -195,6 +195,7 @@ label chapter4_home_meetTimeGod:
     g "Go!"
     hide timegod
 
+    play sound "timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
 
     n "{i}The Time God snaps his fingers and you are transported back in the past."
@@ -552,6 +553,7 @@ label chapter4_street_missionFail:
     g "Here, your reputation can be salvaged. Simply, complete this mission for me. Let us try this again."
     show timegod snap1 at s33
     show timegod snap2 at s33
+    play sound "timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     scene bg home
     # [Jumps to present (home), akin to beginning of mission]
@@ -694,6 +696,7 @@ label chapter4_street_missionSuccess:
     show timegod snap1 at t33
     show timegod snap2 at t33
     scene black with Dissolve(0.5)
+    play sound "timeTravelSound.mp3" fadeout 1
     #jump chapter4_home_missionSuccess_present
 
 
