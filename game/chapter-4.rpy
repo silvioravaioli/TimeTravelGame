@@ -562,7 +562,16 @@ label chapter4_street_missionFail:
     show timegod creepy at t33
     g "You're going to regret this."
     hide timegod creepy
-    return
+
+
+
+    scene black with Dissolve(1.0)
+    n "END OF MISSION 4"
+    jump start_chapter5
+    #return
+
+
+
 
 
 label chapter4_street_missionSuccess:
@@ -684,4 +693,8 @@ label chapter4_home_missionSuccess_present:
     n "EVERYONE AT THE OFFICE IS PANICKING"
     n "TEXT ME"
     n "NOW"
-    return
+
+    scene black with Dissolve(1.0)
+    n "END OF MISSION 4"
+    jump start_chapter5
+    #return

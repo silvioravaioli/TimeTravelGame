@@ -10,5 +10,26 @@ label start_chapter3:
     hide eileen
     scene black
 
-    jump start
+    scene black with Dissolve(1.0)
+    n "END OF MISSION 3"
+    jump start_chapter4
+    #return
 
+
+
+
+
+
+
+
+label chapter3_EXAMPLE:
+
+    scene bg home
+
+    show protagonist neutral at t11
+    p "xxxx"
+    p "xxxx"
+    p "xxxx"
+    p "xxxx"
+    p "xxxx"
+    p "xxxx"  

@@ -708,9 +708,16 @@ label chapter2_end_success:
     p "Oh, okay. Well, thank you for the compliment! I'm a great worker, haha!"
     show protagonist neutral at t31
     boss "That is all, also, let me know if you have seen a personalized fountainhead pen with my initials. {w}Please, it would mean quite a lot to me."
+    
+    show boss at thide
+    hide boss
+    show protagonist at thide
+    hide protagonist
+    
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
-    return
+    jump start_chapter3
+    #return
 
 
 ####################################################
@@ -745,24 +752,16 @@ label chapter2_end_failure:
     boss "No, it really wasn't, now please leave."
     show boss sad
     boss "On another note, if you've seen a personalized pen with my initials, PLEASE return it. {w}It would mean quite a lot to me."
-    show boss at s33
+    show boss at thide
+    hide boss
+    show protagonist at thide
+    hide protagonist
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 2"
-    return
+    jump start_chapter3
+    #return
 
 
 
 
-
-label chapter2_EXAMPLE:
-
-    scene bg home
-
-    show protagonist neutral at t11
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"
-    p "xxxx"

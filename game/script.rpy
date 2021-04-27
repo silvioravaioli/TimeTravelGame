@@ -71,5 +71,5 @@ label start_game:
             jump start_chapter4
         "Chapter 5":
             jump start_chapter5
-        "Testing Zone":
-            jump start_testingZone
+
+
