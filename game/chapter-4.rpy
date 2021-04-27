@@ -232,22 +232,23 @@ label chapter4_street_early:
     p "Looks like it's 8:05 am. I have plenty of time to kill."
     p "Guess I'll wait at that bench."
 
+    scene black with Dissolve(0.5)
     jump chapter4_street_decision
 
 
 ####################################################
 label chapter4_street_decision:
 
-    scene bg cafeoutdoor
+    scene bg cafeoutdoor with Dissolve(0.5)
 
-    show protagonist anxious at t11
-    n "You are standing in front of the road."
-    n "The road has a huge traffic..."
+    show protagonist neutral at t11
+    n "{i}You check the street sign. {w}This is the correct intersection.{\i}"
+    n "{i}The road has a huge amount of traffic...{\i}"
 
     p "So... I just have to find the biggest rock I can."
     p "Let's see..."
     show protagonist at thide
-    hide protagonist
+    hide protagonist with Pause(1.0)
 
     show protagonist neutral at t11
     p "Ok, this should work."
@@ -591,15 +592,15 @@ label chapter4_street_missionSuccess:
     p  "OH! Oh no!"
     # [fullscreen image of boss in car]
     # [fullscreen image of boss's car hitting that giant rock, car kinda tipping forward]
-    n "Your boss's car hits the giant rock, tipping forward."
+    scene black with Dissolve(0.5)
+    n "{i}Your boss's car hits the giant rock, {w}it starts to tip forward.{\i}"
     # [back to street background image with p in foreground]
     # p [still surprised, just watching in shock. No words]
     # [fullscreen image of boss in car. But now instead of neutral face, boss is PANICKING]
-    n "You see your boss is panicking."
-    n "The car crashes and you hear a cacophony of car horns."
-    scene black with Dissolve(0.5)
+    n "{i}You see your boss is panicking.{\i}"
+    n "{i}The car crashes and you hear a cacophony of car horns.{\i}"
+    # scene black with Dissolve(0.5)
     scene bg road_carcrash with Dissolve(0.5)
-    n "The scene looks like the remnants of a car accident."
     # [crash sound]
     # [cacophony of car horns]
     # [back to street background image with p in foreground. But now there are remnants of a car accident in the street]
@@ -694,13 +695,13 @@ label chapter4_home_missionSuccess_present:
     p "What. What just happened?"
     p "What do I do now?"
     p "I should... I should be at work."
-    n "You hear a ding message sound"
-    n "You receive a text from your coworker. It reads:"
-    n "WHERE ARE YOU? ARE YOU OK?"
-    n "BOSS WAS IN A CAR ACCIDENT AT KRONOS. MULTI-CAR PILEUP. ISN'T THAT CLOSE TO WHERE YOU LIVE?"
-    n "EVERYONE AT THE OFFICE IS PANICKING"
-    n "TEXT ME"
-    n "NOW"
+    n "{i}You hear a ding message sound.{\i}"
+    n "{i}You receive a text from your coworker. It reads:{\i}"
+    coworker "WHERE ARE YOU? ARE YOU OK?"
+    coworker "BOSS WAS IN A CAR ACCIDENT AT KRONOS. MULTI-CAR PILEUP. ISN'T THAT CLOSE TO WHERE YOU LIVE?"
+    coworker "EVERYONE AT THE OFFICE IS PANICKING"
+    coworker "TEXT ME"
+    coworker "NOW"
 
     scene black with Dissolve(1.0)
     n "END OF MISSION 4"
