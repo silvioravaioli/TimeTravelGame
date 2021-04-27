@@ -103,14 +103,14 @@ label chapter1_introdialogue1:
             show timegod neutral at t11
             g "Interesting."
             show timegod laugh at t11
-            g "Allow me to tell you something more..."
+            g "Allow me to tell you some more..."
             jump chapter1_introdialogue2
 
         "No":
             show timegod neutral at t11
             g "Interesting answer."
             show timegod laugh at t11
-            g "Allow me to tell you something more..."
+            g "Allow me to tell you some more..."
             jump chapter1_introdialogue2
 
 
