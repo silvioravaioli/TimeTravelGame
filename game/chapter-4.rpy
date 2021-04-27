@@ -355,7 +355,7 @@ label chapter4_cafe_prelude:
     scene bg cafe with Dissolve(0.5)
 
     show protagonist neutral at t31
-    p "This seems kinda ominous."
+    p "Wow, the cafe is totally deserted. This seems kinda ominous."
     show protagonist at s31
 
     show barista neutral at t33
@@ -406,19 +406,11 @@ label chapter4_cafe_prelude:
         "Go to the Street":
             scene black with Dissolve(0.5)
             jump chapter4_street_decision
-        "Go to the Office" (disabled=False) if flag_visited_office==0:
+        "Go to the Office" if flag_visited_office==0:
             $ flag_visited_office = 1;
             scene black with Dissolve(0.5)
             jump chapter4_office_prelude
-        "Go to the Office" (disabled=True) if flag_visited_office==1:
-            $ flag_visited_office = 1;
-            scene black with Dissolve(0.5)
-            jump chapter4_office_prelude
-        "Go back Home" (disabled=False) if flag_visited_home==0:
-            $ flag_visited_home = 1;
-            scene black with Dissolve(0.5)
-            jump chapter4_home_prelude
-        "Go back Home" (disabled=True) if flag_visited_home==1:
+        "Go back Home" if flag_visited_home==0:
             $ flag_visited_home = 1;
             scene black with Dissolve(0.5)
             jump chapter4_home_prelude
@@ -434,15 +426,15 @@ label chapter4_office_prelude:
     show coworker neutral at t33
     coworker "Hey! I see you are early as well. I think this is the first time ever that I've been here before the boss."
     show coworker at s33
-    show protagonist neutral at t31
+    show protagonist talking at t31
     p "The boss isn't here yet? Don't they usually get in at like 6?"
-    show protagonist at s31
+    show protagonist neutral at s31
     show coworker at t33
     coworker "Yeah, no clue what's going on. Although yesterday it seemed like they only just got here when I arrived."
     show coworker at s33
-    show protagonist at t31
+    show protagonist talking at t31
     p "Maybe something is stressing them out? Is there a big meeting coming up that I forgot about?"
-    show protagonist at s31
+    show protagonist neutral at s31
     show coworker at t33
     coworker "Nah you're good. This week is pretty light as far as I can tell."
     coworker "The only other thing I can think of that would stress them out to this extent is if they lost their lucky pen or something."
@@ -450,9 +442,9 @@ label chapter4_office_prelude:
     coworker "Anyway, I'm going to use this chance to take a small break. You should too, chances like these are rare."
     coworker "See you tonight at the picnic!"
     show coworker at s33
-    show protagonist at t31
+    show protagonist talking at t31
     p "See you! Have a good one."
-    show protagonist at s31
+    show protagonist neutral at s31
     scene black with Dissolve(0.5)
     p "Where should I go now?"
     menu:
@@ -500,7 +492,7 @@ label chapter4_street_missionFail:
     show protagonist anxious at t31
     p "I'm not so sure about this. I don't think I can."
     show protagonist at s31
-    n "You see your boss driving by, waving to you."
+    n "{i}You see your boss driving by. {w}He waves to you.{\i}"
     show protagonist surprised at t31
     p "Hey, that was my boss!"
     show protagonist at s31
@@ -594,7 +586,7 @@ label chapter4_street_missionSuccess:
     p "Whew. Ok, I did it. Now what?"
     # [fullscreen image of boss in car]
     # [return back to street background image with p in foreground]
-    n "You see your boss in the car."
+    n "{i}You see your boss driving by. {w}He waves to you."
     show protagonist surprised at s31
     p  "OH! Oh no!"
     # [fullscreen image of boss in car]
