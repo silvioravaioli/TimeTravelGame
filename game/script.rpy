@@ -20,8 +20,10 @@ define pp       = Character("You (from the past)",color="#888888")              
 define barista  = Character("Barista",color="#ff0066")                          # barista
 define boss     = Character("Boss",color="#ff0066")                             # boss
 
-define coworker  = Character("Coworker",color="#33cc33")                        # coworker
-define coworker2 = Character("Coworker 2",color="#33cc33")                      # coworker 2
+define coworker  = Character("coworker_name",color="#33cc33", dynamic=True)     # coworker
+define coworker_name = "Coworker"
+define coworker2 = Character("new_coworker_name",color="#33cc33", dynamic=True) # coworker 2
+define new_coworker_name = "New Coworker"
 
 define g        = Character("timegod_name" ,color="#809fff", dynamic=True)      # time god
 define timegod_name = "???"
