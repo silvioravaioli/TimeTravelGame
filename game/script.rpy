@@ -11,7 +11,10 @@ call transforms
 # name of the character.
 
 define n        = Character("",color="#d9d9d9")                                 # narrator
-define p        = Character("You",color="#ffff00")                              # protagonist
+
+define p        = Character("protagonist_name",color="#ffff00", dynamic=True)   # protagonist
+define protagonist_name = "You"
+
 define pp       = Character("You (from the past)",color="#888888")              # past protagonist
 
 define barista  = Character("Barista",color="#ff0066")                          # barista

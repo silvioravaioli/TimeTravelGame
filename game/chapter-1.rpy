@@ -7,43 +7,66 @@ label start_chapter1:
 
 
     scene bg office
+    n "{i}Just another day in the office..."
+
+    show coworker talking at t33
+    coworker "Hey newbie, the boss is mad at you. At least, I guess he was referring to you. You are the new idiot, right? {p}What is your name again?!?"
+    show coworker at s33
+
+    show protagonist hmm at t31
+    n "{i}This is me. I have just started this new job, but things are not going great..."
+    n "{i}Nobody seems to remember my name."
+    p "I am ..."
+
+    $ protagonist_name = renpy.input("What is your name again?!?")
+    $ protagonist_name = protagonist_name.strip()
+    if protagonist_name == "":
+        $ protagonist_name="Eli"
+    coworker "Right, [protagonist_name], the new idiot! Hurry up!"
+    show coworker at thide
+    hide coworker
+
+
 
     show protagonist talking at t31
     p "This is your coffee, Boss."
     show protagonist at s31
 
-    show boss neutral at t33
+    show boss angry at t33
     show protagonist anxious
     boss "Why did it take you so long?"
 
     show protagonist at thide
     hide protagonist
 
-    boss "---THE BOSS MAKES FUNNY FACES---"
+    show boss coffee
+    boss "This coffee..."
+    show boss disgusted
+    boss "THIS COFFEE IS DISGUSTING! {p}BLEAH!!!"
     show boss at s33
 
-    show coworker neutral at t31
+    show coworker normal at t31
     coworker "Woah you really messed that up"
     show coworker at s31
 
-    # [See angry boss spitting out coffee]
-    show boss neutral at t33
-    boss "DISGUSTING!!!"
+    show boss angry at t33
+    boss "[protagonist_name], out of my way!!!"
     show boss at s33
 
 
-    show coworker neutral at t31
+    show coworker laughing at t31
     coworker "I know it’s called bean water, but you don’t just directly put the beans in the water."
     coworker "HAHAHAHAHAHAHAHAHAHAHA"
     show coworker at thide
     hide coworker
     show boss at thide
     hide boss
+    scene black with Dissolve(0.5)
 
 ####################################################
 label chapter1_introdialogue0:
 
-    scene bg home
+    scene bg home with Dissolve(0.5)
     show protagonist anxious at t11
     p "I'm finally home..."
     show protagonist at thide
@@ -57,12 +80,12 @@ label chapter1_introdialogue1:
     show timegod laugh at t11
     g "I have a proposition for you."
     show timegod creepy at t11
-    g "Would you like a do over...a chance to undo your mistakes?"
+    g "Would you like a do over... {w}a chance to undo your mistakes?"
     #show timegod at thide
     hide timegod
 
     menu:
-        g "Would you like a do over...a chance to undo your mistakes?"
+        g "Would you like a do over... a chance to undo your mistakes?"
         "Ummm... okay":
             show timegod neutral at t11
             g "I was sure you would have said so."
@@ -80,14 +103,14 @@ label chapter1_introdialogue1:
             show timegod neutral at t11
             g "Interesting."
             show timegod laugh at t11
-            g "Allow me to tell you something more..."
+            g "Allow me to tell you some more..."
             jump chapter1_introdialogue2
 
         "No":
             show timegod neutral at t11
             g "Interesting answer."
             show timegod laugh at t11
-            g "Allow me to tell you something more..."
+            g "Allow me to tell you some more..."
             jump chapter1_introdialogue2
 
 
@@ -125,7 +148,7 @@ label chapter1_introdialogue3:
     hide timegod
 
     menu:
-        g "Interesting question. I simply need you to deliver this letter to the coffee shop across the street from your office."
+        g "I simply need you to deliver this letter to the coffee shop across the street from your office."
         "Let me read it first.":
             n "{i}Letter reads: \"Loved the date last night -T\"{/i}"
             jump chapter1_introdialogue4
@@ -149,7 +172,7 @@ label chapter1_introdialogue4:
     show timegod snap2 at t11
     g "Go!"
 
-    scene black with Dissolve(2.0)
+    scene black with Dissolve(1.0)
     n "{i}The Time God snaps his fingers and you’re transported to one week into the past.{\i}"
 
     # TODO "1 week ago" fades in and out at corner of screen
@@ -176,18 +199,20 @@ label chapter1_introdialogue4:
 ####################################################
 label chapter1_cafe_outdoor:
 
-    scene bg cafeoutdoor
+    scene bg cafeoutdoor with Dissolve(0.5)
     show protagonist neutral at t11
     p "I wish I had known how to brew coffee, maybe I should send my past self to deliver the letter instead of doing it myself."
-    n "Where should I go now?"
+    p "Where should I go now?"
     #show protagonist at thide
     hide protagonist
 
     menu:
-        n "Where should I go now?"
+        p "Where should I go now?"
         "Enter the cafe":
+            scene black with Dissolve(0.5)
             jump chapter1_cafe_present2
         "Go to the office":
+            scene black with Dissolve(0.5)
             jump chapter1_office
 
 
@@ -195,7 +220,7 @@ label chapter1_cafe_outdoor:
 ####################################################
 label chapter1_cafe_present2:
 
-    scene bg cafe
+    scene bg cafe with Dissolve(0.5)
     show protagonist neutral at t11
     p "This is the place, the food smells really good."
     p "It should be enough if I leave the letter on the counter, but I am getting hungry now!"
@@ -223,6 +248,7 @@ label chapter1_cafe_table:
     hide protagonist
     show barista at thide
     hide barista
+    scene black with Dissolve(0.5)
 
     jump chapter1_end
 
@@ -232,16 +258,17 @@ label chapter1_cafe_past2:
     # this is the only path that gives success in the personal mission
     $ mission1personal_success = 1   # SUCCEED PERSONAL MISSION
 
-    scene bg cafeoutdoor
+    scene bg cafeoutdoor with Dissolve(0.5)
     show pastprotagonist neutral at t11
     pp "This must be the Hourglass Cafe."
     pp "OK, who am I supposed to deliver this to?"
     pp "I guess I can simply leave it to anyone."
     show pastprotagonist at thide
     hide pastprotagonist
+    scene black with Dissolve(0.5)
 
-    scene bg cafe
-    show pastprotagonist neutral at t11
+    scene bg cafe with Dissolve(0.5)
+    show pastprotagonist talking at t11
     pp "The food smells really good."
     pp "I might as well get some lunch while I’m at it."
 
@@ -251,69 +278,70 @@ label chapter1_cafe_past2:
 ####################################################
 label chapter1_cafe_present3:
 
-    show protagonist neutral at t11
-    p "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
+    show protagonist joy at t11
+    p "Can I get an egg salad sandwich {w}with extra onions, {w}extra pickles, {w}and extra garlic?"
     show protagonist at s31
 
     show barista neutral at t33
-    barista "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
+    barista "Sure! Would you like to add a cup of coffee to that order? {w}Promotion week, only 25 cents extra"
     show barista at s33
 
-    show protagonist at t31
-    p "I'm not actually a coffee person. But hey, sure, why not?"
+    show protagonist talking at t31
+    p "I'm not actually a coffee person. {w}But hey, sure, why not?"
     show protagonist at s31
 
     show barista at t33
     barista "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
-    show barista at s33
+    show barista at thide
+    hide barista
 
     n "The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
-    # TODO SHOW [Barista is now standing in front of coffee machine]
 
-    show protagonist at t31
-    p "So...that's how you make coffee. Wish I knew that earlier."
+    show protagonist hmm at t31
+    p "So... that's how you make coffee. {w}Wish I knew that earlier."
     show protagonist at s31
 
-    show barista at t33
+    show barista neutral at t33
     barista "Oh, where'd this letter come from?"
     show barista shocked
     barista "Oh, where'd this letter come from?"
-    show barista at thide
-    hide barista
     show protagonist at thide
     hide protagonist
+    barista "Oh, where'd this letter come from?"
+    show barista at thide
+    hide barista
 
+    scene black with Dissolve(0.5)
     jump chapter1_end
-
 
 
 ####################################################
 label chapter1_cafe_past3:
 
-    show pastprotagonist neutral at t11
+    show pastprotagonist joy at t11
     pp "Can I get an egg salad sandwich with extra onions, extra pickles, extra garlic?"
     show pastprotagonist at s31
 
     show barista neutral at t33
-    barista "Sure! Would you like to add a cup of coffee to that order? Promotion week, only 25 cents extra"
+    barista "Sure! Would you like to add a cup of coffee to that order? {w}Promotion week, only 25 cents extra"
     show barista at s33
 
-    show pastprotagonist at t31
-    pp "I'm not actually a coffee person. But hey, sure, why not?"
+    show pastprotagonist talking at t31
+    pp "I'm not actually a coffee person. {w}But hey, sure, why not?"
     show pastprotagonist at s31
 
     show barista at t33
     barista "Ok, egg salad sandwich with extra onions, extra pickles, extra garlic, and a cup of coffee coming right up!"
-    show barista at s33
+    show barista at thide
+    hide barista
 
     n "The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
-    # TODO SHOW [Barista is now standing in front of coffee machine]
 
-    show pastprotagonist at t31
-    pp "So...that's how you make coffee. I never really paid attention to it."
+    show pastprotagonist hmm at t31
+    pp "So... that's how you make coffee. {w}Wish I knew that earlier."
     show pastprotagonist at s31
 
-    show barista at t33
+    show barista neutral at t33
     barista "Oh, where'd this letter come from?"
     show barista shocked
     barista "Oh, where'd this letter come from?"
@@ -324,8 +352,9 @@ label chapter1_cafe_past3:
     hide barista
 
     show protagonist neutral at t31
-    p "Oh, looks like I'm leaving. Better leave so that I don't run into myself."
+    p "Oh, looks like I'm leaving. Better go so that I don't run into myself."
 
+    scene black with Dissolve(0.5)
     jump chapter1_end
 
 
@@ -333,18 +362,18 @@ label chapter1_cafe_past3:
 ####################################################
 label chapter1_office:
 
-    scene bg office
+    scene bg office with Dissolve(0.5)
     show protagonist anxious at t11
     p "My desk is empty. Looks like he- or I am still on my bathroom break."
 
     show protagonist hmm
-    p "Here’s what I'll do...write a delivery message on this letter and put it on my desk"
+    p "Here’s what I'll do... {w}Write a delivery message on this letter and put it on my desk"
 
     #show protagonist excited
     hide protagonist
-    n "The letter is now folded up nicely, with a post-it note on top that reads"
-    n "\"URGENT: Deliver to Hourglass Cafe\" followed by the address"
-    n "(Toilet flushes)"
+    n "{i}The letter is now folded up nicely, with a post-it note on top that reads"
+    n "{i}\"URGENT: Deliver to Hourglass Cafe\" followed by the address"
+    n "{i}You hear the sound of the toilet flushing..."
 
     show protagonist surprised at t11
     p "HIDE!"
@@ -354,8 +383,7 @@ label chapter1_office:
 
     show pastprotagonist neutral at t11
     pp "What is this???"
-    # TODO past self confused
-    pp "Hm...maybe it's from the boss. Guess I'll drop it off."
+    pp "Hm... Maybe it's from the boss. {p}Guess I'll drop it off."
     hide pastprotagonist
 
     menu:
@@ -366,6 +394,7 @@ label chapter1_office:
             p "Ok I need to see this through."
             show protagonist at thide
             hide protagonist
+            scene black with Dissolve(0.5)
             jump chapter1_cafe_past2
 
         "Return to the present":
@@ -375,6 +404,7 @@ label chapter1_office:
             menu:
                 p "What should I do now?"
                 "Follow the past self to the cafe":
+                    scene black with Dissolve(0.5)
                     jump chapter1_cafe_past2
                 "Return to the present" (disabled=True):
                     show timegod laugh at t11
@@ -386,7 +416,7 @@ label chapter1_office:
 
 ####################################################
 label chapter1_home:
-    scene bg home
+    scene bg home with Dissolve(0.5)
 
     show protagonist hmm at t11
     p "What just happened?"
@@ -402,10 +432,13 @@ label chapter1_home:
     menu:
         p "What should I do?"
         "Go to the Cafe":
+            scene black with Dissolve(0.5)
             jump chapter1_cafe_outdoor
         "Go to the Office":
+            scene black with Dissolve(0.5)
             jump chapter1_office
         "Stay Home and take a nap":
+            scene black with Dissolve(0.5)
             jump chapter1_restartmission
 
 
@@ -413,6 +446,7 @@ label chapter1_home:
 ####################################################
 label chapter1_restartmission:
 
+    scene home with Dissolve(0.5)
     show timegod neutral at t11
     g "This is no time to nap!"
     show timegod angry at t11
@@ -422,8 +456,10 @@ label chapter1_restartmission:
     menu:
         g "Have you already forgotten your mission???"
         "Go to the Cafe":
+            scene black with Dissolve(0.5)
             jump chapter1_cafe_outdoor
         "Go to the Office":
+            scene black with Dissolve(0.5)
             jump chapter1_office
         "Stay Home and take a nap" (disabled=True):
             jump chapter1_restartmission
@@ -436,7 +472,6 @@ label chapter1_restartmission:
 ####################################################
 label chapter1_end:
 
-    scene black with Dissolve(0.5)
     scene bg home with Dissolve(0.5)
 
     show timegod neutral at t11
@@ -482,9 +517,11 @@ label chapter1_end:
     n "The day after, in the Office..."
     scene bg office with Dissolve(0.5)
 
-    show boss neutral at t11
+    show boss neutral at t33
     boss "I need you to file these documents, and sign these things for me."
+    show boss talking at t33
     boss "Also I need those progress reports done by the end of the day."
+    show boss neutral at t33
     boss "Oh, and fix those UGLY bar charts! Who pairs neon green with hot pink?"
     show boss at s33
 
@@ -492,12 +529,12 @@ label chapter1_end:
     p "Ok, anything else?"
     show protagonist neutral at s31
 
-    show boss at t33
-    boss "Oh, yeah. Make me a cup of coffee"
+    show boss talking at t33
+    boss "Oh, yeah. {w}Make me a cup of coffee"
     show boss at s33
 
     show protagonist anxious at t31
-    p "You want me to make you a cup of coffee?"
+    p "You want ME to make you a cup of coffee?"
     show protagonist at s31
 
     if mission1personal_success==1:
@@ -509,15 +546,14 @@ label chapter1_end:
 ####################################################
 label chapter1_end_success:
     show boss at t33
-    boss "Yeah, cup of coffee."
+    boss "Yeah, a cup of coffee."
     show boss at s33
 
     show protagonist hmm at t31
-    p "Me???"
+    p "ME?????"
     show protagonist at s31
 
-    show boss at t33
-    #show boss irritated
+    show boss angry at t33
     boss "Yes. That’s what I SAID."
     show protagonist joy
     boss "And be fast, I need to run to the next meeting."
@@ -529,31 +565,28 @@ label chapter1_end_success:
     show protagonist at thide
     hide protagonist
 
-    scene black with Dissolve(2.0)
-    n "END OF CHAPTER 1"
+    scene black with Dissolve(1.0)
+    n "END OF MISSION 1"
     return
 
 
 ####################################################
 label chapter1_end_failure:
-    show boss at t33
+    show boss angry at t33
     boss "OF COURSE NOT!"
     show protagonist surprised
-    #show boss pointingAtCoffeeStation
     boss "Actually after yesterday, you are banned from making coffee."
     show boss at s33
 
-    #scene bg coffeeMachineBanned
-    n "Pan to the coffee machine, there’s a huge printout sign with the protagonist’s face on it and a huge prohibited sign over it"
+    n "He is not joking. Above the coffee machine, there’s a huge printout with my face and a stop sign over it."
 
-    show boss at t33
-    #show boss irritated
+    show boss disgusted at t33
     boss "Bean water. My god..."
     show boss at thide
     hide boss
     show protagonist at thide
     hide protagonist
 
-    scene black with Dissolve(2.0)
-    n "END OF CHAPTER 1"
+    scene black with Dissolve(1.0)
+    n "END OF MISSION 1"
     return
