@@ -2,11 +2,10 @@
 label start_chapter4:
 
     # INITIALIZE VARIABLES FOR VISITED PLACES
-    $ flag_visited_cafe = 0;
-    $ flag_visited_office = 0;
-    $ flag_visited_home = 0;
+    $ flag_visited_cafe = 0
+    $ flag_visited_office = 0
+    $ flag_visited_home = 0
 
-    # play music "funiculifunicula.mp3" fadeout 1       # ADD MUSIC
 
     n "{i}At some point in time... {p}When you really do not expect to be surprised by anything..."
     scene bg office with Dissolve(0.5)
