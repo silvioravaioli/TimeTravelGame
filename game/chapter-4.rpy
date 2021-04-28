@@ -593,6 +593,7 @@ label chapter4_street_missionFail:
 
 label chapter4_street_missionSuccess:
     scene bg road
+    $ mission4timegod_success = 1
     show protagonist neutral at t31
     p "Whew. Ok, I did it. Now what?"
     # [fullscreen image of boss in car]

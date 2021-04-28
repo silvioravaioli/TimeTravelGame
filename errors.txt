@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapter-3.rpy", line 550: expected statement.
-    =======
-          ^
+File "game/chapter-4.rpy", line 596: expected statement.
+    mission4timegod_success
+                           ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 17:44:50 2021
+Tue Apr 27 19:24:48 2021
