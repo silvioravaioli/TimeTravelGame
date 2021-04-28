@@ -531,20 +531,21 @@ label chapter3_past1_Street_distract:
     p "Just need to get that backpack away from ‘em. Good thing I don’t fully wear my backpack, just sort of carry it. In hindsight, that’s probably an awful idea."
     p "Should be a pretty straightforward rouse, I’ll just get him to run and drop it. I enjoy puppies quite a bit, so that should work well."
 
-    n "You hide in a bush"
+    n "{i}You hide in a bush"
 
+    show protagonist neutral at thide
     p "Hmmm. Definitely need to hide my voice. He’ll recognize me. I’m gonna be real surprised if this works."
     p "HEY YOU, [protagonist_name], there’s a puppy around the corner! Get there quick before it runs away!"
 
+    show pastprotagonist joy at t33
     pp "What? No way! I gotta see this!"
     n "{i}Past you runs to dog, abandoning the backpack as he runs"
     show pastprotagonist at thide
     hide pastprotagonist
 
-    show protagonist at t11
+    show protagonist talking at t11
     p "Wow, I'm surprised that worked. {w}Now I just gotta find that beef jerky"
-    show protagonist at thide
-    show protatonist joy at t11
+    show protagonist joy at t11
     p "AHA! I got it! {w}Now that I've got the beef jerky, Princess for sure won't get lost!"
     show protagonist anxious
     p "But I'm a little bit hungry..."
@@ -555,9 +556,15 @@ label chapter3_past1_Street_distract:
     show protagonist anxious
     p "Oh wait... {w}Oh no..."
     show protagonist surprised at t11
+    p "OH NO! MY STOMACH!"
+    p "MR. TIME GOD! TAKE ME BACK!"
 
     show timegod angry at t33
     g "This is a fairly interesting spot to find you considering your task was at your office-building."
+    show protagonist surprised at t31
+    p "Please! Please! Just take me back!"
+
+    hide timegod
 
     if mission3timegod_success == 0:
         jump chapter3_past1_street_distract_FailTG
@@ -568,7 +575,7 @@ label chapter3_past1_Street_distract:
 ####################################################
 label chapter3_past1_street_distract_FailTG:
 
-    #scene bg home
+    scene bg home
 
     show timegod angry at t33
     g "My task for you was incredibly simple. All you needed to do was go and remove a poster."
@@ -600,7 +607,7 @@ label chapter3_past1_street_distract_FailTG:
     show timegod angry at t33
     g "GET {w}OUT {w}OF {w}HERE!"
     g "It’s the middle of the day! Go to work!"
-    jump chapter3_past1_Home_distract_Outcome
+    jump chapter3_past1_office_distract_Outcome
 
 
 ####################################################
@@ -623,19 +630,19 @@ label chapter3_past1_street_distract_SucceedTG:
 
     g "Yet again, I thank you for your work. Goodbye."
     p "Uh thanks, I probably should get back to work."
-    jump chapter3_past1_Home_distract_Outcome
+    jump chapter3_past1_office_distract_Outcome
 
 
 ####################################################
 label chapter3_past1_office_distract_Outcome:
 
-    #scene bg home
+    scene bg office
 
     show protagonist neutral at t31
     p "Work time. Princess should just be waiting, no jerky dilemma here."
 
     show boss happy at t33
-    boss "Hey [Character_name], how was Princess?"
+    boss "Hey, how was Princess?"
 
     show dog happy at t11
     show protagonist anxious at t31
