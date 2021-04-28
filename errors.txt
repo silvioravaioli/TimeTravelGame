@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapter-3.rpy", line 540: expected 'simple_expression' not found.
-    show pastprotagonist happy at 
-                                  ^
+File "game/chapter-3.rpy", line 550: expected statement.
+    =======
+          ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 16:53:32 2021
+Tue Apr 27 17:44:50 2021

@@ -242,6 +242,7 @@ label chapter3_travel1DogSearch_Home:
     show timegod at thide
     hide timegod
 
+    play sound "timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     #jump chapter3_past1_Home
 
@@ -516,6 +517,7 @@ label chapter3_past1_Street_tackle:
     p "No! But––"
     show timegod snap1
 
+    play sound "timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     jump chapter3_present_Home_tackleOutcome
 
@@ -540,7 +542,7 @@ label chapter3_past1_Street_distract:
     show pastprotagonist joy at t33
     pp "What? No way! I gotta see this!"
     n "{i}Past you runs to dog, abandoning the backpack as he runs"
-    show pastprotagonist at thide
+    show pastprotagonist neutral at thide
     hide pastprotagonist
 
     show protagonist talking at t11
@@ -585,7 +587,7 @@ label chapter3_past1_street_distract_FailTG:
     g "Instead..."
     show timegod laugh at t33
     g "Instead... You eat some expired beef jerky?!"
-    
+
 
     show protagonist anxious at t31
     p "I don't know what I was thinking..."
@@ -634,7 +636,7 @@ label chapter3_past1_street_distract_SucceedTG:
 
 
 ####################################################
-label chapter3_past1_office_distract_Outcome:
+label chapter3_past1_Home_distract_Outcome:
 
     scene bg office
 
@@ -642,7 +644,7 @@ label chapter3_past1_office_distract_Outcome:
     p "Work time. Princess should just be waiting, no jerky dilemma here."
 
     show boss happy at t33
-    boss "Hey, how was Princess?"
+    boss "Hey [protagonist_name], how was Princess?"
 
     show dog happy at t11
     show protagonist anxious at t31
