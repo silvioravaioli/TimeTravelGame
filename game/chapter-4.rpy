@@ -87,7 +87,9 @@ label chapter4_office_start:
     p "Oh no, are they going to die??? Did I just kill the boss?"
     show protagonist surprised at s31
 
-    show coworker puking at t11
+    show coworker sick at s11
+    n "The coworker also starts vomiting"
+    show coworker puking at s11
     n "The coworker also starts vomiting"
 
     show coworker at thide
@@ -609,6 +611,7 @@ label chapter4_street_missionSuccess:
     # p [still surprised, just watching in shock. No words]
     # [fullscreen image of boss in car. But now instead of neutral face, boss is PANICKING]
     n "{i}You see your boss is panicking.{\i}"
+    play sound "MusicSoundAssets/carAccidentSound.mp3" fadeout 1
     n "{i}The car crashes and you hear a cacophony of car horns.{\i}"
     # scene black with Dissolve(0.5)
     scene bg road_carcrash with Dissolve(0.5)
