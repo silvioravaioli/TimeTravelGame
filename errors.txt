@@ -2,9 +2,18 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
 File "game/chapter-1.rpy", line 128: expected 'image_name_component' not found.
     show 
          ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
 Sat May  1 16:54:26 2021
+=======
+File "game/chapter-1.rpy", line 6: expected statement.
+    renpy.music.play("MusicSoundAssets/timeTravelBackgroundMusic_Happy.mp3", channel=u'music', loop=True, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False, relative_volume=0.5)
+                                                                                                                                                                                                         ^
+
+Ren'Py Version: Ren'Py 7.4.2.1292
+Sat May  1 19:03:30 2021
+>>>>>>> 6d448def12e92d8e2ce43832f03c98d74a731131

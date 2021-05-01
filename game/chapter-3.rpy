@@ -41,6 +41,7 @@ label start_chapter3:
     show boss neutral at s33
 
     show dog neutral at t11
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     show boss happy at t33
     boss "Be good, little Princess girl ok?"
     show dog cool
@@ -49,6 +50,7 @@ label start_chapter3:
     boss "Look at those eyes."
     show dog happy
     boss "Oh Princess, you are one adorable girl"
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     show dog neutral
     boss "I love you! I love you!"
 
@@ -63,6 +65,7 @@ label start_chapter3:
 
     show protagonist talking at t31
     p "Looks like it’s just you and me, Princess."
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     show protagonist joy
     p "Huh, I guess you are kinda cute."
     hide protagonist
@@ -78,6 +81,7 @@ label start_chapter3:
     p "Egg salad sandwich, here I come!"
 
     show dog neutral at t33
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
 
     show protagonist anxious
     p "Oh... Shoot."
@@ -98,8 +102,10 @@ label start_chapter3:
     p "Lunch!"
 
     show dog happy
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     n "{i}Princess also wants her lunch! She is joyfully jumping around."
     n "{i}Princess grabs the beef jerky, and runs away..."
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     hide dog
 
     show protagonist hey
@@ -242,7 +248,7 @@ label chapter3_travel1DogSearch_Home:
     show timegod at thide
     hide timegod
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     #jump chapter3_past1_Home
 
@@ -299,8 +305,10 @@ label chapter3_past1_Office:
     menu:
         p "Found it! What should I do now?"
         "Take down poster":
+            $ mission3timegod_success = 1
             jump chapter3_past1_OfficeMissionSuccess
         "Do not take down poster":
+            $ mission3timegod_success = 0
             jump chapter3_past1_OfficeMissionFail
 
 
@@ -517,7 +525,7 @@ label chapter3_past1_Street_tackle:
     p "No! But––"
     show timegod snap1
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     jump chapter3_present_Home_tackleOutcome
 
@@ -647,6 +655,7 @@ label chapter3_past1_Home_distract_Outcome:
     boss "Hey [protagonist_name], how was Princess?"
 
     show dog happy at t11
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     show protagonist anxious at t31
     p "Uh"
     show protagonist joy at t31
@@ -666,18 +675,19 @@ label chapter3_past1_Home_distract_Outcome:
         #[Boss leaves without walking into glass, scene ends].
 
     if mission3timegod_success==1:
-        n "{i}You hear a loud crash sound from the corridor"
+        n "{i}You hear a loud crash sound from the corridor..."
+        play sound "MusicSoundAssets/brokenGlassSound.mp3" fadeout 1
         #[crash/bonk sound in the background]
         show protagonist surprised at t31
         p "What the heck! What was that?"
 
-        show boss angry at t33
+        show boss blood at t33
         n "{i}The boss is back... but is his head pouring blood?"
         boss "God DANG IT!"
 
         p "What happened? Are you ok?"
 
-        boss "I just walked into that glass wall there! There are usually a bunch of posters on that wall! I don’t know who the HELL took them down"
+        boss "I just walked into that glass wall there! There are usually a bunch of posters on that wall! I don’t know who the HELL took them down!"
 
         show protagonist anxious
         p "Oh no..."
@@ -687,7 +697,7 @@ label chapter3_past1_Home_distract_Outcome:
         p "Uh... No? Definitely not me."
 
         boss "Then stop oh no-ing and get back to work!"
-        boss "I swear, one of you idiots is TRYING to kill me"
+        boss "I swear, one of you idiots is TRYING to kill me!"
         show boss at thide
         hide boss
 
@@ -753,7 +763,7 @@ label chapter3_present_Home_tackleOutcome:
         g "You’re absolutely right! You did NOT think!"
 
     show timegod angry at t33
-    g "If you had even one ounce of brain, you would realize that tackling your past self was a TERRIBLE idea"
+    g "If you had even one ounce of brain, you would realize that tackling your past self was a TERRIBLE idea!"
     g "Oh but that’s not even the problem."
     show timegod neutral
     g "Death and injuries? Oh, those are part of the job when you time travel."
@@ -782,7 +792,7 @@ label chapter3_present_Home_tackleOutcome:
     g "That’s how we stay in control."
     p "Please, let me fix this! {w}I can go back! {p}I still have to make sure my boss’s dog doesn’t get lost!"
     show timegod laugh
-    g "Ha! Go back?! You are in no position to beg for favors"
+    g "Ha! Go back?! You are in no position to beg for favors!"
     show timegod angry
     g "Now, get out of here!"
 
@@ -832,6 +842,7 @@ label chapter3_present_Office_tackleOutcome:
 
 
     show dog neutral at t11
+    play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     p "It was that easy?"
 
     boss "Oh here you are, little baby!"
@@ -847,7 +858,7 @@ label chapter3_present_Office_tackleOutcome:
     p "I had to sing a song???"
 
     show boss angry
-    boss "Yes! Her song. Now get back to work"
+    boss "Yes! Her song. Now get back to work!"
     show boss at thide
     hide boss
     show dog at thide
@@ -858,18 +869,19 @@ label chapter3_present_Office_tackleOutcome:
         #[Boss leaves without walking into glass, scene ends].
 
     if mission3timegod_success==1:
-        n "{i}You hear a loud crash sound from the corridor"
+        n "{i}You hear a loud crash sound from the corridor..."
+        play sound "MusicSoundAssets/brokenGlassSound.mp3" fadeout 1
         #[crash/bonk sound in the background]
         show protagonist surprised at t31
         p "What the heck! What was that?"
 
-        show boss angry at t33
+        show boss blood at t33
         n "{i}The boss is back... but is his head pouring blood?"
         boss "God DANG IT!"
 
         p "What happened? Are you ok?"
 
-        boss "I just walked into that glass wall there! There are usually a bunch of posters on that wall! I don’t know who the HELL took them down"
+        boss "I just walked into that glass wall there! There are usually a bunch of posters on that wall! I don’t know who the HELL took them down!!!"
 
         show protagonist anxious
         p "Oh no..."
@@ -879,7 +891,7 @@ label chapter3_present_Office_tackleOutcome:
         p "Uh... No? Definitely not me."
 
         boss "Then stop oh no-ing and get back to work!"
-        boss "I swear, one of you idiots is TRYING to kill me"
+        boss "I swear, one of you idiots is TRYING to kill me."
         show boss at thide
         hide boss
 

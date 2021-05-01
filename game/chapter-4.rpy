@@ -87,7 +87,9 @@ label chapter4_office_start:
     p "Oh no, are they going to die??? Did I just kill the boss?"
     show protagonist surprised at s31
 
-    show coworker puking at t11
+    show coworker sick at s11
+    n "The coworker also starts vomiting"
+    show coworker puking at s11
     n "The coworker also starts vomiting"
 
     show coworker at thide
@@ -195,7 +197,7 @@ label chapter4_home_meetTimeGod:
     g "Go!"
     hide timegod
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
 
     n "{i}The Time God snaps his fingers and you are transported back in the past."
@@ -553,7 +555,7 @@ label chapter4_street_missionFail:
     g "Here, your reputation can be salvaged. Simply, complete this mission for me. Let us try this again."
     show timegod snap1 at s33
     show timegod snap2 at s33
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     scene bg home
     # [Jumps to present (home), akin to beginning of mission]
@@ -609,6 +611,7 @@ label chapter4_street_missionSuccess:
     # p [still surprised, just watching in shock. No words]
     # [fullscreen image of boss in car. But now instead of neutral face, boss is PANICKING]
     n "{i}You see your boss is panicking.{\i}"
+    play sound "MusicSoundAssets/carAccidentSound.mp3" fadeout 1
     n "{i}The car crashes and you hear a cacophony of car horns.{\i}"
     # scene black with Dissolve(0.5)
     scene bg road_carcrash with Dissolve(0.5)
@@ -697,7 +700,7 @@ label chapter4_street_missionSuccess:
     show timegod snap1 at t33
     show timegod snap2 at t33
     scene black with Dissolve(0.5)
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     #jump chapter4_home_missionSuccess_present
 
 

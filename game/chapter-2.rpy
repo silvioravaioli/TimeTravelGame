@@ -120,7 +120,7 @@ label chapter2_home_meetTimeGod:
     show timegod at thide
     hide timegod
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
 
 
@@ -300,7 +300,7 @@ label chapter2_travelPast_office2hide:
                 show timegod snap1 at t11
                 g "Oh, you amuse me so much. Getting hungry at 11 pm?. I'm taking you back"
                 show timegod snap2 at t11
-                play sound "timeTravelSound.mp3" fadeout 1
+                play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
                 scene black with Dissolve(2.0)
                 jump chapter2_returnPen
 
@@ -492,7 +492,7 @@ label chapter2_returnPen_snap:
             g "Interesting. I trust you will continue to have such success in the future."
             show timegod at thide
             hide timegod
-            play sound "timeTravelSound.mp3" fadeout 1
+            play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
             scene black with Dissolve(2.0)
         "I feel like something is wrong here.":
             show timegod neutral at t11
@@ -503,7 +503,7 @@ label chapter2_returnPen_snap:
             g "Interesting. It seems to me you performed splendidly. I trust you will continue to have such success in the future."
             show timegod at thide
             hide timegod
-            play sound "timeTravelSound.mp3" fadeout 1
+            play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
             scene black with Dissolve(2.0)
 
     jump chapter2_end
@@ -544,7 +544,7 @@ label chapter2_failedDestruction:
     show timegod snap1 at t11
     p "Wait! But –– but my costume!"
     show timegod snap2 at t11
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     jump chapter2_returnPen
 
@@ -671,7 +671,7 @@ label chapter2_travelPast_cafe4:
     show timegod at thide
     hide timegod
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     jump chapter2_end
 

@@ -1,6 +1,8 @@
 ####################################################
 label start_chapter1:
 
+    play music "MusicSoundAssets/timeTravelBackgroundMusic_Happy.mp3" volume 0.1
+
     scene bg office
     n "{i}Just another day in the office..."
 
@@ -176,7 +178,7 @@ label chapter1_introdialogue4:
     show timegod snap2 at t11
     g "Go!"
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(1.0)
     n "{i}The Time God snaps his fingers and you’re transported to one week into the past.{\i}"
 
@@ -562,7 +564,7 @@ label chapter1_end:
 
             scene black with Dissolve(0.5)
             n "{i}The Time God snaps their fingers and sends you back to the present.{\i}"
-            play sound "timeTravelSound.mp3" fadeout 1
+            play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
             scene bg home with Dissolve(0.5)
         "Went ok.":
             show timegod neutral at t11
@@ -574,7 +576,7 @@ label chapter1_end:
 
             scene black with Dissolve(0.5)
             n "{i}The Time God snaps their fingers and sends you back to the present.{\i}"
-            play sound "timeTravelSound.mp3" fadeout 1
+            play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
             scene bg home with Dissolve(0.5)
 
     show protagonist anxious at t31
