@@ -177,27 +177,27 @@ label epilogue_finalMissionFail_highRep:
         show boss neutral at t33
         boss "Bang-up job with the coffee."
         show boss at s33
-        show protagonist neutral at t31
+        show protagonist talking at t31
         p "Yeah, that’s me! {w}I’m pretty good at stuff."
         show protagonist at s31
 
     # IF MISSION 2 SUCCESS
     if mission2personal_success == 0:
-        show boss neutral at t33
+        show boss talking at t33
         boss "Absolutely nailed that meeting as well. {p}Made me proud to work in home insurance."
         show boss at s33
-        show protagonist neutral at t31
+        show protagonist joy at t31
         p "I know how to be professional when we have important clients!"
         show protagonist at s31
 
     # IF MISSION 3 SUCCESS
     if mission3personal_success == 0:
-        show boss neutral at t33
+        show boss happy at t33
         boss "You took good care of Princess."
         show dog cool at t11
         boss "I trust you will take care of our company with the same level of attention."
         show boss at s33
-        show protagonist neutral at t31
+        show protagonist talking at t31
         p "I never lose sight of what is important."
         show protagonist at s31
         show dog at thide
@@ -207,12 +207,14 @@ label epilogue_finalMissionFail_highRep:
     boss "So, I’d like to offer you a promotion to my assistant. {p}You’ll get all the great bits and bobs: {w}experience, {w}more time in the office, {w}and a slightly higher salary!"
     show boss at s33
 
-    show protagonist blush at t31
+    show protagonist joy at t31
     p "Oh boy, that’s pretty swell."
     show protagonist at s31
 
     show boss neutral at t33
-    boss "Don’t use up all your enthusiasm! I’ve got a first job for ya now that you’re in the big leagues, great time to prove yourself again."
+    boss "Don’t use up all your enthusiasm!"
+    show protagonist neutral
+    boss "Don’t use up all your enthusiasm! {w}I’ve got a first job for ya now that you’re in the big leagues, great time to prove yourself again."
     show boss happy
     boss "As you know, we’ve got quite a bit of rivals, not just a bit, they number us pretty heavily."
     boss "I’m going to need you to give me a full profile of each of these."
@@ -222,12 +224,16 @@ label epilogue_finalMissionFail_highRep:
     show boss at s33
 
     show protagonist anxious at t31
-    p "Uhh... {w}doesn’t that seem to be..."
+    p "Uhh... You want me to compile a report about 40 different companies... {w}All on my own? {w}Doesn’t that seem to be..."
     show protagonist at s31
 
     show boss talking_happy at t33
     boss "Don’t worry, you’ve been doing pretty good with this stuff. {p}So much so, that I think you can get it done by next week."
+    show protagonist surprised at t31
+    p "NEXT WEEK?!"
+    boss "I'll leave you to it!"
     show boss at thide
+
     hide boss
     show protagonist at thide
     hide protagonist
@@ -239,17 +245,26 @@ label epilogue_finalMissionFail_highRep:
     #n "Two options for this, up to art team: Either a montage of the Protagonist in various positions in the office (same scene)"
     #n "or could just show a slumped version of him over a computer looking tired, disheveled"
 
+    show protagonist despair at t11
+    p "Oh dear... How long have I been sitting in front of this computer?"
+    show protagonist surprised at t11
+    p "What?! It's already 11pm!"
+    show protagonist despair at t11
+    p "And I still have so much more to get done... {w}So much for a 9 to 5 job..."
+    p "Went from making coffee and burgers to this garbage every night. {w}Oh jeez..."
+    p "I'm so tired..."
+    n "{i}Something on the corner of the screen catches your attention. {w}It is an ad for the rival company.{w} You click it without even thinking why you are doing that."
+    p "Guess I'll start looking at rival company number 27..."
     show protagonist hmm at t11
-    p "How long has it been? {w}How much time do I have left? {p}Went from coffee and burgers to this every night. {w}Oh jeez..."
-    show protagonist hmm at t31
-    p "Wait a minute..."
+    p "Hm... Motto, \"taking care of what's important...\""
+    show protagonist surprised at t11
+    p "Oh my god!! Wait a minute!"
     show protagonist at thide
     hide protagonist
 
-    n "{i}Something on the corner of the screen catches your attention. {w}It is an ad for the rival company{w}, you click it without even thinking why you are doing that."
     scene black with Dissolve(0.5)
     scene bg ending2_image1 with Dissolve(0.5)
-    n "{i}It is supposed to be a picture of the best representatives for the rival company, but something is off..."
+    n "{i}You see a picture of the best representatives for the rival company, and one of them looks a little familiar..."
     scene bg ending2_image2 with Dissolve(0.5)
     n "{i}You got your second chance."
     scene bg ending2_image3 with Dissolve(0.5)
@@ -268,12 +283,15 @@ label epilogue_finalMissionFail_lowRep:
 
     show boss neutral at t33
     boss "On the topic of great things, the work you’ve done these past few weeks has been incredible."
-    boss "This month’s promotion is going to [coworker_name], but keep up the good work and you might just get lucky next time."
+    boss "This month’s promotion is going to [coworker_name]"
+    show protagonist despair
+    show boss talking_happy
+    boss "But keep up the good work and you might just get lucky next time."
     show boss at s33
 
     show protagonist anxious at t31
     p "You don’t think I’ve just been a huge doofus? {w}The coffee... {w}and the costume... {w}not to mention the burger incident!"
-    show protagonist neutral at s31
+    show protagonist anxious at s31
 
     show boss neutral at t33
     boss "Everyone makes these kinds of mistakes."
@@ -287,7 +305,7 @@ label epilogue_finalMissionFail_lowRep:
     boss "In a few years, you may even be running this place."
     show boss at s33
 
-    show protagonist at t31
+    show protagonist joy at t31
     p "I won’t let you down! Is there anything I can do to prove myself?"
     show protagonist at s31
 
@@ -298,10 +316,11 @@ label epilogue_finalMissionFail_lowRep:
 
     show coworker2 neutral at t11
     n "{i}A new coworker stumbles into office, {w}she trips over nothing, and just barely catches herself."
+    show protagonist blush
 
-    show coworker2 happy at t11
+    show coworker2 happy_right at t11
     coworker2 "Hello boss. It’s nice to finally meet you in person!"
-    show coworker2 neutral at s11
+    show coworker2 neutral_right at s11
 
     show boss happy at t33
     boss "Welcome to the company, [new_coworker_name]. You have impeccable timing, that will take you far."
@@ -312,7 +331,6 @@ label epilogue_finalMissionFail_lowRep:
 
     show protagonist talking at t31
     p "Nice to meet you, [new_coworker_name]. It’d be a pleasure to show off our exquisite linoleum flooring."
-    #show coworker2 at s33
     show protagonist neutral at s31
 
     n "{i}As you are leaving the office, you pass the old Star Wars day poster."
@@ -329,7 +347,7 @@ label epilogue_finalMissionFail_lowRep:
     coworker2 "Am I?! HECK YEAH!!! If only I joined this company earlier you would have seen my sweet homemade Wookiee costume."
     show coworker2 excited at s33
 
-    show protagonist talking at t31
+    show protagonist joy at t31
     p "Well good thing you weren’t here, because there’s no way you could have held a candle to mine."
     p "I even used Wookiee-scented paint to make the outfit truly authentic."
     show protagonist neutral at s31
@@ -389,9 +407,9 @@ label epilogue_finalMissionFail_lowRep:
     p "..."
     show protagonist neutral at s31
 
-    show coworker2 happy at t33
+    show coworker2 hmm at t33
     coworker2 "Ugh, I hate that guy so much!"
-    show coworker2 neutral at s33
+    show coworker2 hmm at s33
 
     show protagonist surprised at t31
     p "You know him????"
@@ -399,13 +417,23 @@ label epilogue_finalMissionFail_lowRep:
 
     show coworker2 neutral at t33
     coworker2 "Where do you think I worked before I came here? That guy’s my former boss."
+    show coworker2 hmm
     coworker2 "Absolute pill of a manager. He has no respect for anyone."
     show coworker2 happy
     coworker2 "You have no idea how happy I am to be out from under his thumb."
     show coworker2 neutral at s33
 
     show protagonist talking at t31
-    p "Yeah, I know that feeling. {w}It seems you had your second chance..."
+    p "Yeah, I know that feeling. {w}Now, you get your second chance!"
+    show coworker2 excited at t33
+    coworker2 "I do! {w}Also, is this coffee place far away? {w}For some reason, I'm really craving some egg salad."
+    show coworker2 at s33
+    show protagonist joy at t31
+    p "Oh yes! I love egg salad sandwiches too! We're really close by."
+    show protagonist at s31
+    show coworker2 happy at t33
+    coworker2 "Great! {w}Forget about stupid ex-boss Tim, let's go!"
+    coworker2 "Egg salad awaits!"
     show coworker2 at thide
     hide coworker2
     show protagonist at thide

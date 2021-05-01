@@ -9,8 +9,8 @@ label start_chapter1:
     show coworker neutral at s33
 
     show protagonist hmm at t31
-    n "{i}This is me. I have just started this new job, but things are not going great..."
-    n "{i}Nobody seems to remember my name."
+    p "I just started this new job a week ago, but things are not going great..."
+    p "Nobody seems to remember my name."
     p "I am ..."
 
     $ protagonist_name = renpy.input("What is your name again?!?")
@@ -52,7 +52,7 @@ label start_chapter1:
 
     show coworker laughing at t31
     coworker "I know it’s called bean water, but you don’t just directly put the beans in the water."
-    coworker "HAHAHAHAHAHAHAHAHAHAHA"
+    coworker "Loser..."
     show coworker at thide
     hide coworker
     show boss at thide
@@ -63,19 +63,23 @@ label start_chapter1:
 label chapter1_introdialogue0:
 
     scene bg home with Dissolve(0.5)
-    show protagonist anxious at t11
+    show protagonist anxious at t31
     p "I'm finally home..."
-    show protagonist at thide
-    hide protagonist
 
 ####################################################
 label chapter1_introdialogue1:
 
-    show timegod neutral at t11
+    show timegod neutral at t33
     g "Whoa you really messed that up! I see you’ve had a bad day."
-    show timegod laugh at t11
+
+    show protagonist surprised at t31
+    p "WHAT THE HELL! Who are YOU?!"
+    p "GET OUT OF MY HOUSE BEFORE I CALL THE POLICE!"
+
+
+    show timegod laugh at t33
     g "I have a proposition for you."
-    show timegod creepy at t11
+    show timegod creepy at t33
     g "Would you like a do over... {w}a chance to undo your mistakes?"
     #show timegod at thide
     hide timegod
@@ -113,13 +117,17 @@ label chapter1_introdialogue1:
 ####################################################
 label chapter1_introdialogue2:
 
-    show timegod snap1 at t11
-    g "The rules are simple. You go back and complete a task for me..."
-    show timegod snap2 at t11
+    show timegod snap1 at t33
+    g "The rules are simple. I will send you back in time to complete a task for me..."
+    show timegod snap2 at t33
     g "...and in exchange you can fix your mistake!"
     $ timegod_name = "Time God"
-    show timegod neutral at t11
+    show timegod neutral at t33
     g "What would you say?"
+    show timegod at s33
+
+    show protagonist anxious at t31
+    p "What do you mean by send me back in time?"
     #show timegod at thide
     hide timegod
 
@@ -174,8 +182,76 @@ label chapter1_introdialogue4:
 
     # TODO "1 week ago" fades in and out at corner of screen
     # TODO MAP to choose where to go
+    n "{i}1 week ago..."
+    
+    scene bg home with Dissolve(0.5)
+    show protagonist despair at t11
+    p "Time travel? Please. {w}I'm not an idiot."
+    show protagonist hmm
+    p "Ok, so he rearranged my wall calendar so it shows a week ago..."
+    p "And he changed my phone calendar too."
+    p "Haha... Very funny."
+    show protagonist hey
+    p "Does he take me for a fool??"
+    p "HEY, RANDOM CRACKPOT WHO MANAGED TO BREAK INTO MY HOUSE! {w}Sorry to burst your bubble, but {w}TIME TRAVEL ISN'T REAL!"
+    show protagonist hmm
+    p "There's no way this is real. Let me check..."
+    show protagonist at thide
+    hide protagonist
+    p "..."
+    show protagonist hmm at t11
+    p "Ok, so he hid all of my newspapers from the past week too. {w}Gotta admire the dedication. {w}That is one elaborate prank."
+    n "{i}Suddenly, there's a commotion outside"
+    p "What is going on outside? {w}Let me go see"
 
-    p "So...where should I go now?"
+    scene bg road
+    show pastprotagonist hey at t33
+    pp "HEY! EVERYONE, GET OUT OF MY WAY! I CAN'T BE LATE TO MY FIRST DAY OF WORK!"
+    show protagonist hmm_right at t31
+    p "Is that..."
+    show pastprotagonist at thide
+    hide pastprotagonist
+    show protagonist surprised
+    p "Is that... ME?!"
+    p "Do I have a doppleganger? {w}Secret twin?"
+    show protagonist hmm_right
+    p "Wait... Wasn't I wearing a blue tie to work a week ago?"
+    p "And then I spilled orange juice on myself and almost destroyed it..."
+    show protagonist surprised
+    p "DID I ACTUALLY JUST TIME TRAVEL?!"
+
+    show timegod laugh at t33
+    g "HA! Well, that took you a while to figure out. {w}I never lie."
+    show timegod angry at t33
+    g "But you just wasted a lot of precious time."
+    show timegod at s33
+
+    show protagonist anxious at t31
+    p "I'm sorry... but"
+    show protagonist hey at t31
+    p "You sent me back a week in time with no warning! {w}Forgive me if I'm disoriented!"
+    show protagonist at s31
+
+    show timegod laugh at t33
+    g "Oh, watching people panic like this never gets old."
+    show timegod angry
+    g "Now, stop squandering my time and my benevolence. {w}Time to work."
+    show timegod at thide
+    hide timegod
+
+    show protagonist surprised at t31
+    p "AH! {w}Where did that guy go?!"
+    show protagonist anxious at t31
+    p "I'm so confused."
+    g "I said!"
+    show protagonist surprised
+    g "GET! {w} TO! {w}WORK!"
+
+    p "HOW DOES HE DO THAT?!"
+    show protagonist anxious
+    p "Jeez, ok! {w}So...where should I go now?"
+    show protagonist at thide
+    hide protagonist
 
     menu:
         p "So...where should I go now?"
@@ -185,13 +261,6 @@ label chapter1_introdialogue4:
             jump chapter1_office
         "Home":
             jump chapter1_home
-
-
-
-
-
-
-
 
 ####################################################
 label chapter1_cafe_outdoor:
@@ -361,6 +430,14 @@ label chapter1_office:
 
     scene bg office with Dissolve(0.5)
     show protagonist anxious at t11
+    p "Now I'm at the office."
+    
+    p "It actually looks different! {w}The calendars are off, the clocks are off..."
+    show protagonist surprised
+    p "I'm actually in the office from a week ago!"
+    
+    show protagonist anxious at t11
+    p "Ok, I better get to work."
     p "My desk is empty. Looks like he- or I am still on my bathroom break."
 
     show protagonist hmm
@@ -419,12 +496,9 @@ label chapter1_home:
     show protagonist hmm at t11
     p "What just happened?"
 
-    show protagonist surprised
-    p "I am in the same place... but it is also different..."
-
     show protagonist hmm
     p "I was supposed to do something, but what?"
-    p "My memory is foggy, maybe I should just take a nap."
+    p "My memory is foggy. Should I just take a nap?"
     hide protagonist
 
     menu:

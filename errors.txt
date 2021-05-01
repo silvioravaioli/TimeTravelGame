@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapter-4.rpy", line 596: expected statement.
-    mission4timegod_success
-                           ^
+File "game/chapter-1.rpy", line 128: expected 'image_name_component' not found.
+    show 
+         ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 19:24:48 2021
+Sat May  1 16:54:26 2021
