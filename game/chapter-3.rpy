@@ -242,7 +242,7 @@ label chapter3_travel1DogSearch_Home:
     show timegod at thide
     hide timegod
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     #jump chapter3_past1_Home
 
@@ -517,7 +517,7 @@ label chapter3_past1_Street_tackle:
     p "No! But––"
     show timegod snap1
 
-    play sound "timeTravelSound.mp3" fadeout 1
+    play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(0.5)
     jump chapter3_present_Home_tackleOutcome
 

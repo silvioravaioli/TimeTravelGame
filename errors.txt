@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapter-4.rpy", line 596: expected statement.
-    mission4timegod_success
-                           ^
+File "game/chapter-1.rpy", line 6: expected statement.
+    renpy.music.play("MusicSoundAssets/timeTravelBackgroundMusic_Happy.mp3", channel=u'music', loop=True, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False, relative_volume=0.5)
+                                                                                                                                                                                                         ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Tue Apr 27 19:24:48 2021
+Sat May  1 19:03:30 2021
