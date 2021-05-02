@@ -85,6 +85,7 @@ label chapter1_introdialogue1:
     g "Would you like a do over... {w}a chance to undo your mistakes?"
     #show timegod at thide
     hide timegod
+    hide protagonist
 
     menu:
         g "Would you like a do over... a chance to undo your mistakes?"
@@ -185,7 +186,7 @@ label chapter1_introdialogue4:
     # TODO "1 week ago" fades in and out at corner of screen
     # TODO MAP to choose where to go
     n "{i}1 week ago..."
-    
+
     scene bg home with Dissolve(0.5)
     show protagonist despair at t11
     p "Time travel? Please. {w}I'm not an idiot."
@@ -433,11 +434,11 @@ label chapter1_office:
     scene bg office with Dissolve(0.5)
     show protagonist anxious at t11
     p "Now I'm at the office."
-    
+
     p "It actually looks different! {w}The calendars are off, the clocks are off..."
     show protagonist surprised
     p "I'm actually in the office from a week ago!"
-    
+
     show protagonist anxious at t11
     p "Ok, I better get to work."
     p "My desk is empty. Looks like he- or I am still on my bathroom break."
