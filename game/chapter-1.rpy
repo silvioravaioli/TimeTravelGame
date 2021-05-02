@@ -133,6 +133,7 @@ label chapter1_introdialogue2:
     p "What do you mean by send me back in time?"
     #show timegod at thide
     hide timegod
+    hide protagonist
 
     menu:
         g "What would you say?"
@@ -230,7 +231,7 @@ label chapter1_introdialogue4:
     show timegod at s33
 
     show protagonist anxious at t31
-    p "I'm sorry... but"
+    p "I'm sorry... but..."
     show protagonist hey at t31
     p "You sent me back a week in time with no warning! {w}Forgive me if I'm disoriented!"
     show protagonist at s31
@@ -238,7 +239,7 @@ label chapter1_introdialogue4:
     show timegod laugh at t33
     g "Oh, watching people panic like this never gets old."
     show timegod angry
-    g "Now, stop squandering my time and my benevolence. {w}Time to work."
+    g "Now, stop squandering my time and my benevolence. {p}Time to work!"
     show timegod at thide
     hide timegod
 
