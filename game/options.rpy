@@ -30,6 +30,14 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+Credits to CUGameDev
+
+Programming: Silvio Ravaioli, Da Hua Chen
+
+Game Design/Story: Elaine Lee, Eli Goldin, Thaddeus Lipke
+
+Art: Nico Aldana, Ren Huang
+
 """)
 
 
