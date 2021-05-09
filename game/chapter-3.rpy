@@ -541,15 +541,16 @@ label chapter3_past1_Street_distract:
     p "Just need to get that backpack away from ‘em. Good thing I don’t fully wear my backpack, just sort of carry it. In hindsight, that’s probably an awful idea."
     p "Should be a pretty straightforward rouse, I’ll just get him to run and drop it. I enjoy puppies quite a bit, so that should work well."
 
-    n "{i}You hide in a bush"
-
+    n "{i}You hide in a bush..."
     show protagonist neutral at thide
+    hide protagonist
+
     p "Hmmm. Definitely need to hide my voice. He’ll recognize me. I’m gonna be real surprised if this works."
     p "HEY YOU, [protagonist_name], there’s a puppy around the corner! Get there quick before it runs away!"
 
     show pastprotagonist joy at t33
     pp "What? No way! I gotta see this!"
-    n "{i}Past you runs to dog, abandoning the backpack as he runs"
+    n "{i}Past you runs to the dog, abandoning the backpack as he runs."
     show pastprotagonist neutral at thide
     hide pastprotagonist
 
@@ -561,7 +562,7 @@ label chapter3_past1_Street_distract:
     p "But I'm a little bit hungry..."
     show protagonist talking
     p "Eh, eating a little bit can't hurt, right?"
-    n "{i}Despite common sense, you eat the beef jerky that's been sitting in your backpack for the past 5+ years"
+    n "{i}Despite common sense, you eat the beef jerky that's been sitting in your backpack for the past 5+ years!"
     p "MMMM! Delicious! {w}Wow, I am SO HUNGRY!"
     show protagonist anxious
     p "Oh wait... {w}Oh no..."
@@ -573,8 +574,6 @@ label chapter3_past1_Street_distract:
     g "This is a fairly interesting spot to find you considering your task was at your office-building."
     show protagonist surprised at t31
     p "Please! Please! Just take me back!"
-
-    hide timegod
 
     if mission3timegod_success == 0:
         jump chapter3_past1_street_distract_FailTG
@@ -617,7 +616,10 @@ label chapter3_past1_street_distract_FailTG:
     show timegod angry at t33
     g "GET {w}OUT {w}OF {w}HERE!"
     g "It’s the middle of the day! Go to work!"
-    jump chapter3_past1_office_distract_Outcome
+
+    scene black with Dissolve(0.5)
+    
+    jump chapter3_past1_Office_distract_Outcome
 
 
 ####################################################
@@ -638,15 +640,21 @@ label chapter3_past1_street_distract_SucceedTG:
     scene black with Dissolve(0.5)
     show bg home with Dissolve(0.5)
 
+    show timegod laugh at t33
     g "Yet again, I thank you for your work. Goodbye."
+
+    show protagonist talking at t31
     p "Uh thanks, I probably should get back to work."
-    jump chapter3_past1_office_distract_Outcome
+
+    scene black with Dissolve(0.5)
+
+    jump chapter3_past1_Office_distract_Outcome
 
 
 ####################################################
-label chapter3_past1_Home_distract_Outcome:
+label chapter3_past1_Office_distract_Outcome:
 
-    scene bg office
+    scene bg office with Dissolve(0.5)
 
     show protagonist neutral at t31
     p "Work time. Princess should just be waiting, no jerky dilemma here."
