@@ -326,7 +326,7 @@ label chapter4_street_decision:
     g "That's the safest thing you'll do today."
     show timegod at s33
 
-    show protagonist neutral at t31
+    show protagonist despair at t31
     p "Hmm..."
     show protagonist at s31
 
@@ -542,7 +542,8 @@ label chapter4_street_missionFail:
     scene bg road with Dissolve(0.5)
     show protagonist neutral at s31
     show timegod neutral at t33
-    g "See? You've failed. Your entire office is going to suffer from this. Poisoning your coworkers isn't exactly beneficial. Do you realize what you've done?"
+    g "See? You've failed. {w}Your entire office is going to suffer from this."
+    g "Poisoning your coworkers isn't exactly beneficial. {w}Do you realize what you've done?"
     show timegod at s33
     show protagonist at t31
     p "Yea, I saved my boss. I'm not sure either of these things outweigh the other."
@@ -551,7 +552,7 @@ label chapter4_street_missionFail:
     g "You don't realize the repercussions of your actions. You do understand that I am a TIME GOD?"
     g "There is a perfectly good reason for why I tell you what to do."
     show timegod happy at t33
-    g "It's to your benefit that I'm a kind lord. You have an opportunity here to undo your mistakes, although you're testing the limits of my kindness."
+    g "It's to your benefit that I'm a kind lord. {w}You have an opportunity here to undo your mistakes, although you're testing the limits of my kindness."
     g "Here, your reputation can be salvaged. Simply, complete this mission for me. Let us try this again."
     show timegod snap1 at s33
     show timegod snap2 at s33
@@ -565,18 +566,57 @@ label chapter4_street_missionFail:
     show protagonist hey at t31
     p "No! I don't know whose benefit this is for, but it certainly isn't mine. Or anyone's. In what world is dying better than food poisoning?"
     p "I'm pretty sure one of those is treatable. Why are you doing this?"
-    show protagonist hey at t31 #should have another angry image to make more dynamic
+    show protagonist at s31
+
+    show timegod at t33
     g "You wouldn't understand. I'm simply taking care of what is important."
+    show timegod at s33
+
+    show protagonist hey at t31
+    p "WHAT {w}are you even talking about? {w}What could be this important?"
     show protagonist hey at s31
-    p "What could be this important?"
-    show protagonist hey at s31
+
     show timegod neutral at t33
     g "Interesting question, but I didn't come to you to respond to these questions."
-    g "I came to you so you could complete these tasks for the benefit of all. Remember, you can improve yourself this way."
-    show timegod at s33
+    show timegod angry
+    g "I came to you so you could complete these tasks for the benefit of all. {w}Remember... {w}This is the ONLY way you can improve yourself."
+    show timegod snap1
+    
+    show protagonist anxious
+    g "Anyway... I'm taking you back. You ready? {w}Set..."
+
     show protagonist hey at t31
-    p "I can't do this! I'm not going to kill anyone! I'm done. Consider this working relationship terminated. I don't need time travel to improve myself."
-    show protagonist hey at s31
+    p "STOP!"
+
+    show timegod angry
+    g "Stop?! {w}You think you can give me commands?"
+    show timegod at s33
+
+    p "I can't do this! {w}I'm not going to kill anyone!"
+    show protagonist at s31
+
+    show timegod laugh at t33
+    g "That's CUTE!"
+    show timegod angry
+    g "That's CUTE! {w} You are in NO position to bargain with me. Now get back––"
+
+    show protagonist at t31
+    p "NO!"
+    show timegod at s33
+
+    show timegod laugh at t33
+    g "No?"
+    show timegod angry
+    g "You are CLEARLY missing the point!"
+    g "You are NOTHING without me. {w}Just another fool who can't tell his rear end from his face."
+    g "YOU. {w}ARE. {w}NOTHING! {w}Now get back out there and FINISH YOUR JOB!"
+    
+    show protagonist at t31
+    p "No, you're missing the point! {w}I am NOT bargaining with you anymore."
+    show protagonist at s31
+    show timegod at s33
+    show protagonist despair
+    p "I'm done. {w}Consider this working relationship terminated. {w}I don't need time travel to improve myself."
     show timegod creepy at t33
     g "You're going to regret this."
     hide timegod creepy

@@ -2,18 +2,39 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/chapter-1.rpy", line 128: expected 'image_name_component' not found.
-    show 
-         ^
+File "game/chapter-4.rpy", line 597: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    p "I'm not going to kill anyone!" {w}I'm done! Consider this working relationship terminated. I don't need time travel to improve myself."
+                                      ^
+        show protagonist hey at s31
+        show timegod creepy at t33
+        g "You're going to regret this."
+        hide timegod creepy
+    
+        scene black with Dissolve(1.0)
+        n "END OF MISSION 4"
+        n "  "
+        jump start_chapter5
+        #return
+    
+    
+    
+    
+    
+    
+    
+    label chapter4_street_missionSuccess:
+        scene bg road
+        $ mission4timegod_success = 1
+        show protagonist neutral at t31
+        p "Whew. Ok, I did it. Now what?"
+        # [fullscreen image of boss in car]
+        # [return back to street background image with p in foreground]
+        n "{i}You see your boss driving by. {w}He waves to you."
+        show protagonist surprised at s31
+        p  "OH! Oh no!"
+        # [fullscreen image of boss in car]
+        # [fullscreen image of boss's car hitting that giant rock, car kinda tipping forward]
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat May  1 16:54:26 2021
-=======
-File "game/chapter-1.rpy", line 6: expected statement.
-    renpy.music.play("MusicSoundAssets/timeTravelBackgroundMusic_Happy.mp3", channel=u'music', loop=True, fadeout=None, synchro_start=False, fadein=0, tight=None, if_changed=False, relative_volume=0.5)
-                                                                                                                                                                                                         ^
-
-Ren'Py Version: Ren'Py 7.4.2.1292
-Sat May  1 19:03:30 2021
->>>>>>> 6d448def12e92d8e2ce43832f03c98d74a731131
+Wed May 12 14:52:07 2021

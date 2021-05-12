@@ -631,8 +631,8 @@ label chapter3_past1_street_distract_SucceedTG:
     g "Regardless of what you are doing on this street with that rancid jerky, you’ve completed what I had asked of you."
     g "Congratulations. You’ve been working quite well under me."
 
-    show protagonist talking at t31
-    p "Thank you, I’m a pretty handy guy."
+    show protagonist despair at t31
+    p "Great! {w}Sure! {w}Of course! Whatever! My stomach HURTS! JUST TAKE ME BACK!"
 
     show timegod laugh at t33
     g "Indeed. Let’s return to the present."
@@ -642,9 +642,32 @@ label chapter3_past1_street_distract_SucceedTG:
 
     show timegod laugh at t33
     g "Yet again, I thank you for your work. Goodbye."
+    show timegod at s33
 
-    show protagonist talking at t31
-    p "Uh thanks, I probably should get back to work."
+    show protagonist surprised at t31
+    p "But––But but! {w} My stomach hurts!"
+    show protagonist despair
+    p "Don't leave me! What if I die?"
+    show protagonist at s31
+
+    show timegod angry at t33
+    g "You're fine."
+    show timegod happy
+    g "As joyous as I am that you didn't fail me,"
+    show timegod angry
+    g "As joyous as I am that you didn't fail me, {w}you did this to yourself."
+    show timegod at s33
+
+    show protagonist anxious at t31
+    p "But...."
+
+    show timegod angry at t33
+    g "Go to work! {w}Your joke of a boss probably needs you."
+    g "Goodbye!"
+    show timegod at thide
+    hide timegod
+
+    p ":("
 
     scene black with Dissolve(0.5)
 
@@ -656,23 +679,31 @@ label chapter3_past1_Office_distract_Outcome:
 
     scene bg office with Dissolve(0.5)
 
-    show protagonist neutral at t31
-    p "Work time. Princess should just be waiting, no jerky dilemma here."
+    show protagonist anxious at t31
+    p "Jeez, after sitting on the toilet for half an hour, my tummy still hurts."
+    p "At least Princess should just be waiting, no jerky dilemma here."
+    show protagonist at s31
 
     show boss happy at t33
     boss "Hey [protagonist_name], how was Princess?"
+    show boss at s33
 
     show dog happy at t11
     play sound "MusicSoundAssets/dogBarkSound.mp3" fadeout 1
     show protagonist anxious at t31
     p "Uh"
     show protagonist joy at t31
-    p "absolutely amazing! No running away, no sickness, just me watching a dog I think."
+    p "Absolutely amazing! No running away, no sickness, just me watching a dog I think."
     show dog cool at t11
+    show protagonist at s31
 
+    show boss at t33
     boss "Well, that’s what I asked of you. Good job on completing that menial task. I know I can count on you."
+    show boss at s33
 
+    show protagonist at t31
     p "Yup, that’s me!"
+    show protagonist at s31
     show boss at thide
     hide boss
     show dog at thide
@@ -688,22 +719,35 @@ label chapter3_past1_Office_distract_Outcome:
         #[crash/bonk sound in the background]
         show protagonist surprised at t31
         p "What the heck! What was that?"
+        show protagonsit at s31
 
         show boss blood at t33
         n "{i}The boss is back... but is his head pouring blood?"
         boss "God DANG IT!"
+        show boss at s33
 
+        show protagonist at t31
         p "What happened? Are you ok?"
+        show protagonist at s31
 
-        boss "I just walked into that glass wall there! There are usually a bunch of posters on that wall! I don’t know who the HELL took them down!"
-
-        show protagonist anxious
+        show boss at t33
+        boss "I just walked into that glass wall there!"
+        boss "There are usually a bunch of posters on that wall! {w}I don’t know who the HELL took them down!"
+        show boss at s33
+        
+        show protagonist anxious at t31
         p "Oh no..."
+        show protagonist at s31
 
+        show boss at t33
         boss "[protagonist_name], was it you?!"
+        show boss at s33
 
-        p "Uh... No? Definitely not me."
+        show protagonist at t31
+        p "Uh... No? {w}Definitely not me."
+        show protagonist at s31
 
+        show boss at t33
         boss "Then stop oh no-ing and get back to work!"
         boss "I swear, one of you idiots is TRYING to kill me!"
         show boss at thide

@@ -73,17 +73,49 @@ label chapter1_introdialogue1:
 
     show timegod neutral at t33
     g "Whoa you really messed that up! I see you’ve had a bad day."
+    show timegod at s33
 
     show protagonist surprised at t31
     p "WHAT THE HELL! Who are YOU?!"
     p "GET OUT OF MY HOUSE BEFORE I CALL THE POLICE!"
+    show protagonist at s31
 
 
     show timegod laugh at t33
     g "I have a proposition for you."
+    show protagonist despair
     show timegod creepy at t33
     g "Would you like a do over... {w}a chance to undo your mistakes?"
-    #show timegod at thide
+    show timegod at s33
+
+    show protagonist anxious at t31
+    p "Uh... {w}I mean...{w}Yeah? {w}Maybe?"
+    show timegod happy
+    show protagonist hey
+    p "WAIT!"
+    show timegod angry
+    p "WAIT! {w}What am I saying?! {w}YOU! {w}What are you doing in my house?"
+    show protagonist at s31
+
+    show timegod laugh at t33
+    g "Ah, this is always my favorite part. {w}Being accused of breaking into other people's houses."
+    show timegod at s33
+
+    show protagonist surprised at t31
+    p "What do you even MEAN?!"
+    show protagonist hey
+    p "You ARE breaking into my––"
+
+    show timegod angry at t33
+    g "SILENCE!"
+
+    show protagonist blush at s31
+
+    g "You silly people. {w}Always missing the point."
+    g "I'm asking you a QUESTION, {w}now you answer."
+
+    show timegod at thide
+    show protagonist at thide
     hide timegod
     hide protagonist
 
@@ -131,6 +163,17 @@ label chapter1_introdialogue2:
 
     show protagonist anxious at t31
     p "What do you mean by send me back in time?"
+    show protagonist at s31
+
+    show timegod angry at t33
+    g " "
+    show timegod happy
+    g "I mean I'm going to send you back in time. {w}Fix your mistakes, {w}undo the past, {w}et cetera."
+    g "You get to do"
+    show timegod creepy
+    g "You get to do ALL THAT for the low, {w}low price of completing a task for me."
+    show timegod happy
+    g "Quite a bargain, in my opinion."
     #show timegod at thide
     hide timegod
     hide protagonist
@@ -182,7 +225,7 @@ label chapter1_introdialogue4:
 
     play sound "MusicSoundAssets/timeTravelSound.mp3" fadeout 1
     scene black with Dissolve(1.0)
-    n "{i}The Time God snaps his fingers and you’re transported to one week into the past.{\i}"
+    n "{i}The Time God snaps his fingers and you’re transported one week into the past.{\i}"
 
     # TODO "1 week ago" fades in and out at corner of screen
     # TODO MAP to choose where to go
@@ -408,9 +451,23 @@ label chapter1_cafe_past3:
     n "{i}The barista stands in front of the coffee machine, and  brews the coffee quickly and with confidence."
 
     show pastprotagonist hmm at t31
-    pp "So... that's how you make coffee. {w}Wish I knew that earlier."
+    pp "So... that's how you make coffee. {w}Huh, I can't believe I never knew before. {w}This knowledge mighta ctually come in handy."
     show pastprotagonist at s31
+    hide pastprotagonist
+    hide barista
 
+    show protagonist excited at t11
+    p "AHA! Now that I––{w}I mean he––"
+    show protagonist anxious
+    p "AHA! Now that I––I mean he––{w}No, I. {w}I think."
+    p "Jeez, this is confusing. Anyway"
+    show protagonist excited
+    p "Now that my past self has figured out how coffee machines work, we can avoid that fiasco a week from now!"
+    p "Ok now I gotta keep hiding!"
+    hide protagonist
+    
+    show pastprotagonist neutral at s31
+    pp "Wow, this is some good coffee!"
     show barista neutral at t33
     barista "Oh, where'd this letter come from?"
     show barista shocked
@@ -633,6 +690,16 @@ label chapter1_end_success:
 
     show boss angry at t33
     boss "Yes. That’s what I SAID."
+    show boss at s33
+
+    show protagonist at t31
+    p "You want me to make you coffee? {w}Even though I screwed it up majorly last time and put beans in your water?"
+    show protagonist at s31
+
+    show boss at t33
+    boss "What are you even TALKING about?!"
+    show protagonist surprised
+    boss "What are you even TALKING about?! {w}Just make my coffee!"
     show protagonist joy
     boss "And be fast, I need to run to the next meeting."
     show boss at thide
