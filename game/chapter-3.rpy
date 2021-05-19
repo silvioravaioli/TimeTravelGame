@@ -208,11 +208,11 @@ label chapter3_travel1DogSearch_Home:
     p "Oh hey, it’s you again. Guess I shouldn’t be surprised."
 
     show timegod laugh at t33
-    g "Well, it seems yet again, you’ve had another bad day."
+    g "Well, yet again, you’ve had another bad day."
     show timegod laugh at s33
 
     show protagonist anxious at t31
-    p "Was it that obvious? Have you seen a dog in there?"
+    p "Was it that obvious? Have you seen a dog somewhere in there?"
     show protagonist anxious at s31
 
     show timegod neutral at t33
@@ -238,7 +238,7 @@ label chapter3_travel1DogSearch_Home:
         "Why two weeks ago?":
             show timegod angry at t11
 
-    g "That beef jerky has been in your backpack for five years. {w}But my task for you {i}needs{\i} to be completed two weeks ago."
+    g "Hmm... That beef jerky has been in your backpack for five years. {w}But my task for you {i}needs{\i} to be completed two weeks ago."
     show timegod angry at t11
     g "Do not fail me."
     show timegod snap1
@@ -357,7 +357,7 @@ label chapter3_past1_OfficeMissionSuccess:
     p "Still need to find myself though, gotta get that jerky and save Princess."
 
     if mission3visited_past1_Office==0:
-        p "I can’t really remember where I was right now. Could already be at the office or trying to book it to work. Still gotta remove that poster too."
+        p "I can’t really remember where my past self was right now. He could already be at the office or trying to book it to work. Still gotta remove that poster too."
 
     if mission3visited_past1_Office==1:
         p "Pretty sure my past self is trying to get to work right now."
